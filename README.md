@@ -11,6 +11,8 @@ Plataforma: Android
 
 **Definições:**
 
+Usar a Unity na versão 2019.4.3f1;
+
 Antes de começarem, lembrem de conferirem se está no Android e se o New Input System e o Cinemachine estão instalados;
 
 Separar as funcionalidades em classes diferentes, dentro de uma pasta referente ao que ela faz e nomeada conforme a funcionalidade;
