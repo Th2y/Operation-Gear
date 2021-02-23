@@ -13,7 +13,9 @@ Plataforma: Android
 
 Usar a Unity na versão 2019.4.3f1;
 
-Antes de começarem, lembrem de conferirem se está no Android e se o New Input System e o Cinemachine estão instalados;
+Antes de começarem, lembrem de conferirem se está no Android e se o New Input System, Cinemachine e TextMeshPro estão instalados;
+
+Usar o TMPro para colocar textos;
 
 Separar as funcionalidades em classes diferentes, dentro de uma pasta referente ao que ela faz e nomeada conforme a funcionalidade;
 
