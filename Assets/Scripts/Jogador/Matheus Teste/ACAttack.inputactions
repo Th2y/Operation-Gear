@@ -1,0 +1,33 @@
+{
+    "name": "ACAttack",
+    "maps": [
+        {
+            "name": "Action",
+            "id": "bed6a340-8e1d-49e9-a284-423e018d7396",
+            "actions": [
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "b1da6556-359c-4863-b7ef-5a778bb6643f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d7f7d5bb-3664-483c-89c5-1a77b8e424ba",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

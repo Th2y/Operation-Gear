@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveController : MonoBehaviour
+public class ObjectTest : MonoBehaviour
 {
+    public int life; //vida
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,11 @@ public class MoveController : MonoBehaviour
     void Update()
     {
         
+    }
+    public void Takedamage(int dmg)
+    {
+        life-=dmg;
+        
+        if (life <= 0) Destroy(gameObject);
     }
 }
