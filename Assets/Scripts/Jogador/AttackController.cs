@@ -5,10 +5,16 @@ using UnityEngine;
 public class AttackController : MonoBehaviour
 {
     [Header("     Attack")]
+    
     public Transform Attackpoint;  // local do dano
     public int damage;             // dano total
     public float radius;           // raio do dano
     public LayerMask layerDamage;  // layers que poderâo sofrer dano
+    public static bool IsAttaking; // (verifica)player atacando
+
+    [Header("      Time Attack")]
+    public float TimeAttack;       // tempo total pro player atacar
+    public float T_A;              // tempo pro player atacar
 
     private ACAttack controls;     // new input
 
@@ -17,7 +23,7 @@ public class AttackController : MonoBehaviour
     {
         controls = new ACAttack();
 
-        controls.Action.Attack.performed += _ => PlayerAttack();
+        controls.Action.Attack.performed += x => IsAttaking = x.ReadValueAsButton();
     }
 
     private void OnEnable()
@@ -29,6 +35,20 @@ public class AttackController : MonoBehaviour
         controls.Disable();
     }
 
+    private void Update()
+    {
+        // confere se o player está atacando e se o tempo de atacar chegou
+        if (T_A <= 0 && IsAttaking)
+        {
+            PlayerAttack();
+            T_A = TimeAttack;
+        }
+        else 
+        {
+            T_A -= Time.deltaTime;
+        }
+    }
+    
     private void PlayerAttack()
     {
         
@@ -37,14 +57,19 @@ public class AttackController : MonoBehaviour
         
         foreach (Collider2D hit in hitinfo)
         {
+           
             //confere a tag do objeto
             if (hit.gameObject.CompareTag("Object"))
             {
                 Debug.Log("atacou");
                 hit.GetComponent<ObjectTest>().Takedamage(damage);
             }
+
+            
         }
 
+        //remove energia 
+        StatsController.instance.RemoveEnergy();
     }
 
     private void OnDrawGizmos()

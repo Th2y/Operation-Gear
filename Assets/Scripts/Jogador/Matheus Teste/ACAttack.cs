@@ -20,7 +20,7 @@ public class @ACAttack : IInputActionCollection, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Attack"",
-                    ""type"": ""Button"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""b1da6556-359c-4863-b7ef-5a778bb6643f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
