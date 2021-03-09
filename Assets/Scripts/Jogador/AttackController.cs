@@ -69,9 +69,10 @@ public class AttackController : MonoBehaviour
         }
 
         //remove energia 
-        StatsController.instance.RemoveEnergy();
+        StatsController.instance.RemoveEnergy(2);
 
-        StatsController.instance.RemoveLife(5);
+        //tirar depois( só teste)
+        StatsController.instance.RemoveLife(1);
     }
 
     private void OnDrawGizmos()

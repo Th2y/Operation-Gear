@@ -10,16 +10,16 @@ public class StatsController : MonoBehaviour
     [Header("    Start-Stats")]
     public float maxlife;                 // Total de vida      
     public int maxenergy;                 // Total de energia   
-    public int usable_energy;             // quanto de energia que o player gasta  
+
 
     [Header("    Energy Restoration")]
     public int Idle_energy_res;          // energia que vai recuperar parado
-    public int Move_energy_res;          // energia que vai recuperar move
+    public int Move_energy_res;          // energia que vai recuperar movendo
 
     [Header("    Timing Energy Restoration")]
-    public float Idle_TimeEnergyRes;
+    public float Idle_TimeEnergyRes;            // tempo energia que vai recuperar parado
     [SerializeField]private float Idle_T_E_R;
-    public float Move_TimeEnergyRes;
+    public float Move_TimeEnergyRes;            // tempo energia que vai recuperar movendo
     [SerializeField]private float Move_T_E_R;
 
     [Header("    Update-Stats")]
@@ -71,7 +71,7 @@ public class StatsController : MonoBehaviour
     // sistema de energia
     private void EnergyController()
     {
-        if (energy <= 0 || energy < usable_energy || !AttackController.IsAttaking)
+        if (energy <= 0 || energy != maxenergy || !AttackController.IsAttaking)
         {
            
             if(Idle_T_E_R <= 0)
@@ -118,12 +118,16 @@ public class StatsController : MonoBehaviour
     }
 
 
-    public void RemoveEnergy()
+    public void RemoveEnergy(int lost_energy)
     {
-        energy -= usable_energy;
+        //remove a energia baseada na variavel lost_energy
+
+        energy -= lost_energy; 
     }
     public void RemoveLife(float dmg)
     {
+        //remove a vida baseada na variavel dmg
+
         life -= dmg;
     }
     private void UI_Image(Image image,float min,float max)
