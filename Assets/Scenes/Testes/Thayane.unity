@@ -176,7 +176,7 @@ MonoBehaviour:
   m_TrackedDeviceOrientationAction: {fileID: 1025543830046995696, guid: ca9f5fa95ffab41fb9a615ab714db018,
     type: 3}
   m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 0
+  m_PointerBehavior: 2
 --- !u!114 &322028823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 345855062}
   - component: {fileID: 345855061}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: ButtonBaixo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1074592869}
         m_MethodName: BotaoMoverBaixo
         m_Mode: 1
         m_Arguments:
@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 664531995}
   - component: {fileID: 664531994}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: ButtonCima
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -510,7 +510,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1074592869}
         m_MethodName: BotaoMoverCima
         m_Mode: 1
         m_Arguments:
@@ -571,7 +571,7 @@ GameObject:
   - component: {fileID: 681654435}
   - component: {fileID: 681654434}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ButtonDireita
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1074592869}
         m_MethodName: BotaoMoverDireita
         m_Mode: 1
         m_Arguments:
@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 838245466}
   - component: {fileID: 838245465}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonEsquerda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -768,7 +768,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1074592869}
         m_MethodName: BotaoMoverEsquerda
         m_Mode: 1
         m_Arguments:

@@ -1,0 +1,66 @@
+{
+    "name": "PlayerMovimento",
+    "maps": [
+        {
+            "name": "Touch",
+            "id": "98b20a34-1425-4f70-97ae-ebf38ae1f920",
+            "actions": [
+                {
+                    "name": "Mover",
+                    "type": "Button",
+                    "id": "63389e1a-5971-41e0-a98c-fcb713b873db",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Tap"
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7cec59ce-00fa-47f3-8000-206aa051a141",
+                    "path": "<AndroidJoystick>/stick/left",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mover",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ca70c0c8-e01e-4c15-97b9-7e3aee827a6b",
+                    "path": "<AndroidJoystick>/stick/right",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mover",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e0f23a09-d687-4b9c-a7a4-b272cb3f0b2a",
+                    "path": "<AndroidJoystick>/stick/up",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mover",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7293f7a1-5ab5-492b-ad50-c4c259681fdb",
+                    "path": "<AndroidJoystick>/stick/down",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mover",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
