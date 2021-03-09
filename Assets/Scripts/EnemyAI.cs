@@ -6,10 +6,13 @@ using Pathfinding;
 public class EnemyAI : MonoBehaviour
 {
 
+    private float timer = 0f;
+    public float time;
+
     public Transform target;
 
     public float speed = 200f;
-    public float nextWaypointDistance = 3f;
+    public float nextWaypointDistance;
 
     public Transform enemyGFX;
 
@@ -49,9 +52,11 @@ public class EnemyAI : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        
+        timer += Time.deltaTime;
+
+
         if (path == null)
         {
             return;
@@ -67,25 +72,59 @@ public class EnemyAI : MonoBehaviour
             reachedEndOfPath = false;
         }
 
-        Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
-        Vector2 force = direction * speed * Time.deltaTime;
-
-        rb.AddForce(force);
-
-        float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
-
-        if (distance < nextWaypointDistance)
+        if (timer >= time)
         {
-            currentWaypoint++;
-        }
 
-        if (force.x >= 0.01f)
-        {
-            enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
+            Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
+
+            float distanceX = Mathf.Abs(rb.position.x - path.vectorPath[currentWaypoint].x);
+
+            float distanceY = Mathf.Abs(rb.position.y - path.vectorPath[currentWaypoint].y);
+
+
+
+            if (distanceX > distanceY)
+            {
+                if (direction.x > 0)
+                {
+                    transform.position = new Vector3(rb.position.x + 1, rb.position.y, 0);
+                }
+                else if (direction.x < 0)
+                {
+                    transform.position = new Vector3(rb.position.x - 1, rb.position.y, 0);
+                }
+            }
+            else
+            {
+                if (direction.y > 0)
+                {
+                    transform.position = new Vector3(rb.position.x, rb.position.y + 1, 0);
+                }
+                else if (direction.y < 0)
+                {
+                    transform.position = new Vector3(rb.position.x, rb.position.y - 1, 0);
+                }
+            }
+
+            float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+
+            if (distance < nextWaypointDistance)
+            {
+                currentWaypoint++;
+            }
+
+            if (direction.x >= 0.01f)
+            {
+                enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
+            }
+            else if (direction.x <= -0.01f)
+            {
+                enemyGFX.localScale = new Vector3(1f, 1f, 1f);
+            }
+
+            timer = 0;
+
         }
-        else if (force.x <= -0.01f)
-        {
-            enemyGFX.localScale = new Vector3(1f, 1f, 1f);
-        }
+        
     }
 }

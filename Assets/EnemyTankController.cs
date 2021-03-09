@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyTankController : MonoBehaviour
 {
     public Animator animator;
     private Rigidbody2D rb;
+
+    public GameObject Player;
 
     public int maxHealth = 100;
     int currentHealth;
@@ -24,7 +26,7 @@ public class EnemyController : MonoBehaviour
         {
             animator.SetBool("isWalking", true);
         }
-        else if(rb.velocity.x == 0f && rb.velocity.y == 0f)
+        else if (rb.velocity.x == 0f && rb.velocity.y == 0f)
         {
             animator.SetBool("isWalking", false);
 
@@ -51,22 +53,32 @@ public class EnemyController : MonoBehaviour
         this.enabled = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("PlayerAttack"))
-        {
-            Debug.Log("Entrou na área de ataque");
-            TakeDamage(20);
-        }
-    }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Atacou");
             animator.SetTrigger("Attack");
+            Player.GetComponent<PlayerController>().speed -= 0.05f;
+
         }
 
+        if (collision.gameObject.CompareTag("PlayerAttack"))
+        {
+            TakeDamage(20);
+        }
+
+
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            animator.SetTrigger("Attack");
+            Player.GetComponent<PlayerController>().speed = 0.25f;
+
+        }
     }
 }
