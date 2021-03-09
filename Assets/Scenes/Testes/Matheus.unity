@@ -260,10 +260,12 @@ MonoBehaviour:
   maxlife: 100
   maxenergy: 10
   usable_energy: 2
-  Idle_energy_recu: 2
-  Move_energy_recu: 1
-  Idle_TimeEnergyRecu: 1
-  Move_TimeEnergyRecu: 2
+  Idle_energy_res: 2
+  Move_energy_res: 1
+  Idle_TimeEnergyRes: 1
+  Idle_T_E_R: 0
+  Move_TimeEnergyRes: 2
+  Move_T_E_R: 0
   life: 0
   energy: 0
   UI_energy: {fileID: 1453641496}

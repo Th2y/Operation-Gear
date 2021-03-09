@@ -70,6 +70,8 @@ public class AttackController : MonoBehaviour
 
         //remove energia 
         StatsController.instance.RemoveEnergy();
+
+        StatsController.instance.RemoveLife(5);
     }
 
     private void OnDrawGizmos()

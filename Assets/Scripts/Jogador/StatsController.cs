@@ -12,15 +12,15 @@ public class StatsController : MonoBehaviour
     public int maxenergy;                 // Total de energia   
     public int usable_energy;             // quanto de energia que o player gasta  
 
-    [Header("    Energy reculperation")]
-    public int Idle_energy_recu;          // energia que vai recuperar parado
-    public int Move_energy_recu;          // energia que vai recuperar move
+    [Header("    Energy Restoration")]
+    public int Idle_energy_res;          // energia que vai recuperar parado
+    public int Move_energy_res;          // energia que vai recuperar move
 
-    [Header("    Timing Energy reculperation")]
-    public float Idle_TimeEnergyRecu;
-    private float Idle_T_E_R;
-    public float Move_TimeEnergyRecu;
-    private float Move_T_E_R;
+    [Header("    Timing Energy Restoration")]
+    public float Idle_TimeEnergyRes;
+    [SerializeField]private float Idle_T_E_R;
+    public float Move_TimeEnergyRes;
+    [SerializeField]private float Move_T_E_R;
 
     [Header("    Update-Stats")]
     public float life;                    // vida do jogador    
@@ -42,6 +42,10 @@ public class StatsController : MonoBehaviour
 
         life = maxlife;
         energy = maxenergy;
+
+        Idle_T_E_R = Idle_TimeEnergyRes;
+        Move_T_E_R = Move_TimeEnergyRes;
+
     }
 
     // Update is called once per frame
@@ -50,9 +54,9 @@ public class StatsController : MonoBehaviour
         UI_Image(UI_energy, energy, maxenergy);  //atualiza a barra de energia
         UI_Image(UI_life, life, maxlife);        //atualiza a barra de vida
 
-       
-        EnergyController();
         TimingEnergy();
+        EnergyController();
+        
     }
 
     // verifica se esta vivo ou não
@@ -69,40 +73,47 @@ public class StatsController : MonoBehaviour
     {
         if (energy <= 0 || energy < usable_energy || !AttackController.IsAttaking)
         {
-            if (energy >= maxenergy)
-            {
-                energy = maxenergy;
-            }else if (energy < 0)
-            {
-                energy = 0;
-            }
+           
             if(Idle_T_E_R <= 0)
             {             
-                energy += Idle_energy_recu;
+                energy += Idle_energy_res;
 
-                Idle_T_E_R = Idle_TimeEnergyRecu;
+                Idle_T_E_R = Idle_TimeEnergyRes;
             }
             else if (Move_T_E_R <= 0)
             {
-                energy += Move_energy_recu;
+                energy += Move_energy_res;
 
-                Move_T_E_R = Move_TimeEnergyRecu;
+                Move_T_E_R = Move_TimeEnergyRes;
             }
-
+            else if (energy >= maxenergy)
+            {
+                energy = maxenergy;
+            }
+            else if (energy < 0)
+            {
+                energy = 0;
+            }
             
+
         }
     }
 
     private void TimingEnergy()
     {
         // ismove  teste
-        if (!ismove)
+        if (energy != maxenergy)
         {
-            Idle_T_E_R -= Time.deltaTime;
-        }
-        else
-        {
-            Move_T_E_R -= Time.deltaTime;
+            if (!ismove)
+            {
+                Idle_T_E_R -= Time.deltaTime;
+                Move_T_E_R = Move_TimeEnergyRes;
+            }
+            else
+            {
+                Move_T_E_R -= Time.deltaTime;
+                Idle_T_E_R = Idle_TimeEnergyRes;
+            }
         }
     }
 
