@@ -19,5 +19,7 @@ public class MovimentacaoJogador : MonoBehaviour
                 this.transform.position += Vector3.left;
                 break;
         }
+
+        //Tornar a variavel de clicou como true, fazendo o jogador perder estamina, e, ao diminuir a estamina, tornar a variavel como false
     }
 }
