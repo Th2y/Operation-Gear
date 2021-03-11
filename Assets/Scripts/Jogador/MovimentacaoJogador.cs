@@ -4,9 +4,8 @@ public class MovimentacaoJogador : MonoBehaviour
 {
     public void Mover(DirecaoMovimento direcao)
     {
-        if (StatsController.instance.energy > 0)
+        if (StatsController.instance.energy > 0 || Poweraps.instancia.usandoPower)
         {
-            StatsController.instance.ismove = true;
             switch (direcao)
             {
                 case DirecaoMovimento.Baixo:
@@ -23,8 +22,8 @@ public class MovimentacaoJogador : MonoBehaviour
                     break;
             }
 
-            StatsController.instance.RemoveEnergy();
-            StatsController.instance.ismove = false;
+            if(!Poweraps.instancia.usandoPower)
+                StatsController.instance.RemoveEnergy(1);
         } else Debug.Log("Sem energia");
     }
 }

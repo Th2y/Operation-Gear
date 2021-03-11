@@ -617,6 +617,8 @@ GameObject:
   - component: {fileID: 586898248}
   - component: {fileID: 586898249}
   - component: {fileID: 586898250}
+  - component: {fileID: 586898252}
+  - component: {fileID: 586898253}
   m_Layer: 10
   m_Name: Jogador
   m_TagString: Player
@@ -714,11 +716,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxlife: 100
   maxenergy: 10
-  usable_energy: 1
-  Idle_energy_recu: 2
-  Move_energy_recu: 1
-  Idle_TimeEnergyRecu: 2
-  Move_TimeEnergyRecu: 1
+  Idle_energy_res: 2
+  Move_energy_res: 1
+  Idle_TimeEnergyRes: 1
+  Idle_T_E_R: 1
+  Move_TimeEnergyRes: 2
+  Move_T_E_R: 2
   life: 0
   energy: 0
   UI_energy: {fileID: 362931935}
@@ -736,7 +739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8321be8842858204687ebd5b808d871b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TextColetaveis: {fileID: 1478272976}
 --- !u!61 &586898251
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -763,6 +765,42 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.36, y: 0.36}
   m_EdgeRadius: 0
+--- !u!50 &586898252
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586898245}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &586898253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586898245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8339a18abf079354c859dd0db40a7578, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  usandoPower: 0
+  TextColetaveis: {fileID: 1478272976}
+  contadorColetaveis: 0
 --- !u!1 &664531992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1068,7 +1106,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7781659, y: 1}
+    m_SensorSize: {x: 1.7779735, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

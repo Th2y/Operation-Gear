@@ -7,21 +7,53 @@ public class EscolherBotao : MonoBehaviour
 
     public void BotaoMoverBaixo()
     {
-        this.jogador.Mover(DirecaoMovimento.Baixo);
+        if (Poweraps.instancia.usandoPower)
+        {           
+            for (int i = 0; i < 10; i++)
+            {
+                this.jogador.Mover(DirecaoMovimento.Baixo);
+            }
+        }
+        else
+            this.jogador.Mover(DirecaoMovimento.Baixo);
     }
 
     public void BotaoMoverCima()
     {
-        this.jogador.Mover(DirecaoMovimento.Cima);
+        if (Poweraps.instancia.usandoPower)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                this.jogador.Mover(DirecaoMovimento.Cima);
+            }
+        }
+        else
+            this.jogador.Mover(DirecaoMovimento.Cima);
     }
 
     public void BotaoMoverDireita()
     {
-        this.jogador.Mover(DirecaoMovimento.Direita);
+        if (Poweraps.instancia.usandoPower)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                this.jogador.Mover(DirecaoMovimento.Direita);
+            }
+        }
+        else
+            this.jogador.Mover(DirecaoMovimento.Direita);
     }
 
     public void BotaoMoverEsquerda()
     {
-        this.jogador.Mover(DirecaoMovimento.Esquerda);
+        if (Poweraps.instancia.usandoPower)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                this.jogador.Mover(DirecaoMovimento.Esquerda);
+            }
+        }
+        else
+            this.jogador.Mover(DirecaoMovimento.Esquerda);
     }
 }
