@@ -5,55 +5,17 @@ public class EscolherBotao : MonoBehaviour
     [SerializeField]
     private MovimentacaoJogador jogador;
 
-    public void BotaoMoverBaixo()
+    public void Move(string direcao)
     {
-        if (Poweraps.instancia.usandoPower)
-        {           
-            for (int i = 0; i < 10; i++)
-            {
-                this.jogador.Mover(DirecaoMovimento.Baixo);
-            }
-        }
-        else
-            this.jogador.Mover(DirecaoMovimento.Baixo);
+        DirecaoMovimento mover = (DirecaoMovimento)DirecaoMovimento.Parse(typeof(DirecaoMovimento), direcao);  // Animal.Dog
+        BotaoMover(mover);
     }
 
-    public void BotaoMoverCima()
+    private void BotaoMover(DirecaoMovimento direcao)
     {
-        if (Poweraps.instancia.usandoPower)
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                this.jogador.Mover(DirecaoMovimento.Cima);
-            }
-        }
+        if (!Poweraps.instancia.usandoPower)
+            this.jogador.Mover(direcao);
         else
-            this.jogador.Mover(DirecaoMovimento.Cima);
-    }
-
-    public void BotaoMoverDireita()
-    {
-        if (Poweraps.instancia.usandoPower)
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                this.jogador.Mover(DirecaoMovimento.Direita);
-            }
-        }
-        else
-            this.jogador.Mover(DirecaoMovimento.Direita);
-    }
-
-    public void BotaoMoverEsquerda()
-    {
-        if (Poweraps.instancia.usandoPower)
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                this.jogador.Mover(DirecaoMovimento.Esquerda);
-            }
-        }
-        else
-            this.jogador.Mover(DirecaoMovimento.Esquerda);
+            Poweraps.instancia.MoverSo(direcao);
     }
 }
