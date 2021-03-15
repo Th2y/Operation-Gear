@@ -7,7 +7,7 @@ public class EscolherBotao : MonoBehaviour
 
     public void Move(string direcao)
     {
-        DirecaoMovimento mover = (DirecaoMovimento)DirecaoMovimento.Parse(typeof(DirecaoMovimento), direcao);  // Animal.Dog
+        DirecaoMovimento mover = (DirecaoMovimento)DirecaoMovimento.Parse(typeof(DirecaoMovimento), direcao);
         BotaoMover(mover);
     }
 
