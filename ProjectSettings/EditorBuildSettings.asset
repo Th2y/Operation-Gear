@@ -5,15 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Fase 1.unity
     guid: 49560974b6ed30949aebad7c61d5da06
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Testes/Matheus.unity
     guid: fb0728a99db76274ab5f79e4804e5018
+  - enabled: 1
+    path: Assets/Scenes/Testes/Thayane.unity
+    guid: 846c4062e182b5e4ba76b198a9d25311
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 0aeaa7dae5666164fb8c3a8b5535f390,
       type: 2}

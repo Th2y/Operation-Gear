@@ -9,16 +9,16 @@ public class MovimentacaoJogador : MonoBehaviour
             switch (direcao)
             {
                 case DirecaoMovimento.Baixo:
-                    this.transform.position += Vector3.down;
+                    this.transform.position += (Vector3.down/2);
                     break;
                 case DirecaoMovimento.Cima:
-                    this.transform.position += Vector3.up;
+                    this.transform.position += (Vector3.up/2);
                     break;
                 case DirecaoMovimento.Direita:
-                    this.transform.position += Vector3.right;
+                    this.transform.position += (Vector3.right/2);
                     break;
                 case DirecaoMovimento.Esquerda:
-                    this.transform.position += Vector3.left;
+                    this.transform.position += (Vector3.left/2);
                     break;
             }
 
