@@ -1,27 +1,21 @@
-﻿using UnityEngine;
+using UnityEngine;
 
 public class EscolherBotao : MonoBehaviour
 {
     [SerializeField]
     private MovimentacaoJogador jogador;
 
-    public void BotaoMoverBaixo()
+    public void Move(string direcao)
     {
-        this.jogador.Mover(DirecaoMovimento.Baixo);
+        DirecaoMovimento mover = (DirecaoMovimento)DirecaoMovimento.Parse(typeof(DirecaoMovimento), direcao);
+        BotaoMover(mover);
     }
 
-    public void BotaoMoverCima()
+    private void BotaoMover(DirecaoMovimento direcao)
     {
-        this.jogador.Mover(DirecaoMovimento.Cima);
-    }
-
-    public void BotaoMoverDireita()
-    {
-        this.jogador.Mover(DirecaoMovimento.Direita);
-    }
-
-    public void BotaoMoverEsquerda()
-    {
-        this.jogador.Mover(DirecaoMovimento.Esquerda);
+        if (!Poweraps.instancia.usandoPower)
+            this.jogador.Mover(direcao);
+        else
+            Poweraps.instancia.MoverSo(direcao);
     }
 }

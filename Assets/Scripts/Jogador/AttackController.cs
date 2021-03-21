@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -70,9 +70,6 @@ public class AttackController : MonoBehaviour
 
         //remove energia 
         StatsController.instance.RemoveEnergy(2);
-
-        //tirar depois( só teste)
-        StatsController.instance.RemoveLife(1);
     }
 
     private void OnDrawGizmos()
