@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AttackController : MonoBehaviour
 {
@@ -16,39 +17,25 @@ public class AttackController : MonoBehaviour
     public float TimeAttack;       // tempo total pro player atacar
     public float T_A;              // tempo pro player atacar
 
-    private ACAttack controls;     // new input
 
-
-    private void Awake()
-    {
-        controls = new ACAttack();
-
-        controls.Action.Attack.performed += x => IsAttaking = x.ReadValueAsButton();
-    }
-
-    private void OnEnable()
-    {
-        controls.Enable();
-    }
-    private void OnDisable()
-    {
-        controls.Disable();
-    }
 
     private void Update()
     {
+        if(T_A > 0) T_A -= Time.deltaTime;
+    }
+    public void ButtonAttack()
+    {
         // confere se o player está atacando e se o tempo de atacar chegou
-        if (T_A <= 0 && IsAttaking)
+        if (T_A <= 0)
         {
             PlayerAttack();
             T_A = TimeAttack;
         }
-        else 
-        {
-            T_A -= Time.deltaTime;
-        }
+       
+            
+        
     }
-    
+
     private void PlayerAttack()
     {
         

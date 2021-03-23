@@ -20,7 +20,7 @@ public class @ACAttack : IInputActionCollection, IDisposable
             ""actions"": [
                 {
                     ""name"": ""Attack"",
-                    ""type"": ""PassThrough"",
+                    ""type"": ""Button"",
                     ""id"": ""b1da6556-359c-4863-b7ef-5a778bb6643f"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
@@ -31,7 +31,7 @@ public class @ACAttack : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""d7f7d5bb-3664-483c-89c5-1a77b8e424ba"",
-                    ""path"": ""<Mouse>/leftButton"",
+                    ""path"": ""<Touchscreen>/press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
