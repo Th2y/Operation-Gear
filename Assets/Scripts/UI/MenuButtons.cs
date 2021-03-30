@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuButtons : MonoBehaviour
 {
+    public bool debugMode = false;
     public float startTime = 1f;
     public float dramaTime = 1f;
     public string SceneName;
@@ -20,8 +21,11 @@ public class MenuButtons : MonoBehaviour
     private void Start()
     {
         // Dá lock do mouse na tela e começa a Coroutine da sprite de "drama"
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.Confined;
+        if (debugMode)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.Confined;
+        }
         if (isMainMenu)
         {
             StartCoroutine(dramaBegin());
