@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Object
+  - PlayerAttack
+  - Coletavel
   layers:
   - Default
   - TransparentFX
@@ -15,9 +17,12 @@ TagManager:
   - 
   - 
   - Object
+  - Obstacle
   - 
   - 
-  - 
+  - CameraLimites
+  - Player
+  - Coletavel
   - 
   - 
   - 
