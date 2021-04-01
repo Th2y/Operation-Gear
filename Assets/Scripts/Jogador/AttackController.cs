@@ -32,8 +32,6 @@ public class AttackController : MonoBehaviour
             T_A = TimeAttack;
         }
        
-            
-        
     }
 
     private void PlayerAttack()
@@ -49,7 +47,7 @@ public class AttackController : MonoBehaviour
             if (hit.gameObject.CompareTag("Object"))
             {
                 Debug.Log("atacou");
-                hit.GetComponent<ObjectTest>().Takedamage(damage);
+                hit.GetComponent<ObjectController>().Takedamage(damage);
             }
 
             
