@@ -7,6 +7,7 @@ TagManager:
   - Object
   - PlayerAttack
   - Coletavel
+  - CameraLimites
   layers:
   - Default
   - TransparentFX
@@ -18,14 +19,11 @@ TagManager:
   - 
   - Object
   - Obstacle
-  - 
+  - PlayerLados
   - 
   - CameraLimites
   - Player
   - Coletavel
-  - 
-  - 
-  - 
   - 
   - 
   - 
