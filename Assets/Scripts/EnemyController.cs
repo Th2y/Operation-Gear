@@ -7,6 +7,14 @@ public class EnemyController : MonoBehaviour
     public Animator animator;
     private Rigidbody2D rb;
 
+    private float time;
+    public float timer;
+
+    private bool isDead;
+    private bool isAttacking;
+
+    public Transform player;
+
     public int maxHealth = 100;
     int currentHealth;
 
@@ -20,15 +28,38 @@ public class EnemyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity.x > 0.01 || rb.velocity.x < -0.01)
+        
+        if (!isDead)
         {
-            animator.SetBool("isWalking", true);
-        }
-        else if(rb.velocity.x == 0f && rb.velocity.y == 0f)
-        {
-            animator.SetBool("isWalking", false);
+            time += Time.deltaTime;
 
+            if (time > timer)
+            {
+                time = 0;
+
+                float distance = Vector2.Distance(this.transform.position, player.position);
+
+                if (distance <= 1)
+                {
+                    GetComponent<Agent>().Stop();
+                    if (!isAttacking)
+                    {
+                        animator.SetTrigger("Attack");
+                        isAttacking = true;
+                    }
+                }
+                else
+                {
+                    GetComponent<Agent>().Resume();
+                }
+            }
         }
+    }
+
+    public void OnAttackComplete()
+    {
+        isAttacking = false;
+        Debug.Log("Ataque completo");
     }
 
     public void TakeDamage(int damage)
@@ -44,10 +75,12 @@ public class EnemyController : MonoBehaviour
 
     void Die()
     {
+        isDead = true;
+
         animator.SetBool("isDead", true);
 
         GetComponent<Collider2D>().enabled = false;
-        GetComponent<EnemyAI>().enabled = false;
+        GetComponent<Agent>().Stop();
         this.enabled = false;
     }
 
@@ -60,13 +93,4 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Atacou");
-            animator.SetTrigger("Attack");
-        }
-
-    }
 }
