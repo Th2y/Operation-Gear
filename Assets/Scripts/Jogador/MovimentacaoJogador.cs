@@ -3,15 +3,9 @@ using UnityEngine;
 public class MovimentacaoJogador : MonoBehaviour
 {
     [SerializeField]
-    private float distance = .4f;
+    private float distance = 1f;
     [SerializeField]
     private GameObject up;
-    [SerializeField]
-    private GameObject down;
-    [SerializeField]
-    private GameObject left;
-    [SerializeField]
-    private GameObject right;
     [SerializeField]
     private LayerMask cameraLimites;
 
@@ -48,7 +42,7 @@ public class MovimentacaoJogador : MonoBehaviour
         RaycastHit2D ray = Physics2D.Raycast(up.transform.position, up.transform.TransformDirection(direcaoV), distance, cameraLimites);
         if (ray.collider == null)
         {
-            if(direcaoV == Vector2.down)
+            if (direcaoV == Vector2.down)
                 this.transform.position += Vector3.down;
             else if (direcaoV == Vector2.up)
                 this.transform.position += Vector3.up;
