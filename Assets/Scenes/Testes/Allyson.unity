@@ -1680,7 +1680,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 7
 --- !u!114 &586898250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2696,6 +2696,7 @@ MonoBehaviour:
   animator: {fileID: 2078915075}
   timer: 2
   player: {fileID: 586898247}
+  agent: {fileID: 2078915070}
   maxHealth: 100
 --- !u!114 &2078915072
 MonoBehaviour:
@@ -2711,7 +2712,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 586898247}
   map: {fileID: 1570806092}
-  movementDelay: 0.45
+  movementDelay: 1
 --- !u!50 &2078915073
 Rigidbody2D:
   serializedVersion: 4

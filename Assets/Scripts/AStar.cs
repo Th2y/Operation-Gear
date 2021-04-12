@@ -33,6 +33,7 @@ public class AStar {
         if (pathFound) {
             this.path = RebuildPath(this.originNode);
             this.path.Remove(this.originNode);
+            this.Path.Remove(targetNode);
         }
     }
 

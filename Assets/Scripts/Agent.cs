@@ -13,8 +13,9 @@ public class Agent : MonoBehaviour {
 
     [Header("Movimentação")]
     [SerializeField]
-    private float movementDelay;
+    public float movementDelay;
 
+    private IAgentObserver observer;
 
     private float movementElapsedTime;
 
@@ -40,6 +41,14 @@ public class Agent : MonoBehaviour {
 
     public void Stop() {
         this.searching = false;
+    }
+
+    public IAgentObserver Observer
+    {
+        set
+        {
+            this.observer = value;
+        }
     }
 
     public Transform Target {
@@ -84,7 +93,7 @@ public class Agent : MonoBehaviour {
         this.path = this.searchAlgorithm.Path;
     }
 
-    private void Update() {
+    private void LateUpdate() {
         if (!this.searching) {
             return;
         }
@@ -101,7 +110,11 @@ public class Agent : MonoBehaviour {
 
                 // Move para o próximo nó e remove o nó do caminho restante
                 this.transform.position = this.path[0].Position;
-                this.path.RemoveAt(0);                
+                this.path.RemoveAt(0); 
+                if(observer != null)
+                {
+                    observer.OnMoveComplete();
+                }
             }
         }        
     }
