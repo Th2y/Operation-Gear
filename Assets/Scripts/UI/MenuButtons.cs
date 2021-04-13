@@ -1,15 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 public class MenuButtons : MonoBehaviour
 {
     public bool debugMode = false;
     public float startTime = 1f;
     public float dramaTime = 1f;
+    public float fallSpeed = 1f;
+    public float fallAcceleration = 1f;
     public string SceneName;
     public bool isMainMenu = false;
+
+    public Color colorSelected = Color.white;
+    public Color colorUnselected = Color.white;
 
     public AudioSource audio;
     public GameObject startButton;
@@ -18,10 +25,18 @@ public class MenuButtons : MonoBehaviour
     public GameObject title;
     public GameObject settingsUI;
     public GameObject dramaSprite;
+
+    [Header("Fill da barra de Gráficos")]
+    public GameObject fillLow;
+    public GameObject fillMedium;
+    public GameObject fillHigh;
+    public Text textLow;
+    public Text textMedium;
+    public Text textHigh;
     private void Start()
     {
         // Dá lock do mouse na tela e começa a Coroutine da sprite de "drama"
-        if (debugMode)
+        if (!debugMode)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;
@@ -64,20 +79,39 @@ public class MenuButtons : MonoBehaviour
     {
         // Ativa as configurações de alta qualidade
         QualitySettings.SetQualityLevel(5, true);
+        fillLow.SetActive(true);
+        fillMedium.SetActive(true);
+        fillHigh.SetActive(true);
+        textLow.color = colorSelected;
+        textMedium.color = colorSelected;
+        textHigh.color = colorSelected;
     }
     public void mediumQuality()
     {
         // Ativa as configurações de média qualidade
         QualitySettings.SetQualityLevel(3, true);
+        fillLow.SetActive(true);
+        fillMedium.SetActive(true);
+        fillHigh.SetActive(false);
+        textLow.color = colorSelected;
+        textMedium.color = colorSelected;
+        textHigh.color = colorUnselected;
     }
     public void lowQuality()
     {
         // Ativa as configurações de baixa qualidade
         QualitySettings.SetQualityLevel(0, true);
+        fillLow.SetActive(true);
+        fillMedium.SetActive(false);
+        fillHigh.SetActive(false);
+        textLow.color = colorSelected;
+        textMedium.color = colorUnselected;
+        textHigh.color = colorUnselected;
     }
     IEnumerator dramaBegin()
     {
         // Desativa a sprite de "drama" após o tempo determinado
+        dramaSprite.SetActive(true);
         yield return new WaitForSeconds(dramaTime);
         dramaSprite.SetActive(false);
     }
