@@ -4,11 +4,30 @@ public class EscolherBotao : MonoBehaviour
 {
     [SerializeField]
     private MovimentacaoJogador jogador;
+    private float tempoClique = .4f;
+    private bool clicou = false;
+
+    private void Update()
+    {
+        if (clicou)
+        {
+            tempoClique -= Time.deltaTime;
+            if (tempoClique <= 0)
+            {
+                tempoClique = .4f;
+                clicou = false;
+            }
+        }
+    }
 
     public void Move(string direcao)
     {
-        DirecaoMovimento mover = (DirecaoMovimento)DirecaoMovimento.Parse(typeof(DirecaoMovimento), direcao);
-        BotaoMover(mover);
+        if(!clicou)
+        {
+            DirecaoMovimento mover = (DirecaoMovimento)DirecaoMovimento.Parse(typeof(DirecaoMovimento), direcao);
+            BotaoMover(mover);
+            clicou = true;
+        }
     }
 
     private void BotaoMover(DirecaoMovimento direcao)

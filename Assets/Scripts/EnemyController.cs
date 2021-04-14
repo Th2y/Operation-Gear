@@ -70,8 +70,7 @@ public class EnemyController : MonoBehaviour, IAgentObserver
                     if (distance <= 1)
                     {
                         Vector2 pushDirection = (player.transform.position - this.transform.position).normalized;
-                        Debug.Log(pushDirection);
-                        player.GetComponent<PlayerController>().Knockback(pushDirection);
+                        player.GetComponent<MovimentacaoJogador>().Knockback(pushDirection);
                         hasPushed = true;
                         GetComponent<Agent>().Stop();
                     }
@@ -169,6 +168,9 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     private void CheckPushDistance()
     {
         float distance = Vector2.Distance(this.transform.position, player.transform.position);
+        distance = Mathf.FloorToInt(distance);
+        Debug.Log(distance);
+
 
         if (distance == 4)
         {
