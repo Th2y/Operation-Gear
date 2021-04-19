@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Map : MonoBehaviour {
 
-    private static readonly Vector2 OriginPosition = new Vector2(0.5f, 0.5f);
+    public Vector2 OriginPosition = new Vector2(0.5f, 0.5f);
     private static readonly Vector2[] Directions = new Vector2[] { 
         Vector2.up, 
         Vector2.right, 
@@ -44,6 +44,8 @@ public class Map : MonoBehaviour {
                 Gizmos.DrawSphere(node.Position, 0.1f);
             }
         }
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(OriginPosition, 0.5f);
     }
 #endif
 

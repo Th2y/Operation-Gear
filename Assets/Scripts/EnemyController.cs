@@ -2,18 +2,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class EnemyController : MonoBehaviour, IAgentObserver
 {
     public Animator animator;
     private Rigidbody2D rb;
 
-    private float time;
-    public float timer;
+    private float attackTime;
+    public float attackTimer;
+    private float pushTime;
+    public float pushCooldown;
+    public float pushForce;
+    [Range(0,100)]
+    public float pushRate;
 
+    [SerializeField]
     private bool isDead;
+    [SerializeField]
     private bool isAttacking;
+    [SerializeField]
+    private bool isFollowing;
+    [SerializeField]
+    private bool hasPushed;
+    [SerializeField]
+    private bool isTackingDamage;
 
-    public Transform player;
+    public GameObject player;
+    public GameObject agent;
 
     public int maxHealth = 100;
     int currentHealth;
@@ -23,36 +37,82 @@ public class EnemyController : MonoBehaviour
     {
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
+        isFollowing = false;
+        hasPushed = false;
+        isTackingDamage = false;
+        GetComponent<Agent>().Observer = this;
+        CheckPushDistance();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        float distance = Vector2.Distance(this.transform.position, player.transform.position);
+
         if (!isDead)
-        {
-            time += Time.deltaTime;
+        {           
 
-            if (time > timer)
+            if (isFollowing)
             {
-                time = 0;
-
-                float distance = Vector2.Distance(this.transform.position, player.position);
-
+                if (hasPushed)
+                {
+                    pushTime += Time.deltaTime;
+                    if (pushTime >= pushCooldown)
+                    {
+                        pushTime = 0;
+                        hasPushed = false;
+                        isFollowing = false;
+                    }
+                }
+                else
+                {
+                    agent.GetComponent<Agent>().movementDelay = (distance - 1) * pushForce;
+                    if (distance <= 1)
+                    {
+                        Vector2 pushDirection = (player.transform.position - this.transform.position).normalized;
+                        player.GetComponent<MovimentacaoJogador>().Knockback(pushDirection);
+                        hasPushed = true;
+                        GetComponent<Agent>().Stop();
+                    }
+                }
+            }
+            else
+            {
                 if (distance <= 1)
                 {
-                    GetComponent<Agent>().Stop();
-                    if (!isAttacking)
+                    if (!isAttacking && !isTackingDamage)
                     {
-                        animator.SetTrigger("Attack");
-                        isAttacking = true;
-                    }
+                        attackTime += Time.deltaTime;
+
+                        if (attackTime > attackTimer)
+                        {
+                            attackTime = 0;
+
+                            GetComponent<Agent>().Stop();
+                            NormalAttack();
+
+                        }
+                    }                   
                 }
                 else
                 {
                     GetComponent<Agent>().Resume();
                 }
+
+                agent.GetComponent<Agent>().movementDelay = 1f;
+          
             }
+        }
+
+    }
+
+    private void NormalAttack()
+    {       
+        if (!isAttacking)
+        {
+            Debug.Log("Usou o ataque normal");
+            animator.SetTrigger("Attack");
+            isAttacking = true;
         }
     }
 
@@ -62,8 +122,20 @@ public class EnemyController : MonoBehaviour
         Debug.Log("Ataque completo");
     }
 
+    public void OnAttackCancel()
+    {
+        isAttacking = false;
+    }
+
+    public void OnTackingDamageComplete()
+    {
+        isTackingDamage = false;
+    }
+
     public void TakeDamage(int damage)
     {
+        isTackingDamage = true;
+        OnAttackCancel();
         currentHealth -= damage;
         animator.SetTrigger("Hurt");
 
@@ -93,4 +165,31 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    private void CheckPushDistance()
+    {
+        float distance = Vector2.Distance(this.transform.position, player.transform.position);
+        distance = Mathf.FloorToInt(distance);
+        Debug.Log(distance);
+
+
+        if (distance == 4)
+        {
+            float randomChance = Random.Range(0f, 100f);
+            if (randomChance <= pushRate)
+            {
+                isFollowing = true;
+
+            }
+            else
+            {
+                isFollowing = false;
+            }
+
+        }
+    }
+
+    public void OnMoveComplete()
+    {
+        CheckPushDistance();
+    }
 }

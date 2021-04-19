@@ -20,7 +20,7 @@ TagManager:
   - Object
   - Obstacle
   - PlayerLados
-  - 
+  - Portas
   - CameraLimites
   - Player
   - Coletavel
