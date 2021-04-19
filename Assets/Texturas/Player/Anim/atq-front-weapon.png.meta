@@ -1,13 +1,19 @@
 fileFormatVersion: 2
-guid: b238ab54ed8261c4e94ed6ea7bf56aa3
+guid: db90f1003609d954da748746b728a446
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3727993747073374944
-    second: Char1_0
+      213: 2578684190416191520
+    second: atq-front-weapon_0
   - first:
-      213: 6458361834637038092
-    second: Char1_0
+      213: -1720577141409318991
+    second: atq-front-weapon_1
+  - first:
+      213: 1709589073887618999
+    second: atq-front-weapon_2
+  - first:
+      213: 3025820051191610777
+    second: atq-front-weapon_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -52,11 +58,11 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
-  spriteBorder: {x: 20, y: 8, z: 20, w: 14}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -90,27 +96,15 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: Windows Store Apps
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: 47
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 1
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -129,46 +123,91 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Char1_0
+      name: atq-front-weapon_0
       rect:
         serializedVersion: 2
-        x: 21
-        y: 9
-        width: 21
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 28
+        y: 146
+        width: 74
+        height: 96
+      alignment: 9
+      pivot: {x: 0.43243244, y: 0.6041667}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c021b78eed5b0a950800000000000000
-      internalID: 6458361834637038092
+      spriteID: 0204ca5db9359c320800000000000000
+      internalID: 2578684190416191520
       vertices: []
       indices: 
       edges: []
       weights: []
-    outline:
-    - - {x: 8, y: 19}
-      - {x: -11, y: 19}
-      - {x: -13, y: 10}
-      - {x: -13, y: -22}
-      - {x: -12, y: -25}
-      - {x: 11, y: -25}
-      - {x: 12, y: -15}
-      - {x: 12, y: 15}
-      - {x: 11, y: 18}
-    physicsShape:
-    - - {x: 8, y: 19}
-      - {x: -11, y: 19}
-      - {x: -13, y: 10}
-      - {x: -13, y: -22}
-      - {x: -12, y: -25}
-      - {x: 11, y: -25}
-      - {x: 12, y: -15}
-      - {x: 12, y: 15}
-      - {x: 11, y: 18}
+    - serializedVersion: 2
+      name: atq-front-weapon_1
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 146
+        width: 74
+        height: 96
+      alignment: 9
+      pivot: {x: 0.43243244, y: 0.6041667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7f3a5b4384f18e0800000000000000
+      internalID: -1720577141409318991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atq-front-weapon_2
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 18
+        width: 74
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5675676, y: 0.6041667}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7e5f4743ea9b710800000000000000
+      internalID: 1709589073887618999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: atq-front-weapon_3
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 8
+        width: 74
+        height: 96
+      alignment: 9
+      pivot: {x: 0.6216216, y: 0.7083333}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99db7891e4fddf920800000000000000
+      internalID: 3025820051191610777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
