@@ -14,6 +14,18 @@ TextureImporter:
   - first:
       213: -1803469809998505399
     second: Char1-side-walk2_3
+  - first:
+      213: 4059252163239490359
+    second: Char1-side-walk2_0
+  - first:
+      213: 8900560708690577188
+    second: Char1-side-walk2_1
+  - first:
+      213: -885499245955273405
+    second: Char1-side-walk2_2
+  - first:
+      213: 8315243445712777573
+    second: Char1-side-walk2_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -57,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,6 +131,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -126,19 +150,19 @@ TextureImporter:
       name: Char1-side-walk2_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 154
-        width: 40
-        height: 78
-      alignment: 9
-      pivot: {x: 0.35, y: 0.74358976}
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2c4ff7a93605c3c0800000000000000
-      internalID: -4340055821200176083
+      spriteID: 73330abe55c555830800000000000000
+      internalID: 4059252163239490359
       vertices: []
       indices: 
       edges: []
@@ -147,19 +171,19 @@ TextureImporter:
       name: Char1-side-walk2_1
       rect:
         serializedVersion: 2
-        x: 170
-        y: 152
-        width: 44
-        height: 80
-      alignment: 9
-      pivot: {x: 0.3409091, y: 0.725}
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc902033c82745e60800000000000000
-      internalID: 7950105188692527567
+      spriteID: 4270d4faec4258b70800000000000000
+      internalID: 8900560708690577188
       vertices: []
       indices: 
       edges: []
@@ -168,19 +192,19 @@ TextureImporter:
       name: Char1-side-walk2_2
       rect:
         serializedVersion: 2
-        x: 44
-        y: 26
-        width: 40
-        height: 78
-      alignment: 9
-      pivot: {x: 0.35, y: 0.74358976}
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75717cbc2acfa57c0800000000000000
-      internalID: -4081672336124209321
+      spriteID: 34da5fb902316b3f0800000000000000
+      internalID: -885499245955273405
       vertices: []
       indices: 
       edges: []
@@ -189,19 +213,19 @@ TextureImporter:
       name: Char1-side-walk2_3
       rect:
         serializedVersion: 2
-        x: 170
-        y: 24
-        width: 50
-        height: 80
-      alignment: 9
-      pivot: {x: 0.3, y: 0.725}
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94ad5e353c9c8f6e0800000000000000
-      internalID: -1803469809998505399
+      spriteID: 561fa9a9bdda56370800000000000000
+      internalID: 8315243445712777573
       vertices: []
       indices: 
       edges: []

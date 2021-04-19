@@ -1,81 +1,68 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEditor;
 
 public class MenuButtons : MonoBehaviour
 {
-    public bool debugMode = false;
-    public float startTime = 1f;
-    public float dramaTime = 1f;
-    public float fallSpeed = 1f;
-    public float fallAcceleration = 1f;
-    public string SceneName;
-    public bool isMainMenu = false;
+    private bool debugMode = false;
+    private float startTime = 1f;
+    private float dramaTime = 1f;
+    private float fallSpeed = 1f;
+    private float fallAcceleration = 1f;
+    private string SceneName;
+    private bool isMainMenu = false;
 
-    public Color colorSelected = Color.white;
-    public Color colorUnselected = Color.white;
+    [SerializeField]
+    private Color colorSelected = Color.white;
+    [SerializeField]
+    private Color colorUnselected = Color.white;
 
-    public AudioSource audio;
-    public GameObject startButton;
-    public GameObject settingsButton;
-    public GameObject exitButton;
-    public GameObject title;
-    public GameObject settingsUI;
-    public GameObject dramaSprite;
+    [SerializeField]
+    private AudioSource audios;
+    [SerializeField]
+    private GameObject dramaSprite;
 
     [Header("Fill da barra de Gráficos")]
-    public GameObject fillLow;
-    public GameObject fillMedium;
-    public GameObject fillHigh;
-    public Text textLow;
-    public Text textMedium;
-    public Text textHigh;
+    [SerializeField]
+    private GameObject fillLow;
+    [SerializeField]
+    private GameObject fillMedium;
+    [SerializeField]
+    private GameObject fillHigh;
+    [SerializeField]
+    private Text textLow;
+    [SerializeField]
+    private Text textMedium;
+    [SerializeField]
+    private Text textHigh;
+
     private void Start()
     {
         // Dá lock do mouse na tela e começa a Coroutine da sprite de "drama"
-        if (!debugMode)
+        // Reativar caso fizermos para pc também
+        /*if (!debugMode)
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;
-        }
+        }*/
         if (isMainMenu)
         {
-            StartCoroutine(dramaBegin());
+            StartCoroutine(DramaBegin());
         }
     }
-    public void play()
+    public void Play()
     {
         // Toca um áudio e pula para a Scene especificada no editor ao fim da Coroutine
-        audio.Play();
-        StartCoroutine(startCoroutine());
+        audios.Play();
+        StartCoroutine(CarregarFases());
     }
-    public void settings()
-    {
-        // Desabilita a UI do menu principal e habilita a UI do menu de configurações
-        startButton.SetActive(false);
-        settingsButton.SetActive(false);
-        exitButton.SetActive(false);
-        title.SetActive(false);
-        settingsUI.SetActive(true);
-    }
-    public void settingsExit()
-    {
-        // Desabilita a UI do menu de configurações e habilita a UI do menu principal
-        startButton.SetActive(true);
-        settingsButton.SetActive(true);
-        exitButton.SetActive(true);
-        title.SetActive(true);
-        settingsUI.SetActive(false);
-    }
-    public void exit()
+    public void Exit()
     {
         // Fecha o jogo
         Application.Quit();
     }
-    public void highQuality()
+    public void HighQuality()
     {
         // Ativa as configurações de alta qualidade
         QualitySettings.SetQualityLevel(5, true);
@@ -86,7 +73,7 @@ public class MenuButtons : MonoBehaviour
         textMedium.color = colorSelected;
         textHigh.color = colorSelected;
     }
-    public void mediumQuality()
+    public void MediumQuality()
     {
         // Ativa as configurações de média qualidade
         QualitySettings.SetQualityLevel(3, true);
@@ -97,7 +84,7 @@ public class MenuButtons : MonoBehaviour
         textMedium.color = colorSelected;
         textHigh.color = colorUnselected;
     }
-    public void lowQuality()
+    public void LowQuality()
     {
         // Ativa as configurações de baixa qualidade
         QualitySettings.SetQualityLevel(0, true);
@@ -108,17 +95,17 @@ public class MenuButtons : MonoBehaviour
         textMedium.color = colorUnselected;
         textHigh.color = colorUnselected;
     }
-    IEnumerator dramaBegin()
+    IEnumerator DramaBegin()
     {
         // Desativa a sprite de "drama" após o tempo determinado
         dramaSprite.SetActive(true);
         yield return new WaitForSeconds(dramaTime);
         dramaSprite.SetActive(false);
     }
-    IEnumerator startCoroutine()
+    IEnumerator CarregarFases()
     {
         // Muda para a Scene determinada após o tempo determinado
         yield return new WaitForSeconds(startTime);
-        SceneManager.LoadScene(this.SceneName);
+        SceneManager.LoadScene("Piso1");
     }
 }
