@@ -11904,6 +11904,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5718769790082970067, guid: 56d0884f5f256b24fa98c63dbaa96891,
+        type: 3}
+      propertyPath: m_TagString
+      value: Object
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718769790082970067, guid: 56d0884f5f256b24fa98c63dbaa96891,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 5718769790082970070, guid: 56d0884f5f256b24fa98c63dbaa96891,
         type: 3}
       propertyPath: m_Tiles.Array.size
