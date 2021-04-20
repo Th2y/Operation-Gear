@@ -14,6 +14,18 @@ TextureImporter:
   - first:
       213: 6338150671752245512
     second: atq-esq-arm_3
+  - first:
+      213: 3123285475432834310
+    second: atq-esq-arm_0
+  - first:
+      213: 1253944955193571882
+    second: atq-esq-arm_1
+  - first:
+      213: 5459863178637600883
+    second: atq-esq-arm_2
+  - first:
+      213: -8470272974434823845
+    second: atq-esq-arm_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -57,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -119,6 +131,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -126,19 +150,19 @@ TextureImporter:
       name: atq-esq-arm_0
       rect:
         serializedVersion: 2
-        x: 25
-        y: 154
-        width: 80
-        height: 78
-      alignment: 9
-      pivot: {x: 0.4625, y: 0.74358976}
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e18d36b4b61acaff0800000000000000
-      internalID: -23466415845287906
+      spriteID: 605af4f8793285b20800000000000000
+      internalID: 3123285475432834310
       vertices: []
       indices: 
       edges: []
@@ -147,19 +171,19 @@ TextureImporter:
       name: atq-esq-arm_1
       rect:
         serializedVersion: 2
-        x: 147
-        y: 154
-        width: 86
-        height: 78
-      alignment: 9
-      pivot: {x: 0.47674417, y: 0.6666667}
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4e874d61d560bf10800000000000000
-      internalID: 2283436961232817742
+      spriteID: a2ab4360b48e66110800000000000000
+      internalID: 1253944955193571882
       vertices: []
       indices: 
       edges: []
@@ -168,19 +192,19 @@ TextureImporter:
       name: atq-esq-arm_2
       rect:
         serializedVersion: 2
-        x: 22
-        y: 26
-        width: 80
-        height: 78
-      alignment: 9
-      pivot: {x: 0.5125, y: 0.6666667}
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26de633da6ec9b9d0800000000000000
-      internalID: -2757946338582270622
+      spriteID: 378ede422a455cb40800000000000000
+      internalID: 5459863178637600883
       vertices: []
       indices: 
       edges: []
@@ -189,19 +213,19 @@ TextureImporter:
       name: atq-esq-arm_3
       rect:
         serializedVersion: 2
-        x: 134
-        y: 26
-        width: 80
-        height: 78
-      alignment: 9
-      pivot: {x: 0.65, y: 0.6666667}
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80132ba7472a5f750800000000000000
-      internalID: 6338150671752245512
+      spriteID: b5198307b9b837a80800000000000000
+      internalID: -8470272974434823845
       vertices: []
       indices: 
       edges: []

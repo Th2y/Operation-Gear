@@ -25,7 +25,6 @@ public class AttackController : MonoBehaviour
     }
     public void ButtonAttack()
     {
-        Debug.Log("Oi");
         // confere se o player está atacando e se o tempo de atacar chegou
         if (T_A <= 0)
         {
@@ -48,7 +47,7 @@ public class AttackController : MonoBehaviour
             if (hit.gameObject.CompareTag("Object"))
             {
                 Debug.Log("atacou");
-                hit.GetComponent<ObjectController>().Takedamage(damage);
+                hit.GetComponent<EnemyController>().TakeDamage(damage);
             }
 
             

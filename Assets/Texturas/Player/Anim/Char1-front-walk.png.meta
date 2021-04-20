@@ -69,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -131,6 +131,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -138,12 +150,12 @@ TextureImporter:
       name: Char1-front-walk_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 152
-        width: 38
-        height: 80
-      alignment: 9
-      pivot: {x: 0.39473686, y: 0.725}
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -159,12 +171,12 @@ TextureImporter:
       name: Char1-front-walk_1
       rect:
         serializedVersion: 2
-        x: 172
-        y: 154
-        width: 38
-        height: 78
-      alignment: 9
-      pivot: {x: 0.39473686, y: 0.74358976}
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,12 +192,12 @@ TextureImporter:
       name: Char1-front-walk_2
       rect:
         serializedVersion: 2
-        x: 44
-        y: 24
-        width: 38
-        height: 80
-      alignment: 9
-      pivot: {x: 0.39473686, y: 0.725}
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,12 +213,12 @@ TextureImporter:
       name: Char1-front-walk_3
       rect:
         serializedVersion: 2
-        x: 172
-        y: 26
-        width: 38
-        height: 78
-      alignment: 9
-      pivot: {x: 0.39473686, y: 0.74358976}
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

@@ -50,10 +50,10 @@ public class EnemyController : MonoBehaviour, IAgentObserver
         float distance = Vector2.Distance(this.transform.position, player.transform.position);
 
         if (!isDead)
-        {           
-
+        {
             if (isFollowing)
             {
+                animator.SetBool("isWalking", true);
                 if (hasPushed)
                 {
                     pushTime += Time.deltaTime;
@@ -78,6 +78,7 @@ public class EnemyController : MonoBehaviour, IAgentObserver
             }
             else
             {
+                animator.SetBool("isWalking", false);
                 if (distance <= 1)
                 {
                     if (!isAttacking && !isTackingDamage)
