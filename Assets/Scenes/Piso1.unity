@@ -1654,6 +1654,11 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 639419467}
+    - target: {fileID: 674252069980412134, guid: f3867618f8da17d47b30f65271a48ffe,
+        type: 3}
+      propertyPath: D_I
+      value: 
+      objectReference: {fileID: 1281370937}
     - target: {fileID: 3768666784501941318, guid: f3867618f8da17d47b30f65271a48ffe,
         type: 3}
       propertyPath: m_TagString
@@ -9523,6 +9528,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1251773159}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1281370937 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2015113853, guid: 084b8c42e85a183469dfbe6ecb23e893,
+    type: 3}
+  m_PrefabInstance: {fileID: 5529757057317254907}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1300088499 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5529757057344532423, guid: 084b8c42e85a183469dfbe6ecb23e893,
@@ -10703,6 +10714,43 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2015113853, guid: 084b8c42e85a183469dfbe6ecb23e893, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015113854, guid: 084b8c42e85a183469dfbe6ecb23e893, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015113854, guid: 084b8c42e85a183469dfbe6ecb23e893, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015113854, guid: 084b8c42e85a183469dfbe6ecb23e893, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015113854, guid: 084b8c42e85a183469dfbe6ecb23e893, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015113854, guid: 084b8c42e85a183469dfbe6ecb23e893, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015113854, guid: 084b8c42e85a183469dfbe6ecb23e893, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015113856, guid: 084b8c42e85a183469dfbe6ecb23e893, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2015113856, guid: 084b8c42e85a183469dfbe6ecb23e893, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 515d6070278562b4ab830915f7322e97,
+        type: 3}
     - target: {fileID: 542095506122067462, guid: 084b8c42e85a183469dfbe6ecb23e893,
         type: 3}
       propertyPath: m_Color.r
