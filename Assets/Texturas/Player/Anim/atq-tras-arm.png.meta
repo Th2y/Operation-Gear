@@ -38,6 +38,30 @@ TextureImporter:
   - first:
       213: 6028436030929916476
     second: atq-tras-arm_7
+  - first:
+      213: 684174362778028430
+    second: atq-tras-arm_8
+  - first:
+      213: -7392966155833373516
+    second: atq-tras-arm_9
+  - first:
+      213: -9063096756522107414
+    second: atq-tras-arm_10
+  - first:
+      213: 4801475450084075842
+    second: atq-tras-arm_11
+  - first:
+      213: 385078686869316881
+    second: atq-tras-arm_12
+  - first:
+      213: 6203218333026826472
+    second: atq-tras-arm_13
+  - first:
+      213: 4392161507427430766
+    second: atq-tras-arm_14
+  - first:
+      213: 514731945620485605
+    second: atq-tras-arm_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:

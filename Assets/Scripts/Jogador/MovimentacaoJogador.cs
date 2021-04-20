@@ -29,7 +29,6 @@ public class MovimentacaoJogador : MonoBehaviour
             if (distance < 1)
             {
                 isPushing = false;
-                Debug.Log("Desativou o Push");
             }
             else
             {
@@ -109,11 +108,8 @@ public class MovimentacaoJogador : MonoBehaviour
             distance = distanceKnockback;
         }
 
-        Debug.Log(distance);
-
         pushTargetPosition = (Vector2)this.transform.position + (direction * distance);
 
         this.pushDirection = direction;
-
     }
 }
