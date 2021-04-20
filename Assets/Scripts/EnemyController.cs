@@ -31,6 +31,7 @@ public class EnemyController : MonoBehaviour, IAgentObserver
 
     public int maxHealth = 100;
     int currentHealth;
+    public int damage = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -120,6 +121,10 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     public void OnAttackComplete()
     {
         isAttacking = false;
+       
+        GameObject _player = GameObject.FindGameObjectWithTag("Player");
+        _player.GetComponent<TakeDamage>().DamageInPlayer(damage);
+
         Debug.Log("Ataque completo");
     }
 
