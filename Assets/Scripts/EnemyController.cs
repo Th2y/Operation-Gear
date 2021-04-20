@@ -170,8 +170,6 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     {
         float distance = Vector2.Distance(this.transform.position, player.transform.position);
         distance = Mathf.FloorToInt(distance);
-        Debug.Log(distance);
-
 
         if (distance == 4)
         {
@@ -185,7 +183,6 @@ public class EnemyController : MonoBehaviour, IAgentObserver
             {
                 isFollowing = false;
             }
-
         }
     }
 

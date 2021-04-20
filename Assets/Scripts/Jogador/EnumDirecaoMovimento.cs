@@ -1,7 +1,7 @@
 ﻿public enum DirecaoMovimento
 {
-    Cima,
-    Baixo,
-    Direita,
-    Esquerda
+    Up,
+    Down,
+    Right,
+    Left
 }

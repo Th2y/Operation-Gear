@@ -4,6 +4,8 @@ public class EscolherBotao : MonoBehaviour
 {
     [SerializeField]
     private MovimentacaoJogador jogador;
+    [SerializeField]
+    private AnimController animController;
     private float tempoClique = .4f;
     private bool clicou = false;
 
@@ -25,6 +27,7 @@ public class EscolherBotao : MonoBehaviour
         if(!clicou)
         {
             DirecaoMovimento mover = (DirecaoMovimento)DirecaoMovimento.Parse(typeof(DirecaoMovimento), direcao);
+            animController.MoveToDirection(direcao);
             BotaoMover(mover);
             clicou = true;
         }
