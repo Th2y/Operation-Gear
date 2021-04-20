@@ -1,20 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
+﻿using UnityEngine;
 
 public class AnimController : MonoBehaviour
 {
+    [SerializeField]
     private Animator anim;
-
-    public string saveDir;
-    // Start is called before the first frame update
-    void Start() 
-    {
-        saveDir = "Down";
-        anim = GetComponent<Animator>();
-
-    }
+    private string saveDir = "Down";
 
     public void IsAttaking()
     {
@@ -24,19 +14,15 @@ public class AnimController : MonoBehaviour
     {
         anim.SetBool("IsAttaking", false);
     }
-    public void IsMoving()
-    {
-        anim.SetBool("IsMoving", true);
-    }
     public void IsNotMoving()
     {
         anim.SetBool("IsMoving", false);
     }
     public void MoveToDirection(string direcao)
     {
-
         if (saveDir != null)
         {
+            anim.SetBool("IsMoving", true);
             if (saveDir == direcao)
             {
                 anim.SetBool(saveDir, true);
@@ -49,7 +35,5 @@ public class AnimController : MonoBehaviour
             }
             Invoke("IsNotMoving",1f);
         }
-
-
     }
 }
