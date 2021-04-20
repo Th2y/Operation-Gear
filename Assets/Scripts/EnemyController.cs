@@ -37,7 +37,6 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     void Start()
     {
         currentHealth = maxHealth;
-        Debug.Log(currentHealth);
         rb = GetComponent<Rigidbody2D>();
         isFollowing = false;
         hasPushed = false;
