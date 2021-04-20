@@ -7,18 +7,23 @@ public class AnimController : MonoBehaviour
 {
     private Animator anim;
 
-    public string saveDir;
+    private string saveDir;
     // Start is called before the first frame update
     void Start() 
     {
-        saveDir = "Down";
         anim = GetComponent<Animator>();
+
+        saveDir = "Up";
+        anim.SetBool(saveDir, true);
+
+       
 
     }
 
     public void IsAttaking()
     {
         anim.SetBool("IsAttaking", true);
+        
     }
     public void IsNotAttaking()
     {
@@ -51,5 +56,9 @@ public class AnimController : MonoBehaviour
         }
 
 
+    }
+    public void TakeDamageAnim()
+    {
+        anim.SetBool("TakeDamage",true);
     }
 }

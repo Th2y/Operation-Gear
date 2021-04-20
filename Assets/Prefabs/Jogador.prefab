@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 3768666785882165613}
   - component: {fileID: 1678197199}
   - component: {fileID: 1678197200}
+  - component: {fileID: 674252069980412134}
   m_Layer: 13
   m_Name: Jogador
   m_TagString: Player
@@ -191,6 +192,12 @@ MonoBehaviour:
   cameraLimites:
     serializedVersion: 2
     m_Bits: 26423
+  timer: 0
+  distanceKnockback: 0
+  enemy: {fileID: 0}
+  collisionLayers:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &3768666785882165612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,5 +377,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e9f3bf599843854194562fdd847bcce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dir: {fileID: -5502791058712020613, guid: f6eed85fe7488d64eb3892df1f6a2706, type: 3}
-  saveDir: 
+--- !u!114 &674252069980412134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3768666785882165603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30b2972616ddb6343b742f160159ce38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
