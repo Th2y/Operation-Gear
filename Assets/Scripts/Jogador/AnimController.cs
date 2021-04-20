@@ -8,7 +8,7 @@ public class AnimController : MonoBehaviour
 
     public void IsAttaking()
     {
-        anim.SetBool("IsAttaking", true);
+        anim.SetBool("IsAttaking", true);        
     }
     public void IsNotAttaking()
     {
@@ -35,5 +35,9 @@ public class AnimController : MonoBehaviour
             }
             Invoke("IsNotMoving",1f);
         }
+    }
+    public void TakeDamageAnim()
+    {
+        anim.SetBool("TakeDamage",true);
     }
 }

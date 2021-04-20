@@ -26,8 +26,7 @@ public class AttackController : MonoBehaviour
         {
             PlayerAttack();
             T_A = TimeAttack;
-        }
-       
+        }       
     }
 
     private void PlayerAttack()
