@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Parede - Dobra para Cima (Direita)
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: 88941e9d2b6008c4997e90cad4f74685, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 948b122f4b73f0243bc315c8a6553373, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
@@ -33,4 +33,4 @@ MonoBehaviour:
     e33: 1
   m_InstancedGameObject: {fileID: 0}
   m_Flags: 1
-  m_ColliderType: 2
+  m_ColliderType: 1

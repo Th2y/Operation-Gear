@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class StatsController : MonoBehaviour
@@ -55,8 +53,7 @@ public class StatsController : MonoBehaviour
         UI_Image(UI_life, life, maxlife);        //atualiza a barra de vida
 
         TimingEnergy();
-        EnergyController();
-        
+        EnergyController();        
     }
 
     // verifica se esta vivo ou não
@@ -94,8 +91,6 @@ public class StatsController : MonoBehaviour
             {
                 energy = 0;
             }
-            
-
         }
     }
 

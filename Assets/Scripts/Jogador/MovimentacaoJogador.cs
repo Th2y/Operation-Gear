@@ -52,19 +52,19 @@ public class MovimentacaoJogador : MonoBehaviour
         {
             switch (direcao)
             {
-                case DirecaoMovimento.Baixo:
+                case DirecaoMovimento.Down:
                     direcaoV = Vector2.down;
                     Movimento();
                     break;
-                case DirecaoMovimento.Cima:
+                case DirecaoMovimento.Up:
                     direcaoV = Vector2.up;
                     Movimento();
                     break;
-                case DirecaoMovimento.Direita:
+                case DirecaoMovimento.Right:
                     direcaoV = Vector2.right;
                     Movimento();
                     break;
-                case DirecaoMovimento.Esquerda:
+                case DirecaoMovimento.Left:
                     direcaoV = Vector2.left;
                     Movimento();
                     break;
