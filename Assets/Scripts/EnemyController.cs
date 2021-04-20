@@ -29,14 +29,15 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     public GameObject player;
     public GameObject agent;
 
-    public int maxHealth = 100;
-    int currentHealth;
     public int damage = 10;
+    private int maxHealth = 100;
+    private int currentHealth;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        Debug.Log(currentHealth);
         rb = GetComponent<Rigidbody2D>();
         isFollowing = false;
         hasPushed = false;
@@ -112,7 +113,6 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     {       
         if (!isAttacking)
         {
-            Debug.Log("Usou o ataque normal");
             animator.SetTrigger("Attack");
             isAttacking = true;
         }
@@ -124,8 +124,6 @@ public class EnemyController : MonoBehaviour, IAgentObserver
        
         GameObject _player = GameObject.FindGameObjectWithTag("Player");
         _player.GetComponent<TakeDamage>().DamageInPlayer(damage);
-
-        Debug.Log("Ataque completo");
     }
 
     public void OnAttackCancel()
@@ -166,7 +164,6 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     {
         if (collision.gameObject.CompareTag("PlayerAttack"))
         {
-            Debug.Log("Entrou na área de ataque");
             TakeDamage(20);
         }
     }
@@ -182,7 +179,6 @@ public class EnemyController : MonoBehaviour, IAgentObserver
             if (randomChance <= pushRate)
             {
                 isFollowing = true;
-
             }
             else
             {
