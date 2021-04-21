@@ -5,15 +5,20 @@ public class AttackController : MonoBehaviour
     [Header("     Attack")]
     [SerializeField]
     private AnimController animController;
-    public Transform Attackpoint;  // local do dano
-    public int damage;             // dano total
-    public float radius;           // raio do dano
-    public LayerMask layerDamage;  // layers que poderâo sofrer dano
+    [SerializeField]
+    private Transform Attackpoint;  // local do dano
+    [SerializeField]
+    private int damage;             // dano total
+    [SerializeField]
+    private float radius;           // raio do dano
+    [SerializeField]
+    private LayerMask layerDamage;  // layers que poderâo sofrer dano
     public static bool IsAttaking; // (verifica)player atacando
 
     [Header("      Time Attack")]
-    public float TimeAttack;       // tempo total pro player atacar
-    public float T_A;              // tempo pro player atacar
+    [SerializeField]
+    private float TimeAttack;       // tempo total pro player atacar
+    private float T_A;              // tempo pro player atacar
 
     private void Update()
     {

@@ -2259,7 +2259,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7771987, y: 1}
+    m_SensorSize: {x: 1.7785016, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -9520,7 +9520,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227053388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.7242327, y: -4.4, z: -10}
+  m_LocalPosition: {x: -5.728282, y: -4.4, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 502779972}
@@ -10472,6 +10472,16 @@ PrefabInstance:
       propertyPath: animController
       value: 
       objectReference: {fileID: 639419466}
+    - target: {fileID: 5529757056912813346, guid: 084b8c42e85a183469dfbe6ecb23e893,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 639419471}
+    - target: {fileID: 5529757056912813346, guid: 084b8c42e85a183469dfbe6ecb23e893,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ButtonAttack
+      objectReference: {fileID: 0}
     - target: {fileID: 5529757057344532421, guid: 084b8c42e85a183469dfbe6ecb23e893,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -11186,6 +11196,11 @@ PrefabInstance:
         type: 3}
       propertyPath: OriginPosition.y
       value: -1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1435980936377639139, guid: 56d0884f5f256b24fa98c63dbaa96891,
+        type: 3}
+      propertyPath: obstacleLayer.m_Bits
+      value: 2560
       objectReference: {fileID: 0}
     - target: {fileID: 3267163979465283015, guid: 56d0884f5f256b24fa98c63dbaa96891,
         type: 3}
