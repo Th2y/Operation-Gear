@@ -9,6 +9,7 @@ TagManager:
   - Coletavel
   - CameraLimites
   - Inimigo
+  - Portas
   layers:
   - Default
   - TransparentFX
@@ -26,7 +27,7 @@ TagManager:
   - Player
   - Coletavel
   - Inimigo
-  - 
+  - InimigoNaoPassa
   - 
   - 
   - 
