@@ -41,7 +41,6 @@ public class MovimentacaoJogador : MonoBehaviour
                     time = 0;
 
                     this.transform.position += (Vector3)pushDirection;
-
                 }
             }
         }
@@ -76,7 +75,7 @@ public class MovimentacaoJogador : MonoBehaviour
     void Movimento()
     {
         RaycastHit2D ray = Physics2D.Raycast(up.transform.position, up.transform.TransformDirection(direcaoV), distance, cameraLimites);
-        if (ray.collider == null)
+        if (ray.collider == null || ray.collider.isTrigger)
         {
             if (direcaoV == Vector2.down)
                 this.transform.position += Vector3.down;

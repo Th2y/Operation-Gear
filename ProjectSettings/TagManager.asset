@@ -47,3 +47,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: ObjetosIluminados
+    uniqueID: 958504581
+    locked: 0
+  - name: "Cen\xE1rio"
+    uniqueID: 2938737927
+    locked: 0
+  - name: Canvas
+    uniqueID: 3872626649
+    locked: 0

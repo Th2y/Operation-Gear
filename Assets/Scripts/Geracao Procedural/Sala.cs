@@ -1,0 +1,52 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Sala : MonoBehaviour
+{
+    public Porta[] portas;
+    public Transform posInicial;
+
+    public Porta RetornaPortaOposta(DirecaoMovimento direcao)
+    {
+        DirecaoMovimento direcaoOposta = direcao.Oposta();
+        for(int i = 0; i < portas.Length; i++)
+        {
+            if(portas[i].direcao == direcaoOposta)
+            {
+                return portas[i];
+            }
+        }
+
+        return null;
+    }
+    
+    public Porta escolherPorta()
+    {
+        Porta portaAtual = null;
+
+        do {
+            portaAtual = portas[Random.Range(0, portas.Length)];
+        }
+        while (portaAtual == null || portaAtual.estaConectada);
+
+        return portaAtual;
+    }
+
+    public void Conectar(Porta portaConectar)
+    {
+        this.transform.position = portaConectar.transform.position;
+        //Vector3 posInicialGlobal = posInicial.TransformPoint(Vector3.zero);
+        //Vector3 distancia = this.transform.position - posInicialGlobal;
+        //this.transform.position += distancia;
+
+        Porta portaConectada = RetornaPortaOposta(portaConectar.direcao);
+        Vector3 posConectadaGlobal = portaConectada.transform.TransformPoint(Vector3.zero);
+        Vector3 distanciaPortas = this.transform.position - posConectadaGlobal;
+
+        this.transform.position += distanciaPortas;
+
+        portaConectar.Conectar(this.gameObject.name);
+        portaConectada.Conectar(portaConectar.nomeDaSala);
+    }
+}

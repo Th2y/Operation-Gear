@@ -7,6 +7,6 @@ public class CinemachineChange : MonoBehaviour
 
     public void MudarCam(string cam)
     {
-        animator.Play("Camera"+ cam);
+        animator.Play(cam);
     }
 }
