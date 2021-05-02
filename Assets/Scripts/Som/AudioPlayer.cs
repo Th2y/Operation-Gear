@@ -8,6 +8,13 @@ public class AudioPlayer : MonoBehaviour
     public void playAudio()
     {
         // Toca um áudio determinado no editor
-        audio.Play();
+        if (!audio.isPlaying) {
+            audio.Play();
+        }
+        else
+        {
+            audio.Stop();
+            audio.Play();
+        }
     }
 }

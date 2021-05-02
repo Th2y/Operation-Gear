@@ -6,6 +6,9 @@ public class AnimController : MonoBehaviour
     private Animator anim;
     private string saveDir = "Down";
 
+    [SerializeField]
+    private AudioSource passosJogador;
+
     public void IsAttaking()
     {
         anim.SetBool("IsAttaking", true);        
@@ -23,6 +26,7 @@ public class AnimController : MonoBehaviour
         if (saveDir != null)
         {
             anim.SetBool("IsMoving", true);
+            passosJogador.Play();
             if (saveDir == direcao)
             {
                 anim.SetBool(saveDir, true);

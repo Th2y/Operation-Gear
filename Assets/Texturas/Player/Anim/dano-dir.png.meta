@@ -8,6 +8,12 @@ TextureImporter:
   - first:
       213: -6818990157622588439
     second: dano-dir_1
+  - first:
+      213: -1647051904440488822
+    second: dano-dir_0
+  - first:
+      213: 9093279695610599365
+    second: dano-dir_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -113,6 +119,18 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -120,19 +138,19 @@ TextureImporter:
       name: dano-dir_0
       rect:
         serializedVersion: 2
-        x: 44
-        y: 154
-        width: 40
-        height: 78
-      alignment: 9
-      pivot: {x: 0.4, y: 0.74358976}
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b32877db893fbb380800000000000000
-      internalID: -8954295596756794821
+      spriteID: a8ca135f40f7429e0800000000000000
+      internalID: -1647051904440488822
       vertices: []
       indices: 
       edges: []
@@ -141,19 +159,19 @@ TextureImporter:
       name: dano-dir_1
       rect:
         serializedVersion: 2
-        x: 38
-        y: 26
-        width: 50
-        height: 76
-      alignment: 9
-      pivot: {x: 0.44, y: 0.7631579}
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9eb450884941e51a0800000000000000
-      internalID: -6818990157622588439
+      spriteID: 5c7542474b1d13e70800000000000000
+      internalID: 9093279695610599365
       vertices: []
       indices: 
       edges: []

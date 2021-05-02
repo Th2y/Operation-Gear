@@ -23,6 +23,7 @@ public class StatsController : MonoBehaviour
     [Header("    Update-Stats")]
     public float life;                    // vida do jogador    
     public int energy;                    // energia que o player vai usar
+    [SerializeField] private ReloadScene reloadScene;
     
     [Header("    UI")]
     public Image UI_energy;               // Sprite da energia  
@@ -53,17 +54,14 @@ public class StatsController : MonoBehaviour
         UI_Image(UI_life, life, maxlife);        //atualiza a barra de vida
 
         TimingEnergy();
-        EnergyController();        
+        EnergyController();
+        Isalive();
     }
 
     // verifica se esta vivo ou não
-    public bool Isalive()
+    private void Isalive()
     {
-        if (life <= 0)
-        {
-            return true;
-        }
-        return false;
+        if (life <= 0) reloadScene.Reloadscene();
     }
     // sistema de energia
     private void EnergyController()

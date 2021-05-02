@@ -8,6 +8,8 @@ public class MovimentacaoJogador : MonoBehaviour
     private GameObject up;
     [SerializeField]
     private LayerMask cameraLimites;
+    [SerializeField]
+    private CinemachineChange cinemachineChange;
 
     private Vector2 direcaoV;
 
@@ -29,7 +31,6 @@ public class MovimentacaoJogador : MonoBehaviour
             if (distance < 1)
             {
                 isPushing = false;
-                Debug.Log("Desativou o Push");
             }
             else
             {
@@ -109,11 +110,14 @@ public class MovimentacaoJogador : MonoBehaviour
             distance = distanceKnockback;
         }
 
-        Debug.Log(distance);
-
         pushTargetPosition = (Vector2)this.transform.position + (direction * distance);
 
         this.pushDirection = direction;
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Portas"))
+            cinemachineChange.MudarCam(collision.gameObject.name);
     }
 }
