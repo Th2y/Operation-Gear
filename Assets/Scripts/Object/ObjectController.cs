@@ -4,12 +4,8 @@ public class ObjectController : MonoBehaviour
 {
     public int life; //vida
 
+    [SerializeField]
     protected Animator anim;
-    // Start is called before the first frame update
-    protected virtual void Start()
-    {
-        anim = GetComponent<Animator>();
-    }
 
     public virtual void Takedamage(int dmg)
     {

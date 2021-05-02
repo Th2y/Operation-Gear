@@ -47,7 +47,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 1.5
   m_LightVolumeOpacity: 0
   m_ApplyToSortingLayers: 859e2139
   m_LightCookieSprite: {fileID: 0}
@@ -84,6 +84,7 @@ GameObject:
   - component: {fileID: 4459352313549539436}
   - component: {fileID: 4459352313549539439}
   - component: {fileID: 4459352313549539434}
+  - component: {fileID: 5722842020750123361}
   m_Layer: 8
   m_Name: Caixa
   m_TagString: Object
@@ -98,7 +99,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4459352313549539438}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.5, y: -0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -143,7 +144,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 958504581
-  m_SortingLayer: 1
+  m_SortingLayer: 7
   m_SortingOrder: 3
   m_Sprite: {fileID: -860264664590275695, guid: c5d3113756af9e44d8fa8374d5758f85,
     type: 3}
@@ -170,12 +171,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 1
+  anim: {fileID: 5722842020750123361}
   imagebox:
-  - {fileID: -860264664590275695, guid: c5d3113756af9e44d8fa8374d5758f85, type: 3}
-  - {fileID: 6725727613379955586, guid: c5d3113756af9e44d8fa8374d5758f85, type: 3}
-  - {fileID: -6149412955217794276, guid: c5d3113756af9e44d8fa8374d5758f85, type: 3}
-  - {fileID: -5768267191352871723, guid: c5d3113756af9e44d8fa8374d5758f85, type: 3}
   - {fileID: 6160296599583732815, guid: c5d3113756af9e44d8fa8374d5758f85, type: 3}
+  - {fileID: -5768267191352871723, guid: c5d3113756af9e44d8fa8374d5758f85, type: 3}
+  - {fileID: -6149412955217794276, guid: c5d3113756af9e44d8fa8374d5758f85, type: 3}
+  - {fileID: 6725727613379955586, guid: c5d3113756af9e44d8fa8374d5758f85, type: 3}
+  - {fileID: -860264664590275695, guid: c5d3113756af9e44d8fa8374d5758f85, type: 3}
+  image: {fileID: 4459352313549539436}
 --- !u!61 &4459352313549539434
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -202,3 +205,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
+--- !u!95 &5722842020750123361
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459352313549539438}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f69dd7bb2aa4f554d9dcc3f2bdd8dc2f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
