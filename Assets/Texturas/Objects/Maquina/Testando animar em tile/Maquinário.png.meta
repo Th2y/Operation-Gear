@@ -1,0 +1,488 @@
+fileFormatVersion: 2
+guid: 4c7bfe31b56979944ade569b9d7dfcb9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1129646028150176215
+    second: "Maquin\xE1rio_0"
+  - first:
+      213: 7806000560938731370
+    second: "Maquin\xE1rio_1"
+  - first:
+      213: -4557894994658282112
+    second: "Maquin\xE1rio_2"
+  - first:
+      213: -6608872028290911126
+    second: "Maquin\xE1rio_3"
+  - first:
+      213: 2780356409905941676
+    second: "Maquin\xE1rio_4"
+  - first:
+      213: 1810366241352729470
+    second: "Maquin\xE1rio_5"
+  - first:
+      213: 2674593250377357395
+    second: "Maquin\xE1rio_6"
+  - first:
+      213: 5185122967773292212
+    second: "Maquin\xE1rio_7"
+  - first:
+      213: 3737716885811083323
+    second: "Maquin\xE1rio_8"
+  - first:
+      213: -1281116043925578823
+    second: "Maquin\xE1rio_9"
+  - first:
+      213: -8633918528029866356
+    second: "Maquin\xE1rio_10"
+  - first:
+      213: 3154353701453049932
+    second: "Maquin\xE1rio_11"
+  - first:
+      213: 3299834045543722999
+    second: "Maquin\xE1rio_12"
+  - first:
+      213: -5583712940756152107
+    second: "Maquin\xE1rio_13"
+  - first:
+      213: -6386661680904646618
+    second: "Maquin\xE1rio_14"
+  - first:
+      213: -3696306462366296496
+    second: "Maquin\xE1rio_15"
+  - first:
+      213: -2835544386148421143
+    second: "Maquin\xE1rio_16"
+  - first:
+      213: 5167509597163238042
+    second: "Maquin\xE1rio_17"
+  - first:
+      213: -8471049712829484396
+    second: "Maquin\xE1rio_18"
+  - first:
+      213: 6055264264925808364
+    second: "Maquin\xE1rio_19"
+  - first:
+      213: -4750673470056700087
+    second: "Maquin\xE1rio_20"
+  - first:
+      213: 6806520230978959771
+    second: "Maquin\xE1rio_21"
+  - first:
+      213: 1868636899070630895
+    second: "Maquin\xE1rio_22"
+  - first:
+      213: 4212377430232830013
+    second: "Maquin\xE1rio_23"
+  - first:
+      213: 5660928129938596781
+    second: "Maquin\xE1rio_24"
+  - first:
+      213: -6564658483555199548
+    second: "Maquin\xE1rio_25"
+  - first:
+      213: -3631519729666135170
+    second: "Maquin\xE1rio_26"
+  - first:
+      213: -4490852101292941553
+    second: "Maquin\xE1rio_27"
+  - first:
+      213: -409579607982020075
+    second: "Maquin\xE1rio_28"
+  - first:
+      213: 967284748675887811
+    second: "Maquin\xE1rio_29"
+  - first:
+      213: -3702892590713080856
+    second: "Maquin\xE1rio_30"
+  - first:
+      213: -4809686575271785906
+    second: "Maquin\xE1rio_31"
+  - first:
+      213: -6806713764408364391
+    second: "Maquin\xE1rio_32"
+  - first:
+      213: 1830890057104549669
+    second: "Maquin\xE1rio_33"
+  - first:
+      213: 6362306211574164327
+    second: "Maquin\xE1rio_34"
+  - first:
+      213: 4775484418690602293
+    second: "Maquin\xE1rio_35"
+  - first:
+      213: -3434488138131863086
+    second: "Maquin\xE1rio_36"
+  - first:
+      213: -30083540310133431
+    second: "Maquin\xE1rio_37"
+  - first:
+      213: 5071957792866689357
+    second: "Maquin\xE1rio_38"
+  - first:
+      213: -2183087473567525422
+    second: "Maquin\xE1rio_39"
+  - first:
+      213: 7498926484931495992
+    second: "Maquin\xE1rio_0"
+  - first:
+      213: 5237395142847416054
+    second: "Maquin\xE1rio_1"
+  - first:
+      213: -6776040842478911142
+    second: "Maquin\xE1rio_2"
+  - first:
+      213: -4006731547342170738
+    second: "Maquin\xE1rio_3"
+  - first:
+      213: 7496198208452147426
+    second: "Maquin\xE1rio_4"
+  - first:
+      213: 6319587095547742370
+    second: "Maquin\xE1rio_5"
+  - first:
+      213: 4359634347403050608
+    second: "Maquin\xE1rio_6"
+  - first:
+      213: -6842364448612089922
+    second: "Maquin\xE1rio_7"
+  - first:
+      213: -758654527738791196
+    second: "Maquin\xE1rio_8"
+  - first:
+      213: 5283568923851496020
+    second: "Maquin\xE1rio_9"
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "Maquin\xE1rio_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8384c1338e9811860800000000000000
+      internalID: 7498926484931495992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Maquin\xE1rio_1"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f6c6cd2227fea840800000000000000
+      internalID: 5237395142847416054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Maquin\xE1rio_2"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a51818831caa6f1a0800000000000000
+      internalID: -6776040842478911142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Maquin\xE1rio_3"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e859152e2ea3568c0800000000000000
+      internalID: -4006731547342170738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Maquin\xE1rio_4"
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e8b5b4dd88d70860800000000000000
+      internalID: 7496198208452147426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Maquin\xE1rio_5"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a804451bfea3b750800000000000000
+      internalID: 6319587095547742370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Maquin\xE1rio_6"
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07efc833758808c30800000000000000
+      internalID: 4359634347403050608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Maquin\xE1rio_7"
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebff6b059c90b01a0800000000000000
+      internalID: -6842364448612089922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Maquin\xE1rio_8"
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea33eef9b7b875f0800000000000000
+      internalID: -758654527738791196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "Maquin\xE1rio_9"
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45a167451f1035940800000000000000
+      internalID: 5283568923851496020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

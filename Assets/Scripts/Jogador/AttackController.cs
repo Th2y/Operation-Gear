@@ -39,18 +39,23 @@ public class AttackController : MonoBehaviour
         animController.IsAttaking();
         //cria um circulo ao redor do attackpoint que detecta a layerdamage
         Collider2D[] hitinfo = Physics2D.OverlapCircleAll(Attackpoint.position,radius,layerDamage);
-        
+
         foreach (Collider2D hit in hitinfo)
         {
+            Debug.Log(hit.gameObject.tag);
             //confere a tag do objeto
             if (hit.gameObject.CompareTag("Inimigo"))
             {
                 hit.GetComponent<EnemyController>().TakeDamage(damage);
-            }            
-        }
 
-        //remove energia 
-        StatsController.instance.RemoveEnergy(2);
+                //remove energia 
+                StatsController.instance.RemoveEnergy(2);
+            }
+            else if (hit.gameObject.CompareTag("Object"))
+            {
+                hit.GetComponent<BoxController>().Takedamage(1);
+            }
+        }
     }
 
     private void OnDrawGizmos()

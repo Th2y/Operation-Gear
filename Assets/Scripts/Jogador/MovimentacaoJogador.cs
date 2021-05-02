@@ -5,7 +5,9 @@ public class MovimentacaoJogador : MonoBehaviour
     [SerializeField]
     private float distance = 1f;
     [SerializeField]
-    private GameObject up;
+    private GameObject upDown;
+    [SerializeField]
+    private GameObject leftRight;
     [SerializeField]
     private LayerMask cameraLimites;
     [SerializeField]
@@ -41,7 +43,6 @@ public class MovimentacaoJogador : MonoBehaviour
                     time = 0;
 
                     this.transform.position += (Vector3)pushDirection;
-
                 }
             }
         }
@@ -75,8 +76,13 @@ public class MovimentacaoJogador : MonoBehaviour
 
     void Movimento()
     {
-        RaycastHit2D ray = Physics2D.Raycast(up.transform.position, up.transform.TransformDirection(direcaoV), distance, cameraLimites);
-        if (ray.collider == null)
+        RaycastHit2D ray;
+        if(direcaoV == Vector2.down || direcaoV == Vector2.up)
+            ray = Physics2D.Raycast(upDown.transform.position, upDown.transform.TransformDirection(direcaoV), distance, cameraLimites);
+        else
+            ray = Physics2D.Raycast(leftRight.transform.position, leftRight.transform.TransformDirection(direcaoV), distance, cameraLimites);
+
+        if (ray.collider == null || ray.collider.isTrigger)
         {
             if (direcaoV == Vector2.down)
                 this.transform.position += Vector3.down;
@@ -90,6 +96,8 @@ public class MovimentacaoJogador : MonoBehaviour
             if (!Poweraps.instancia.usandoPower)
                 StatsController.instance.RemoveEnergy(1);
         }
+        else
+            Debug.Log(ray.collider.gameObject.name);
     }
 
     public void Knockback(Vector2 direction)
