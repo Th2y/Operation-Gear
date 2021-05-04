@@ -10,6 +10,7 @@ TagManager:
   - CameraLimites
   - Inimigo
   - Portas
+  - Chaves
   layers:
   - Default
   - TransparentFX
