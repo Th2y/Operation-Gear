@@ -42,7 +42,6 @@ public class AttackController : MonoBehaviour
 
         foreach (Collider2D hit in hitinfo)
         {
-            Debug.Log(hit.gameObject.tag);
             //confere a tag do objeto
             if (hit.gameObject.CompareTag("Inimigo"))
             {

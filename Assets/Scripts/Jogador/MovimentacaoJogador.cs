@@ -126,6 +126,9 @@ public class MovimentacaoJogador : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Portas"))
+        {
             cinemachineChange.MudarCam(collision.gameObject.name);
+            collision.GetComponent<Porta>().StartAnim();
+        }
     }
 }

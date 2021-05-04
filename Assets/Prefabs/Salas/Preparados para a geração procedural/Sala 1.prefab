@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 4240465254808526314}
   - component: {fileID: 4317993970320001230}
   - component: {fileID: 7670386106905533388}
+  - component: {fileID: 1964451806}
   m_Layer: 11
   m_Name: Baixo
   m_TagString: Portas
@@ -128,6 +129,7 @@ MonoBehaviour:
   direcao: 1
   estaConectada: 0
   colisor: {fileID: 4317993970320001230}
+  anim: {fileID: 1964451806}
   nomeDaSala: Sala 1
 --- !u!61 &4317993970320001230
 BoxCollider2D:
@@ -205,6 +207,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1964451806
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267455877361946032}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9893b2e23462cbb4e82f2d0d9ae93bc0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3836031122021015609
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +272,7 @@ GameObject:
   - component: {fileID: 5643187031378051705}
   - component: {fileID: 3101452523682731482}
   - component: {fileID: 1007905490145448579}
+  - component: {fileID: 1964451804}
   m_Layer: 11
   m_Name: Direita
   m_TagString: Portas
@@ -287,6 +309,7 @@ MonoBehaviour:
   direcao: 2
   estaConectada: 0
   colisor: {fileID: 1007905490145448579}
+  anim: {fileID: 1964451804}
   nomeDaSala: Sala 1
 --- !u!61 &1007905490145448579
 BoxCollider2D:
@@ -314,6 +337,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 3}
   m_EdgeRadius: 0
+--- !u!95 &1964451804
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5769139381589157887}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9893b2e23462cbb4e82f2d0d9ae93bc0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6460669694666344678
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +368,7 @@ GameObject:
   - component: {fileID: 2861113409794687771}
   - component: {fileID: 277000258058031404}
   - component: {fileID: 6775569689988353029}
+  - component: {fileID: 1964451808}
   m_Layer: 11
   m_Name: Cima
   m_TagString: Portas
@@ -362,6 +405,7 @@ MonoBehaviour:
   direcao: 0
   estaConectada: 0
   colisor: {fileID: 277000258058031404}
+  anim: {fileID: 1964451808}
   nomeDaSala: Sala 1
 --- !u!61 &277000258058031404
 BoxCollider2D:
@@ -439,6 +483,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1964451808
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460669694666344678}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9893b2e23462cbb4e82f2d0d9ae93bc0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6487204913618548096
 GameObject:
   m_ObjectHideFlags: 0
@@ -2545,6 +2608,7 @@ GameObject:
   - component: {fileID: 5190358928264609572}
   - component: {fileID: 6616991589228684592}
   - component: {fileID: 8589500487017487039}
+  - component: {fileID: 1964451802}
   m_Layer: 11
   m_Name: Esquerda
   m_TagString: Portas
@@ -2581,6 +2645,7 @@ MonoBehaviour:
   direcao: 3
   estaConectada: 0
   colisor: {fileID: 8589500487017487039}
+  anim: {fileID: 1964451802}
   nomeDaSala: Sala 1
 --- !u!61 &8589500487017487039
 BoxCollider2D:
@@ -2608,6 +2673,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 3}
   m_EdgeRadius: 0
+--- !u!95 &1964451802
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7253411550651082619}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9893b2e23462cbb4e82f2d0d9ae93bc0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7667100127132872268
 GameObject:
   m_ObjectHideFlags: 0
