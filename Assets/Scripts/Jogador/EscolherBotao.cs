@@ -25,6 +25,7 @@ public class EscolherBotao : MonoBehaviour
         if(!clicou)
         {
             DirecaoMovimento mover = (DirecaoMovimento)DirecaoMovimento.Parse(typeof(DirecaoMovimento), direcao);
+            Debug.Log(direcao);
             BotaoMover(mover);
             clicou = true;
         }

@@ -3,17 +3,29 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Node {
 
-    private readonly Vector2 position;
-    private readonly bool walkable;
-    private readonly List<Node> nextNodes;
+    
+    private Vector2 position;
+
+    
+    private bool walkable;
+
+    
+    private bool removable;
+
+    private List<Node> nextNodes;
 
 
-    public Node(Vector2 position, bool walkable) {
+
+
+
+    public Node(Vector2 position, bool walkable, bool removable) {
         this.nextNodes = new List<Node>();
         this.position = position;
         this.walkable = walkable;
+        this.removable = removable;
     }
 
     public Vector2 Position {
@@ -25,6 +37,15 @@ public class Node {
     public bool Walkable {
         get {
             return this.walkable;
+        }
+        set {
+            this.walkable = value;
+        }
+    }
+
+    public bool Removable {
+        get {
+            return this.removable;
         }
     }
 
@@ -44,9 +65,11 @@ public class Node {
 
 
     public bool Equals(Node node) {
-        float distance = Vector2.Distance(this.Position, node.Position);
-        if (distance <= Mathf.Epsilon) {
-            return true;
+        if (node != null) {
+            float distance = Vector2.Distance(this.Position, node.Position);
+            if (distance <= Mathf.Epsilon) {
+                return true;
+            }
         }
         return false;
     }
@@ -57,10 +80,21 @@ public class Node {
     }
 
     public float GetHeuristic(Node currentNode, Vector2 targetPosition) {
-        float distanceToNextNode = Vector2.Distance(currentNode.Position, this.position);
-        float distanceToTarget = Vector2.Distance(this.Position, targetPosition);
+        float distanceToNextNode = GetDistanceTo(currentNode);
+        float distanceToTarget = GetDistanceTo(targetPosition);
 
         return (distanceToNextNode + distanceToTarget);
+    }
+
+    public float GetDistanceTo(Node node) {
+        return GetDistanceTo(node.Position);
+    }
+
+    public float GetDistanceTo(Vector2 nodePosition) {
+        float distanceX = Mathf.Abs(this.position.x - nodePosition.x);
+        float distanceY = Mathf.Abs(this.position.y - nodePosition.y);
+        //return Vector2.Distance(this.position, nodePosition);
+        return (distanceX + distanceY);
     }
 
     public bool IsNeighbor(Node node) {
@@ -70,5 +104,9 @@ public class Node {
             }
         }
         return false;
+    }
+
+    public override string ToString() {
+        return ("[Node "  + this.position.x + "x" + this.position.y + "]");
     }
 }

@@ -66,7 +66,7 @@ public class EnemyController : MonoBehaviour, IAgentObserver
                 }
                 else
                 {
-                    agent.GetComponent<Agent>().movementDelay = (distance - 1) * pushForce;
+                    agent.GetComponent<Agent>().MovementDelay = (distance - 1) * pushForce;
                     if (distance <= 1)
                     {
                         Vector2 pushDirection = (player.transform.position - this.transform.position).normalized;
@@ -99,7 +99,7 @@ public class EnemyController : MonoBehaviour, IAgentObserver
                     GetComponent<Agent>().Resume();
                 }
 
-                agent.GetComponent<Agent>().movementDelay = 1f;
+                agent.GetComponent<Agent>().MovementDelay = 1f;
           
             }
         }
