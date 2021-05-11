@@ -131,6 +131,7 @@ public class MovimentacaoJogador : MonoBehaviour
         {
             cinemachineChange.MudarCam(collision.gameObject.name);
             collision.GetComponent<Porta>().StartAnim();
+            collision.GetComponent<Porta>().salaOndeEstou.Ativar();
         }
     }
 }

@@ -46,7 +46,26 @@ public class Sala : MonoBehaviour
 
         this.transform.position += distanciaPortas;
 
-        portaConectar.Conectar(this.gameObject.name);
-        portaConectada.Conectar(portaConectar.nomeDaSala);
+        portaConectar.Conectar(this.gameObject.name, portaConectada);
+        portaConectada.Conectar(portaConectar.nomeDaSala, portaConectar);
+    }
+
+    public void Ativar()
+    {
+        Sala[] salas = GameObject.FindObjectsOfType<Sala>();
+        for(int i = 0; i < salas.Length; i++)
+        {
+            salas[i].gameObject.SetActive(false);
+        }
+
+        this.gameObject.SetActive(true);
+
+        for(int i=0; i < portas.Length; i++)
+        {
+            if (portas[i].estaConectada)
+            {
+                portas[i].portaConectada.salaOndeEstou.gameObject.SetActive(true);
+            }
+        }
     }
 }
