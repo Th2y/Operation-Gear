@@ -36,6 +36,8 @@ public class MovimentacaoJogador : MonoBehaviour
             }
             else
             {
+                Debug.Log("Entrou no else");
+
                 time += Time.deltaTime;
 
                 if (time >= timer)

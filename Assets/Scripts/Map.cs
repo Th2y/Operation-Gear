@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Map : MonoBehaviour {
 
-    public Vector2 OriginPosition = new Vector2(0.5f, 0.5f);
+    [SerializeField]
+    private Vector2 OriginPosition = new Vector2(0.5f, 0.5f);
     private static readonly Vector2[] Directions = new Vector2[] { 
         Vector2.up, 
         Vector2.right, 
@@ -24,7 +25,7 @@ public class Map : MonoBehaviour {
     private bool baked;
 
     [SerializeField]
-    private LayerMask obstacleLayer;
+    private LayerMask layerMask;
 
 #if UNITY_EDITOR
     [Header("Debug")]
@@ -34,6 +35,8 @@ public class Map : MonoBehaviour {
 
 #if UNITY_EDITOR
     private void OnDrawGizmos() {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawSphere(this.OriginPosition, 0.5f);
         if (this.nodes != null) {
             foreach (Node node in this.nodes) {
                 if (node.Walkable) {
@@ -44,23 +47,23 @@ public class Map : MonoBehaviour {
                 Gizmos.DrawSphere(node.Position, 0.1f);
             }
         }
+
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(OriginPosition, 0.5f);
+        Gizmos.DrawSphere(this.OriginPosition, 0.5f);
     }
 #endif
+
+    private void Awake() {
+        Bake();
+    }
 
     public void Bake() {
         Vector2 startPosition = OriginPosition;
         this.nodes = new List<Node>();
 
-        RaycastHit2D hit = Physics2D.Linecast(startPosition, startPosition, this.obstacleLayer);
-        bool walkable;
-        if (hit.transform != null) {
-            walkable = false;
-        } else {
-            walkable = true;
-        }
-        Node origin = new Node(startPosition, walkable);
+        RaycastHit2D hit = Physics2D.Linecast(startPosition, startPosition, this.layerMask);
+        Node origin = CreateNode(hit.transform, startPosition);
+
         FindNextNodes(origin);
 #if UNITY_EDITOR
         Debug.Log("[Map]: {Bake} Quantidade de nós: " + this.nodes.Count);
@@ -98,22 +101,16 @@ public class Map : MonoBehaviour {
             RaycastHit2D hit;
             foreach (Vector2 direction in Directions) {
                 nextNodePosition = (node.Position + direction);
-                hit = Physics2D.Linecast(nextNodePosition, nextNodePosition, this.obstacleLayer);
+                hit = Physics2D.Linecast(nextNodePosition, nextNodePosition, this.layerMask);
                 // Verifica se já existe um nó na posição calculada
                 nextNode = GetNodeByPosition(nextNodePosition);
                 // Caso o nó ainda não exista
                 if (nextNode == null) {
-                    if (hit.transform != null) {
-                        // Célula ocupada (não pode andar)
-                        nextNode = new Node(nextNodePosition, false);
-                    } else {
-                        // Célula vazio (pode andar)
-                        nextNode = new Node(nextNodePosition, true);
-                    }
+                   nextNode = CreateNode(hit.transform, nextNodePosition);
                 }
 
                 node.AddNext(nextNode);
-                if (nextNode.Walkable) {
+                if (nextNode.Walkable || nextNode.Removable) {                    
                     FindNextNodes(nextNode);
                 }
             }
@@ -133,6 +130,35 @@ public class Map : MonoBehaviour {
         if (!ContainsNode(node)) {
             this.nodes.Add(node);
         }
+    }
+
+    private Node CreateNode(Transform mapObject, Vector2 nextNodePosition) {
+        bool removable;
+        bool walkable;
+        if (mapObject != null) {
+            // Célula ocupada (não pode andar)
+            removable = (mapObject.gameObject.layer == LayerMask.NameToLayer("Removable"));
+            walkable = false;
+        } else {
+            // Célula vazio (pode andar)
+            walkable = true;
+            removable = false;
+        }
+
+        Node node = new Node(nextNodePosition, walkable, removable);
+        if (removable) {
+            RemovableObject removableObject = mapObject.GetComponent<RemovableObject>();
+            if(removableObject != null)
+            {
+                removableObject.Node = node;
+            }
+            else
+            {
+                Debug.LogWarning("Objetos removíveis devem ter o script RemovableObject.GameObject:"+mapObject.name);
+            }
+        }
+
+        return node;
     }
 
 }

@@ -13,18 +13,32 @@ public class Agent : MonoBehaviour {
 
     [Header("Movimentação")]
     [SerializeField]
-    public float movementDelay;
+    private float movementDelay;
 
-    private IAgentObserver observer;
 
     private float movementElapsedTime;
 
-    private List<Node> path;
+    private Path path;
     private Node targetNode;
     private AStar searchAlgorithm;
 
     private bool searching;
 
+    private IAgentObserver observer;
+
+
+
+    private void Start() {
+        Init();
+    }
+
+    public IAgentObserver Observer
+    {
+        set
+        {
+            this.observer = value;
+        }
+    }
 
     public void Init() {
         this.searching = false;
@@ -41,14 +55,6 @@ public class Agent : MonoBehaviour {
 
     public void Stop() {
         this.searching = false;
-    }
-
-    public IAgentObserver Observer
-    {
-        set
-        {
-            this.observer = value;
-        }
     }
 
     public Transform Target {
@@ -93,7 +99,7 @@ public class Agent : MonoBehaviour {
         this.path = this.searchAlgorithm.Path;
     }
 
-    private void LateUpdate() {
+    private void Update() {
         if (!this.searching) {
             return;
         }
@@ -103,19 +109,20 @@ public class Agent : MonoBehaviour {
             FindPath();
         }
 
-        if ((this.path != null) && (this.path.Count > 0)) {
+        if ((this.path != null) && (this.path.NodeCount > 0)) {
             this.movementElapsedTime += Time.deltaTime;
             if (this.movementElapsedTime >= this.movementDelay) {
                 this.movementElapsedTime = 0;
 
                 // Move para o próximo nó e remove o nó do caminho restante
-                this.transform.position = this.path[0].Position;
-                this.path.RemoveAt(0); 
-                if(observer != null)
+                Node nextNode = this.path.GetNext();
+                this.transform.position = nextNode.Position;
+                if(this.observer != null)
                 {
-                    observer.OnMoveComplete();
+                    this.observer.OnMoveComplete();
                 }
             }
+
         }        
     }
 
@@ -123,7 +130,7 @@ public class Agent : MonoBehaviour {
         if (this.path != null) {
             Gizmos.color = Color.green;
             Node previousNode = null;
-            foreach (Node node in this.path) {                
+            foreach (Node node in this.path.Nodes) {                
                 Gizmos.DrawSphere(node.Position, 0.1f);
                 if (previousNode != null) {
                     Gizmos.DrawLine(previousNode.Position, node.Position);
