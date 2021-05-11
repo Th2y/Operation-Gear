@@ -1,16 +1,18 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectController : MonoBehaviour
 {
     public int life; //vida
 
+    [SerializeField]
     protected Animator anim;
-    // Start is called before the first frame update
-    protected virtual void Start()
+
+    protected string startAnim;
+
+    public virtual void SetTrigger()
     {
-        anim = GetComponent<Animator>();
+        startAnim = "";
     }
 
     public virtual void Takedamage(int dmg)
@@ -19,8 +21,7 @@ public class ObjectController : MonoBehaviour
 
         if (life <= 0)
         {
-            Destroy(gameObject, 1.5f);
-            
+            Destroy(gameObject, 1.5f);            
         }
     }
 }

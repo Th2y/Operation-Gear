@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class StatsController : MonoBehaviour
@@ -25,6 +23,7 @@ public class StatsController : MonoBehaviour
     [Header("    Update-Stats")]
     public float life;                    // vida do jogador    
     public int energy;                    // energia que o player vai usar
+    [SerializeField] private ReloadScene reloadScene;
     
     [Header("    UI")]
     public Image UI_energy;               // Sprite da energia  
@@ -56,17 +55,13 @@ public class StatsController : MonoBehaviour
 
         TimingEnergy();
         EnergyController();
-        
+        Isalive();
     }
 
     // verifica se esta vivo ou não
-    public bool Isalive()
+    private void Isalive()
     {
-        if (life <= 0)
-        {
-            return true;
-        }
-        return false;
+        if (life <= 0) reloadScene.Reloadscene();
     }
     // sistema de energia
     private void EnergyController()
@@ -94,8 +89,6 @@ public class StatsController : MonoBehaviour
             {
                 energy = 0;
             }
-            
-
         }
     }
 

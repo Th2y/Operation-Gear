@@ -1,36 +1,40 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BoxController : ObjectController
 {
     [Header("Sprites")]
-    public Sprite[] imagebox;
+
+    [SerializeField]
+    private Sprite[] imagebox;
+    [SerializeField]
     private SpriteRenderer image;
 
-    protected override void Start()
+    private void Start()
     {
         // a vida da caixa torna-se o numero de sprites
         life = imagebox.Length-1;
-
-        image = GetComponent<SpriteRenderer>();
-        
-        base.Start();
     }
   
     public override void Takedamage(int dmg)
     {
+        /*life = 0;
+
+        anim.SetTrigger("Destroy");
+        Destroy(gameObject, 1.5f);*/
+
         life -= dmg;
 
+        /*if(life>0) image.sprite = imagebox[life];
 
-        if(life>=0) image.sprite = imagebox[life];
+        else
+        {
+            image.sprite = imagebox[life];
+            Destroy(gameObject, 1.5f);
+        }*/
+
+        anim.SetInteger("Vidas", life);
 
         if (life <= 0)
-        {
-            life = 0;
             Destroy(gameObject, 1.5f);
-           
-            //anim.SetTrigger("Destroy");
-        }
     }
 }

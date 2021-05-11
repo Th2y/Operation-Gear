@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ccc63c9388d15a40b1add8b6e73ab68, type: 3}
+  m_Name: CaixaBrush
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 4459352313549539438, guid: a45e1d10db76bcd4f812b57b70a54ac9, type: 3}

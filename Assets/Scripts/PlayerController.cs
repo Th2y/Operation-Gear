@@ -56,7 +56,6 @@ public class PlayerController : MonoBehaviour
             if (distance < 1)
             {
                 isPushing = false;
-                Debug.Log("Desativou o Push");
             }
             else
             {

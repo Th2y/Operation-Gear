@@ -29,8 +29,9 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     public GameObject player;
     public GameObject agent;
 
-    public int maxHealth = 100;
-    int currentHealth;
+    public int damage = 10;
+    private int maxHealth = 100;
+    private int currentHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -50,10 +51,10 @@ public class EnemyController : MonoBehaviour, IAgentObserver
         float distance = Vector2.Distance(this.transform.position, player.transform.position);
 
         if (!isDead)
-        {           
-
+        {
             if (isFollowing)
             {
+                animator.SetBool("isWalking", true);
                 if (hasPushed)
                 {
                     pushTime += Time.deltaTime;
@@ -78,6 +79,7 @@ public class EnemyController : MonoBehaviour, IAgentObserver
             }
             else
             {
+                animator.SetBool("isWalking", false);
                 if (distance <= 1)
                 {
                     if (!isAttacking && !isTackingDamage)
@@ -110,7 +112,6 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     {       
         if (!isAttacking)
         {
-            Debug.Log("Usou o ataque normal");
             animator.SetTrigger("Attack");
             isAttacking = true;
         }
@@ -119,7 +120,9 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     public void OnAttackComplete()
     {
         isAttacking = false;
-        Debug.Log("Ataque completo");
+       
+        GameObject _player = GameObject.FindGameObjectWithTag("Player");
+        _player.GetComponent<TakeDamage>().DamageInPlayer(damage);
     }
 
     public void OnAttackCancel()
@@ -160,7 +163,6 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     {
         if (collision.gameObject.CompareTag("PlayerAttack"))
         {
-            Debug.Log("Entrou na área de ataque");
             TakeDamage(20);
         }
     }
@@ -169,8 +171,6 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     {
         float distance = Vector2.Distance(this.transform.position, player.transform.position);
         distance = Mathf.FloorToInt(distance);
-        Debug.Log(distance);
-
 
         if (distance == 4)
         {
@@ -178,13 +178,11 @@ public class EnemyController : MonoBehaviour, IAgentObserver
             if (randomChance <= pushRate)
             {
                 isFollowing = true;
-
             }
             else
             {
                 isFollowing = false;
             }
-
         }
     }
 
