@@ -83,5 +83,19 @@ public class Path {
         }
         return 0;
     }
+
+    public Vector2[] GetNodesPositions()
+    {
+        Vector2[] positions = new Vector2[NodeCount];
+
+        int nodeIndex = 0;
+
+        foreach(Node node in this.nodes)
+        {
+            positions[nodeIndex] = node.Position;
+            nodeIndex++;
+        }
+        return positions;
+    }
     
 }
