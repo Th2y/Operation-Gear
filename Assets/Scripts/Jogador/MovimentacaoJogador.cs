@@ -36,8 +36,6 @@ public class MovimentacaoJogador : MonoBehaviour
             }
             else
             {
-                Debug.Log("Entrou no else");
-
                 time += Time.deltaTime;
 
                 if (time >= timer)
@@ -132,7 +130,7 @@ public class MovimentacaoJogador : MonoBehaviour
             cinemachineChange.MudarCam(collision.gameObject.name);
             collision.GetComponent<Porta>().StartAnim();
             collision.GetComponent<Porta>().salaOndeEstou.Ativar();
-            Debug.Log(collision.GetComponent<Porta>().salaOndeEstou);
+            Debug.Log(collision.GetComponent<Porta>().salaOndeEstou);            
         }
     }
 }

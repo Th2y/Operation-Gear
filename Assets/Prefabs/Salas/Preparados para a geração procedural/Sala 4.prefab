@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4385615633191255353}
-  - component: {fileID: 3534735318794618691}
   - component: {fileID: 1807543368862476675}
   - component: {fileID: 2681340737894578749}
   - component: {fileID: 1457777907413807987}
+  - component: {fileID: 5008700590936045715}
   m_Layer: 11
   m_Name: Esquerda
   m_TagString: Portas
@@ -34,25 +34,6 @@ Transform:
   m_Father: {fileID: 5593711704544510828}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3534735318794618691
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1085886418057125592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direcao: 3
-  estaConectada: 0
-  colisor: {fileID: 1807543368862476675}
-  anim: {fileID: 1457777907413807987}
-  portaImg: {fileID: 2681340737894578749}
-  portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
-  nomeDaSala: Sala 4
 --- !u!61 &1807543368862476675
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -148,6 +129,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5008700590936045715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085886418057125592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direcao: 3
+  estaConectada: 0
+  colisor: {fileID: 1807543368862476675}
+  anim: {fileID: 1457777907413807987}
+  portaImg: {fileID: 2681340737894578749}
+  portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
+    type: 3}
+  nomeDaSala: Sala 4
+  salaOndeEstou: {fileID: 0}
+  portaConectada: {fileID: 0}
 --- !u!1 &1383326223536561216
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,10 +160,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 156390846430526348}
-  - component: {fileID: 7286507346472972525}
   - component: {fileID: 3208814515628333144}
   - component: {fileID: 9027981369965207498}
   - component: {fileID: 4875128969389785370}
+  - component: {fileID: 6536169157185893405}
   m_Layer: 11
   m_Name: Cima
   m_TagString: Portas
@@ -182,25 +185,6 @@ Transform:
   m_Father: {fileID: 5593711704544510828}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7286507346472972525
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383326223536561216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direcao: 0
-  estaConectada: 0
-  colisor: {fileID: 3208814515628333144}
-  anim: {fileID: 4875128969389785370}
-  portaImg: {fileID: 9027981369965207498}
-  portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
-  nomeDaSala: Sala 4
 --- !u!61 &3208814515628333144
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -296,6 +280,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6536169157185893405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383326223536561216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direcao: 0
+  estaConectada: 0
+  colisor: {fileID: 3208814515628333144}
+  anim: {fileID: 4875128969389785370}
+  portaImg: {fileID: 9027981369965207498}
+  portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
+    type: 3}
+  nomeDaSala: Sala 4
+  salaOndeEstou: {fileID: 0}
+  portaConectada: {fileID: 0}
 --- !u!1 &1596595220218238768
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,10 +311,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4505316124881911250}
-  - component: {fileID: 4484394085865901791}
   - component: {fileID: 121519982980383118}
   - component: {fileID: 7305444324776858881}
   - component: {fileID: 3211999710255705390}
+  - component: {fileID: 2700047848031733989}
   m_Layer: 11
   m_Name: Baixo
   m_TagString: Portas
@@ -330,25 +336,6 @@ Transform:
   m_Father: {fileID: 5593711704544510828}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4484394085865901791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1596595220218238768}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direcao: 1
-  estaConectada: 0
-  colisor: {fileID: 121519982980383118}
-  anim: {fileID: 3211999710255705390}
-  portaImg: {fileID: 7305444324776858881}
-  portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
-  nomeDaSala: Sala 4
 --- !u!61 &121519982980383118
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -444,6 +431,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2700047848031733989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596595220218238768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direcao: 1
+  estaConectada: 0
+  colisor: {fileID: 121519982980383118}
+  anim: {fileID: 3211999710255705390}
+  portaImg: {fileID: 7305444324776858881}
+  portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
+    type: 3}
+  nomeDaSala: Sala 4
+  salaOndeEstou: {fileID: 0}
+  portaConectada: {fileID: 0}
 --- !u!1 &1615399630161123024
 GameObject:
   m_ObjectHideFlags: 0
@@ -608,10 +617,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portas:
-  - {fileID: 7286507346472972525}
-  - {fileID: 4484394085865901791}
-  - {fileID: 8905274904030703376}
-  - {fileID: 3534735318794618691}
+  - {fileID: 6536169157185893405}
+  - {fileID: 2700047848031733989}
+  - {fileID: 3000087873642111027}
+  - {fileID: 5008700590936045715}
   posInicial: {fileID: 8954158540542019850}
 --- !u!1 &4881517015481273032
 GameObject:
@@ -4466,7 +4475,6 @@ GameObject:
   - component: {fileID: 5579070175892356065}
   - component: {fileID: 5579070175892356066}
   - component: {fileID: 5579070175892356067}
-  - component: {fileID: 1286992769787591162}
   m_Layer: 9
   m_Name: Tilemap Paredes
   m_TagString: Untagged
@@ -6004,11 +6012,11 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - m_RefCount: 2
-    m_Data: {r: 0.80642736, g: 0.5068193, b: 0.5430902, a: 1}
+    m_Data: {r: 0.73873585, g: 0.44692057, b: 0.46165946, a: 1}
   - m_RefCount: 153
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 0
-    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
+    m_Data: {r: 3.1835e-41, g: 3.1835e-41, b: 3.1835e-41, a: 3.1835e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6096,24 +6104,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
---- !u!114 &1286992769787591162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5579070175892356093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49fc53a5fdb748a49be60eebfff9830d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OriginPosition: {x: -10.5, y: -1.5}
-  maxNodes: 1000
-  baked: 0
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 2560
 --- !u!1 &5579070176516045094
 GameObject:
   m_ObjectHideFlags: 0
@@ -6389,10 +6379,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7917780544289145358}
-  - component: {fileID: 8905274904030703376}
   - component: {fileID: 5278980181078852585}
   - component: {fileID: 59602527882183400}
   - component: {fileID: 6341879112473935040}
+  - component: {fileID: 3000087873642111027}
   m_Layer: 11
   m_Name: Direita
   m_TagString: Portas
@@ -6414,25 +6404,6 @@ Transform:
   m_Father: {fileID: 5593711704544510828}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8905274904030703376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6462331928776745118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direcao: 2
-  estaConectada: 0
-  colisor: {fileID: 5278980181078852585}
-  anim: {fileID: 6341879112473935040}
-  portaImg: {fileID: 59602527882183400}
-  portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
-  nomeDaSala: Sala 4
 --- !u!61 &5278980181078852585
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6528,6 +6499,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3000087873642111027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6462331928776745118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direcao: 2
+  estaConectada: 0
+  colisor: {fileID: 5278980181078852585}
+  anim: {fileID: 6341879112473935040}
+  portaImg: {fileID: 59602527882183400}
+  portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
+    type: 3}
+  nomeDaSala: Sala 4
+  salaOndeEstou: {fileID: 0}
+  portaConectada: {fileID: 0}
 --- !u!1001 &6511759515819531447
 PrefabInstance:
   m_ObjectHideFlags: 0

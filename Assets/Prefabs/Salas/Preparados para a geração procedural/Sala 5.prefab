@@ -1077,7 +1077,6 @@ GameObject:
   - component: {fileID: 644414234208561552}
   - component: {fileID: 644414234208561555}
   - component: {fileID: 644414234208561554}
-  - component: {fileID: 6071393850433317771}
   m_Layer: 9
   m_Name: Tilemap Paredes
   m_TagString: Untagged
@@ -1821,24 +1820,6 @@ TilemapCollider2D:
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0.00001
---- !u!114 &6071393850433317771
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644414234208561548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49fc53a5fdb748a49be60eebfff9830d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  OriginPosition: {x: -10.5, y: -1.5}
-  maxNodes: 1000
-  baked: 0
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 2560
 --- !u!1 &2004522094642829639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1892,6 +1873,8 @@ MonoBehaviour:
   portaImg: {fileID: 9148156155986582951}
   portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
   nomeDaSala: Sala 5
+  salaOndeEstou: {fileID: 0}
+  portaConectada: {fileID: 0}
 --- !u!61 &5004794194137622283
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2040,6 +2023,8 @@ MonoBehaviour:
   portaImg: {fileID: 4893243602325548625}
   portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
   nomeDaSala: Sala 5
+  salaOndeEstou: {fileID: 0}
+  portaConectada: {fileID: 0}
 --- !u!61 &5854922163196854099
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2188,6 +2173,8 @@ MonoBehaviour:
   portaImg: {fileID: 1221016667235374252}
   portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
   nomeDaSala: Sala 5
+  salaOndeEstou: {fileID: 0}
+  portaConectada: {fileID: 0}
 --- !u!61 &4931639986440755658
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2336,6 +2323,8 @@ MonoBehaviour:
   portaImg: {fileID: 2182220025994750684}
   portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
   nomeDaSala: Sala 5
+  salaOndeEstou: {fileID: 0}
+  portaConectada: {fileID: 0}
 --- !u!61 &3328893548946709305
 BoxCollider2D:
   m_ObjectHideFlags: 0
