@@ -36,8 +36,6 @@ public class MovimentacaoJogador : MonoBehaviour
             }
             else
             {
-                Debug.Log("Entrou no else");
-
                 time += Time.deltaTime;
 
                 if (time >= timer)
@@ -129,9 +127,10 @@ public class MovimentacaoJogador : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Portas"))
         {
+            Porta porta = collision.GetComponent<Porta>();
             cinemachineChange.MudarCam(collision.gameObject.name);
-            collision.GetComponent<Porta>().StartAnim();
-            collision.GetComponent<Porta>().salaOndeEstou.Ativar();
+            porta.StartAnim();
+            porta.portaConectada.salaOndeEstou.Ativar();
         }
     }
 }

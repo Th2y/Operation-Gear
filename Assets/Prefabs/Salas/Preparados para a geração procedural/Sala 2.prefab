@@ -131,10 +131,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1691899244270048767}
-  - component: {fileID: 329946115861202569}
   - component: {fileID: 3238945858129898793}
   - component: {fileID: 7169221437369704085}
   - component: {fileID: 2808594524828333753}
+  - component: {fileID: 2469567275099728293}
   m_Layer: 11
   m_Name: Esquerda
   m_TagString: Portas
@@ -156,25 +156,6 @@ Transform:
   m_Father: {fileID: 8642029235822610872}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &329946115861202569
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1630662577134969244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direcao: 3
-  estaConectada: 0
-  colisor: {fileID: 3238945858129898793}
-  anim: {fileID: 2808594524828333753}
-  portaImg: {fileID: 7169221437369704085}
-  portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
-  nomeDaSala: Sala 2
 --- !u!61 &3238945858129898793
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -270,83 +251,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &1734859207830537282
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3813933059728525555}
-  - component: {fileID: 2667837506666904805}
-  - component: {fileID: 977337607843940721}
-  m_Layer: 16
-  m_Name: Cima
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3813933059728525555
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734859207830537282}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -31.5, y: 1.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018802081715121643}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2667837506666904805
+--- !u!114 &2469567275099728293
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734859207830537282}
+  m_GameObject: {fileID: 1630662577134969244}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direcao: 0
+  direcao: 3
   estaConectada: 0
-  colisor: {fileID: 0}
-  anim: {fileID: 0}
-  portaImg: {fileID: 0}
-  portaBloqueada: {fileID: 0}
-  nomeDaSala: 
---- !u!61 &977337607843940721
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734859207830537282}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2, y: 3}
-  m_EdgeRadius: 0
+  colisor: {fileID: 3238945858129898793}
+  anim: {fileID: 2808594524828333753}
+  portaImg: {fileID: 7169221437369704085}
+  portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
+    type: 3}
+  nomeDaSala: Sala 2
+  salaOndeEstou: {fileID: 8184530296011292678}
+  portaConectada: {fileID: 0}
 --- !u!1 &1782343947956309856
 GameObject:
   m_ObjectHideFlags: 0
@@ -2074,9 +2000,9 @@ MonoBehaviour:
   OriginPosition: {x: -10.5, y: -1.5}
   maxNodes: 200
   baked: 0
-  obstacleLayer:
+  layerMask:
     serializedVersion: 2
-    m_Bits: 68096
+    m_Bits: 0
 --- !u!1 &2111482581682153453
 GameObject:
   m_ObjectHideFlags: 0
@@ -4341,7 +4267,6 @@ Transform:
   m_Children:
   - {fileID: 3566058381399844775}
   - {fileID: 3503195821050944739}
-  - {fileID: 2018802081715121643}
   m_Father: {fileID: 3468639337109785191}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4394,10 +4319,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   portas:
-  - {fileID: 4705763575869926070}
-  - {fileID: 530900411753888060}
-  - {fileID: 2671785679425683365}
-  - {fileID: 329946115861202569}
+  - {fileID: 4056949152032519115}
+  - {fileID: 4550423512958865997}
+  - {fileID: 4219171212896410476}
+  - {fileID: 2469567275099728293}
   posInicial: {fileID: 3468639337109785191}
 --- !u!1 &3566058381399844776
 GameObject:
@@ -4591,10 +4516,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8541436549666853279}
-  - component: {fileID: 530900411753888060}
   - component: {fileID: 3232608357126187852}
   - component: {fileID: 3847691781629479975}
   - component: {fileID: 35125785489328810}
+  - component: {fileID: 4550423512958865997}
   m_Layer: 11
   m_Name: Baixo
   m_TagString: Portas
@@ -4616,25 +4541,6 @@ Transform:
   m_Father: {fileID: 8642029235822610872}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &530900411753888060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4169849711230453299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direcao: 1
-  estaConectada: 0
-  colisor: {fileID: 3232608357126187852}
-  anim: {fileID: 35125785489328810}
-  portaImg: {fileID: 3847691781629479975}
-  portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
-  nomeDaSala: Sala 2
 --- !u!61 &3232608357126187852
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4730,6 +4636,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4550423512958865997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4169849711230453299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direcao: 1
+  estaConectada: 0
+  colisor: {fileID: 3232608357126187852}
+  anim: {fileID: 35125785489328810}
+  portaImg: {fileID: 3847691781629479975}
+  portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
+    type: 3}
+  nomeDaSala: Sala 2
+  salaOndeEstou: {fileID: 8184530296011292678}
+  portaConectada: {fileID: 0}
 --- !u!1 &4865700478741402135
 GameObject:
   m_ObjectHideFlags: 0
@@ -4739,10 +4667,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3880171581367526506}
-  - component: {fileID: 2671785679425683365}
   - component: {fileID: 7991302955585998721}
   - component: {fileID: 7583173107183603507}
   - component: {fileID: 8265889934204035589}
+  - component: {fileID: 4219171212896410476}
   m_Layer: 11
   m_Name: Direita
   m_TagString: Portas
@@ -4764,25 +4692,6 @@ Transform:
   m_Father: {fileID: 8642029235822610872}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2671785679425683365
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4865700478741402135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direcao: 2
-  estaConectada: 0
-  colisor: {fileID: 7991302955585998721}
-  anim: {fileID: 8265889934204035589}
-  portaImg: {fileID: 7583173107183603507}
-  portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
-  nomeDaSala: Sala 2
 --- !u!61 &7991302955585998721
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4878,160 +4787,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &6356846609964318393
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4798197519498831514}
-  - component: {fileID: 5742441778998823782}
-  - component: {fileID: 8831394574805243118}
-  m_Layer: 16
-  m_Name: Baixo
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4798197519498831514
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6356846609964318393}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.5, y: -9.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018802081715121643}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5742441778998823782
+--- !u!114 &4219171212896410476
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6356846609964318393}
+  m_GameObject: {fileID: 4865700478741402135}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direcao: 1
+  direcao: 2
   estaConectada: 0
-  colisor: {fileID: 0}
-  anim: {fileID: 0}
-  portaImg: {fileID: 0}
-  portaBloqueada: {fileID: 0}
-  nomeDaSala: 
---- !u!61 &8831394574805243118
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6356846609964318393}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 2, y: 3}
-  m_EdgeRadius: 0
---- !u!1 &8162901126651890043
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7330874260100958556}
-  - component: {fileID: 3800862365854766290}
-  - component: {fileID: 1309649314821530028}
-  m_Layer: 16
-  m_Name: Esquerda
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7330874260100958556
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8162901126651890043}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -33.5, y: -3.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018802081715121643}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3800862365854766290
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8162901126651890043}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direcao: 3
-  estaConectada: 0
-  colisor: {fileID: 0}
-  anim: {fileID: 0}
-  portaImg: {fileID: 0}
-  portaBloqueada: {fileID: 0}
-  nomeDaSala: 
---- !u!61 &1309649314821530028
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8162901126651890043}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.5, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 3}
-  m_EdgeRadius: 0
+  colisor: {fileID: 7991302955585998721}
+  anim: {fileID: 8265889934204035589}
+  portaImg: {fileID: 7583173107183603507}
+  portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
+    type: 3}
+  nomeDaSala: Sala 2
+  salaOndeEstou: {fileID: 8184530296011292678}
+  portaConectada: {fileID: 0}
 --- !u!1 &8228459664715485420
 GameObject:
   m_ObjectHideFlags: 0
@@ -5067,83 +4844,6 @@ Transform:
   m_Father: {fileID: 3468639337109785191}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8314236291769278890
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5533658925363023722}
-  - component: {fileID: 4152786415064564562}
-  - component: {fileID: 7614836404041077405}
-  m_Layer: 16
-  m_Name: Direita
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5533658925363023722
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8314236291769278890}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.5, y: -3.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2018802081715121643}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4152786415064564562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8314236291769278890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direcao: 2
-  estaConectada: 0
-  colisor: {fileID: 0}
-  anim: {fileID: 0}
-  portaImg: {fileID: 0}
-  portaBloqueada: {fileID: 0}
-  nomeDaSala: 
---- !u!61 &7614836404041077405
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8314236291769278890}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.5, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 3}
-  m_EdgeRadius: 0
 --- !u!1 &8509235017340686498
 GameObject:
   m_ObjectHideFlags: 0
@@ -5153,10 +4853,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7419150485534379479}
-  - component: {fileID: 4705763575869926070}
   - component: {fileID: 2398438500702314878}
   - component: {fileID: 5882875261531716101}
   - component: {fileID: 8977393756062321344}
+  - component: {fileID: 4056949152032519115}
   m_Layer: 11
   m_Name: Cima
   m_TagString: Portas
@@ -5178,25 +4878,6 @@ Transform:
   m_Father: {fileID: 8642029235822610872}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4705763575869926070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8509235017340686498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  direcao: 0
-  estaConectada: 0
-  colisor: {fileID: 2398438500702314878}
-  anim: {fileID: 8977393756062321344}
-  portaImg: {fileID: 5882875261531716101}
-  portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
-  nomeDaSala: Sala 2
 --- !u!61 &2398438500702314878
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5292,40 +4973,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1 &8732032983812707971
-GameObject:
+--- !u!114 &4056949152032519115
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2018802081715121643}
-  m_Layer: 0
-  m_Name: Colisores
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2018802081715121643
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8732032983812707971}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 3813933059728525555}
-  - {fileID: 4798197519498831514}
-  - {fileID: 5533658925363023722}
-  - {fileID: 7330874260100958556}
-  m_Father: {fileID: 3468639335875947898}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 8509235017340686498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea5d4eee23137e943be48ad08f0a6e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direcao: 0
+  estaConectada: 0
+  colisor: {fileID: 2398438500702314878}
+  anim: {fileID: 8977393756062321344}
+  portaImg: {fileID: 5882875261531716101}
+  portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
+    type: 3}
+  nomeDaSala: Sala 2
+  salaOndeEstou: {fileID: 8184530296011292678}
+  portaConectada: {fileID: 0}
 --- !u!1001 &2103842952769957371
 PrefabInstance:
   m_ObjectHideFlags: 0
