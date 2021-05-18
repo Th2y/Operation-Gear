@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 141a06e140ff71e4d8e69cf139228048, type: 3}
-  m_Name: ItemNew
+  m_Name: BolaAzul
   m_EditorClassIdentifier: 
   name: BolaAzul
   icon: {fileID: 21300000, guid: a884f421d65b4604180ece7f8356797b, type: 3}

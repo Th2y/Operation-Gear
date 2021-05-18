@@ -14,16 +14,10 @@ public class InventorySlots : MonoBehaviour
 
     public void AddItem(Item newItem)
     {
-
         item = newItem;
 
         icon.sprite = newItem.icon;
         icon.enabled = true;
-
-
-
-
-
     }
 
 
@@ -38,7 +32,7 @@ public class InventorySlots : MonoBehaviour
     }
     public void OnRemoveButton()
     {
-        Inventory.instance.RemoveItem(item, iDImage);
+        
         ClearSlot();
     }
 
@@ -48,9 +42,12 @@ public class InventorySlots : MonoBehaviour
     {
         if (item != null)
         {
+            Inventory.instance.RemoveItem(item);
+
             ClearSlot();
 
 
+            
 
         }
 
