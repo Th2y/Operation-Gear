@@ -1873,7 +1873,7 @@ MonoBehaviour:
   portaImg: {fileID: 9148156155986582951}
   portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
   nomeDaSala: Sala 5
-  salaOndeEstou: {fileID: 0}
+  salaOndeEstou: {fileID: 9141451246794704547}
   portaConectada: {fileID: 0}
 --- !u!61 &5004794194137622283
 BoxCollider2D:
@@ -2023,7 +2023,7 @@ MonoBehaviour:
   portaImg: {fileID: 4893243602325548625}
   portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
   nomeDaSala: Sala 5
-  salaOndeEstou: {fileID: 0}
+  salaOndeEstou: {fileID: 9141451246794704547}
   portaConectada: {fileID: 0}
 --- !u!61 &5854922163196854099
 BoxCollider2D:
@@ -2173,7 +2173,7 @@ MonoBehaviour:
   portaImg: {fileID: 1221016667235374252}
   portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
   nomeDaSala: Sala 5
-  salaOndeEstou: {fileID: 0}
+  salaOndeEstou: {fileID: 9141451246794704547}
   portaConectada: {fileID: 0}
 --- !u!61 &4931639986440755658
 BoxCollider2D:
@@ -2323,7 +2323,7 @@ MonoBehaviour:
   portaImg: {fileID: 2182220025994750684}
   portaBloqueada: {fileID: 21300000, guid: d22def461c91a424dba59955188155c8, type: 3}
   nomeDaSala: Sala 5
-  salaOndeEstou: {fileID: 0}
+  salaOndeEstou: {fileID: 9141451246794704547}
   portaConectada: {fileID: 0}
 --- !u!61 &3328893548946709305
 BoxCollider2D:

@@ -149,7 +149,7 @@ MonoBehaviour:
   portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
     type: 3}
   nomeDaSala: Sala 4
-  salaOndeEstou: {fileID: 0}
+  salaOndeEstou: {fileID: 720681580577538708}
   portaConectada: {fileID: 0}
 --- !u!1 &1383326223536561216
 GameObject:
@@ -300,7 +300,7 @@ MonoBehaviour:
   portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
     type: 3}
   nomeDaSala: Sala 4
-  salaOndeEstou: {fileID: 0}
+  salaOndeEstou: {fileID: 720681580577538708}
   portaConectada: {fileID: 0}
 --- !u!1 &1596595220218238768
 GameObject:
@@ -451,7 +451,7 @@ MonoBehaviour:
   portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
     type: 3}
   nomeDaSala: Sala 4
-  salaOndeEstou: {fileID: 0}
+  salaOndeEstou: {fileID: 720681580577538708}
   portaConectada: {fileID: 0}
 --- !u!1 &1615399630161123024
 GameObject:
@@ -5085,18 +5085,18 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
+      m_TileColorIndex: 2
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741827
   - first: {x: 56, y: -30, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 6
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
+      m_TileColorIndex: 2
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741827
   - first: {x: 57, y: -30, z: 0}
@@ -5959,9 +5959,9 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 27
     m_Data: {fileID: 21300000, guid: caf3a36bb821d3042b04ab0f82170500, type: 3}
-  - m_RefCount: 2
-    m_Data: {fileID: 0}
   - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 2
     m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 0b0d42b04adfbb3498ecc20fd406fc53, type: 3}
@@ -6011,12 +6011,12 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 2
-    m_Data: {r: 0.73873585, g: 0.44692057, b: 0.46165946, a: 1}
+  - m_RefCount: 0
+    m_Data: {r: 3.7768e-41, g: 3.7768e-41, b: 3.7768e-41, a: 3.7768e-41}
   - m_RefCount: 153
     m_Data: {r: 1, g: 1, b: 1, a: 1}
-  - m_RefCount: 0
-    m_Data: {r: 3.1835e-41, g: 3.1835e-41, b: 3.1835e-41, a: 3.1835e-41}
+  - m_RefCount: 2
+    m_Data: {r: 0.8797709, g: 0.40231022, b: 0.54105973, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6519,7 +6519,7 @@ MonoBehaviour:
   portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
     type: 3}
   nomeDaSala: Sala 4
-  salaOndeEstou: {fileID: 0}
+  salaOndeEstou: {fileID: 720681580577538708}
   portaConectada: {fileID: 0}
 --- !u!1001 &6511759515819531447
 PrefabInstance:

@@ -22,7 +22,7 @@ public class Mapa : MonoBehaviour
             salaInicial = EscolherSala();
             salaInicial.Conectar(porta);
             if (i == 0)
-                Debug.Log(porta.salaOndeEstou);
+                porta.salaOndeEstou.Ativar();
         }
 
         //Sala ultimaSala = Instantiate(salaFinal, Vector3.zero, Quaternion.identity);

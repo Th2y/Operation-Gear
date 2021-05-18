@@ -149,7 +149,7 @@ MonoBehaviour:
   portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
     type: 3}
   nomeDaSala: Sala 3
-  salaOndeEstou: {fileID: 0}
+  salaOndeEstou: {fileID: 1094286478406617059}
   portaConectada: {fileID: 0}
 --- !u!1 &789528329203225336
 GameObject:
@@ -300,7 +300,7 @@ MonoBehaviour:
   portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
     type: 3}
   nomeDaSala: Sala 3
-  salaOndeEstou: {fileID: 0}
+  salaOndeEstou: {fileID: 1094286478406617059}
   portaConectada: {fileID: 0}
 --- !u!1 &1206531326885236526
 GameObject:
@@ -5166,7 +5166,7 @@ MonoBehaviour:
   portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
     type: 3}
   nomeDaSala: Sala 3
-  salaOndeEstou: {fileID: 0}
+  salaOndeEstou: {fileID: 1094286478406617059}
   portaConectada: {fileID: 0}
 --- !u!1 &4074262031139143817
 GameObject:
@@ -5347,7 +5347,7 @@ MonoBehaviour:
   portaBloqueada: {fileID: -8326039222019089124, guid: 238e886a377e20440afc9b6b0864032e,
     type: 3}
   nomeDaSala: Sala 3
-  salaOndeEstou: {fileID: 0}
+  salaOndeEstou: {fileID: 1094286478406617059}
   portaConectada: {fileID: 0}
 --- !u!1 &6084943630124960737
 GameObject:

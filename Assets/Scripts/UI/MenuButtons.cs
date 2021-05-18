@@ -106,6 +106,6 @@ public class MenuButtons : MonoBehaviour
     {
         // Muda para a Scene determinada após o tempo determinado
         yield return new WaitForSeconds(startTime);
-        SceneManager.LoadScene("Piso1");
+        SceneManager.LoadScene("HUB");
     }
 }
