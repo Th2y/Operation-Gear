@@ -5,7 +5,6 @@ using UnityEngine;
 public class Agent : MonoBehaviour {
 
     [Header("Algoritmo busca")]
-    [SerializeField]
     private Transform target;
 
     [SerializeField]
@@ -138,6 +137,15 @@ public class Agent : MonoBehaviour {
                 previousNode = node;
             }
         }
+    }
+
+    public Vector2[] GetNodesPositions()
+    {
+        if(this.path != null)
+        {
+            return this.path.GetNodesPositions();
+        }
+        return null;
     }
 
 }

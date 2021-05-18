@@ -30,6 +30,8 @@ TagManager:
   - ObstacleTemp
   - Inimigo
   - InimigoNaoPassa
+  - Removable
+  - 
   - 
   - 
   - 
@@ -75,4 +77,12 @@ TagManager:
     locked: 0
   - name: Personagens
     uniqueID: 2240102609
+  - name: AttackIndicator
+    uniqueID: 4188601785
+    locked: 0
+  - name: Player
+    uniqueID: 952346169
+    locked: 0
+  - name: Enemy
+    uniqueID: 2303052053
     locked: 0
