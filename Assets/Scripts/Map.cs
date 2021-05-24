@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Map : MonoBehaviour {
 
-    [SerializeField]
-    private Vector2 OriginPosition = new Vector2(0.5f, 0.5f);
     private static readonly Vector2[] Directions = new Vector2[] { 
         Vector2.up, 
         Vector2.right, 
@@ -14,7 +12,7 @@ public class Map : MonoBehaviour {
     };
 
     [SerializeField]
-    private int maxNodes = 1000;
+    private int maxNodes = 500;
 
     [HideInInspector]
     [SerializeField]
@@ -32,11 +30,13 @@ public class Map : MonoBehaviour {
     private bool drawGizmos;
 #endif
 
+    Vector2 startPosition;
+    public Transform posOrigem;
 
 #if UNITY_EDITOR
     private void OnDrawGizmos() {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(this.OriginPosition, 0.5f);
+        Gizmos.DrawSphere(startPosition, 0.5f);
         if (this.nodes != null) {
             foreach (Node node in this.nodes) {
                 if (node.Walkable) {
@@ -44,21 +44,25 @@ public class Map : MonoBehaviour {
                 } else {
                     Gizmos.color = Color.red;
                 }
-                Gizmos.DrawSphere(node.Position, 0.1f);
+                Gizmos.DrawSphere(node.Position, 1f);
             }
         }
 
         Gizmos.color = Color.yellow;
-        Gizmos.DrawSphere(this.OriginPosition, 0.5f);
+        Gizmos.DrawSphere(startPosition, 0.5f);
     }
 #endif
 
-    private void Awake() {
-        Bake();
-    }
-
     public void Bake() {
-        Vector2 startPosition = OriginPosition;
+        this.startPosition = this.posOrigem.TransformPoint(Vector2.zero);
+        Debug.Log(this.posOrigem.TransformPoint(Vector2.zero));
+
+        /*this.transform.position = portaConectar.transform.position;
+        Vector3 posConectadaGlobal = portaConectada.transform.TransformPoint(Vector3.zero);
+        Vector3 distanciaPortas = this.transform.position - posConectadaGlobal;
+        this.transform.position += distanciaPortas;*/
+
+
         this.nodes = new List<Node>();
 
         RaycastHit2D hit = Physics2D.Linecast(startPosition, startPosition, this.layerMask);

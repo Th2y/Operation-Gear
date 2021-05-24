@@ -9,8 +9,7 @@ public class Stage : MonoBehaviour
     [SerializeField]
     private Map map;
 
-    // Start is called before the first frame update
-    void Start()
+    public void Iniciar()
     {
         map.Bake();
         agent.Init();

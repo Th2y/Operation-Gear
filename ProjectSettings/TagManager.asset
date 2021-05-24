@@ -44,7 +44,6 @@ TagManager:
   - 
   - 
   - 
-  - 
   m_SortingLayers:
   - name: Default
     uniqueID: 0
@@ -70,9 +69,9 @@ TagManager:
   - name: ObjetosIluminados
     uniqueID: 958504581
     locked: 0
-  - name: Canvas
-    uniqueID: 3872626649
-    locked: 0
   - name: Personagens
     uniqueID: 2240102609
+    locked: 0
+  - name: Canvas
+    uniqueID: 3872626649
     locked: 0
