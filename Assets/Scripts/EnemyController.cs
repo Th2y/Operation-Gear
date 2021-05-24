@@ -81,6 +81,7 @@ public class EnemyController : MonoBehaviour, IAgentObserver
         {
             if (isDashing)
             {
+                Debug.Log("Estou seguindo");
                 animator.SetBool("isWalking", true);
                 if (hasPushed)
                 {

@@ -7,6 +7,9 @@ public class Sala : MonoBehaviour
     public Porta[] portas;
     public Transform posInicial;
 
+    [SerializeField]
+    private Stage stage;
+
     public Porta RetornaPortaOposta(DirecaoMovimento direcao)
     {
         DirecaoMovimento direcaoOposta = direcao.Oposta();
@@ -20,7 +23,15 @@ public class Sala : MonoBehaviour
 
         return null;
     }
-    
+
+    public void OnEnable()
+    {
+        if(this.gameObject.name == "Sala 2")
+        {
+            stage.Iniciar();
+        }
+    }
+
     public Porta escolherPorta()
     {
         Porta portaAtual = null;
