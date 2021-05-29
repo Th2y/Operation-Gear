@@ -30,7 +30,7 @@ public class Map : MonoBehaviour {
     private bool drawGizmos;
 #endif
 
-    Vector2 startPosition;
+    public Vector2 startPosition;
     public Transform posOrigem;
 
 #if UNITY_EDITOR
@@ -44,7 +44,7 @@ public class Map : MonoBehaviour {
                 } else {
                     Gizmos.color = Color.red;
                 }
-                Gizmos.DrawSphere(node.Position, 1f);
+                Gizmos.DrawSphere(node.Position, 0.1f);
             }
         }
 
@@ -55,23 +55,14 @@ public class Map : MonoBehaviour {
 
     public void Bake() {
         this.startPosition = this.posOrigem.TransformPoint(Vector2.zero);
-        Debug.Log(this.posOrigem.TransformPoint(Vector2.zero));
-
-        /*this.transform.position = portaConectar.transform.position;
-        Vector3 posConectadaGlobal = portaConectada.transform.TransformPoint(Vector3.zero);
-        Vector3 distanciaPortas = this.transform.position - posConectadaGlobal;
-        this.transform.position += distanciaPortas;*/
-
-
         this.nodes = new List<Node>();
 
         RaycastHit2D hit = Physics2D.Linecast(startPosition, startPosition, this.layerMask);
         Node origin = CreateNode(hit.transform, startPosition);
-
         FindNextNodes(origin);
-#if UNITY_EDITOR
-        Debug.Log("[Map]: {Bake} Quantidade de nós: " + this.nodes.Count);
-#endif
+        /*#if UNITY_EDITOR
+            Debug.Log("[Map]: {Bake} Quantidade de nós: " + this.nodes.Count);
+        #endif*/
         this.baked = true;
     }
 
@@ -82,12 +73,16 @@ public class Map : MonoBehaviour {
     }
 
     public Node GetNodeByPosition(Vector2 position) {
+        Node nodeProx = null;
+        float maisProx = float.MaxValue;
         foreach (Node node in this.nodes) {
-            if (node.Position == position) {
-                return node;
+            float distNoPos = Vector2.Distance(position, node.Position);
+            if (distNoPos < 1 && (nodeProx == null || distNoPos < maisProx)) {
+                nodeProx = node;
+                maisProx = distNoPos;
             }
         }
-        return null;
+        return nodeProx;
     }
 
     private void FindNextNodes(Node node) {

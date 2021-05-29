@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ccc63c9388d15a40b1add8b6e73ab68, type: 3}
-  m_Name: ChaveDeLado
+  m_Name: ChaveDeLadoBrush
   m_EditorClassIdentifier: 
   prefab: {fileID: 7019728908683552550, guid: 59d012d1f404875479149db43be1ca53, type: 3}

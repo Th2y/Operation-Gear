@@ -524,23 +524,13 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1615399630161123026}
-    m_ColliderPaths:
-    - - X: 589977115
-        Y: -410065120
-      - X: 589977115
-        Y: -80096552
-      - X: 370022592
-        Y: -80096845
-      - X: 370022885
-        Y: -410065120
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
-    - - {x: 58.997684, y: -41.00651}
-      - {x: 58.997684, y: -8.009655}
-      - {x: 37.00226, y: -8.009714}
-      - {x: 37.002316, y: -41.00651}
+    - - {x: 58.999943, y: -41}
+      - {x: 58.999943, y: -8}
+      - {x: 37, y: -8.000058}
+      - {x: 37.000057, y: -41}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!61 &1615399630161123026
@@ -556,7 +546,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: 48, y: -24.508083}
+  m_Offset: {x: 48, y: -24.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -567,7 +557,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 21.99548, y: 32.996857}
+  m_Size: {x: 22, y: 33}
   m_EdgeRadius: 0
 --- !u!1 &1615399630343359351
 GameObject:
@@ -585,7 +575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1615399630343359352
 Transform:
   m_ObjectHideFlags: 0
@@ -622,6 +612,7 @@ MonoBehaviour:
   - {fileID: 3000087873642111027}
   - {fileID: 5008700590936045715}
   posInicial: {fileID: 8954158540542019850}
+  stage: {fileID: 0}
 --- !u!1 &4881517015481273032
 GameObject:
   m_ObjectHideFlags: 0
@@ -6012,11 +6003,11 @@ Tilemap:
       e33: 1
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: 3.7768e-41, g: 3.7768e-41, b: 3.7768e-41, a: 3.7768e-41}
+    m_Data: {r: 1.65605e-40, g: 1.65605e-40, b: 1.65605e-40, a: 1.65605e-40}
   - m_RefCount: 153
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   - m_RefCount: 2
-    m_Data: {r: 0.8797709, g: 0.40231022, b: 0.54105973, a: 1}
+    m_Data: {r: 0.92187876, g: 0.38762626, b: 0.54015815, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}

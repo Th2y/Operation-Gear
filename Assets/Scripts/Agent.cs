@@ -99,7 +99,6 @@ public class Agent : MonoBehaviour {
         Node currentTargetNode = this.map.GetNodeByPosition(this.target.position);
         Node previousTargetNode = this.searchAlgorithm.TargetNode;
         if (currentTargetNode != previousTargetNode) {
-            Debug.Log("Estou");
             FindPath();
         }
 
