@@ -2093,6 +2093,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 133632
+  startPosition: {x: 0, y: 0}
   posOrigem: {fileID: 3621174396194697140}
 --- !u!1 &2111482581682153453
 GameObject:
@@ -4344,10 +4345,10 @@ CompositeCollider2D:
   m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
-    - - {x: -7.4956903, y: -10.972223}
-      - {x: -7.4956903, y: 3.0550232}
-      - {x: -34.510757, y: 3.0549645}
-      - {x: -34.5107, y: -10.972223}
+    - - {x: -6.992496, y: -10.513623}
+      - {x: -6.992496, y: 3.5136232}
+      - {x: -34.00756, y: 3.5135648}
+      - {x: -34.007504, y: -10.513623}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
 --- !u!61 &3468639335503108510
@@ -4363,7 +4364,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 1
-  m_Offset: {x: -21.003195, y: -3.9586}
+  m_Offset: {x: -20.5, y: -3.5}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}

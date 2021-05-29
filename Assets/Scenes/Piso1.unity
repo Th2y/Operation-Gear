@@ -961,7 +961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 1471955995}
   m_Damping: 0
   m_MaxWindowSize: -1
 --- !u!1 &708477825
@@ -1704,6 +1704,12 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!66 &1289260775 stripped
+CompositeCollider2D:
+  m_CorrespondingSourceObject: {fileID: 8537857501580345892, guid: d60941fc60e712d44ac7642b8f9d2512,
+    type: 3}
+  m_PrefabInstance: {fileID: 1451152861}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1302140196 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 542095506937041899, guid: 084b8c42e85a183469dfbe6ecb23e893,
@@ -1798,6 +1804,86 @@ PrefabInstance:
       propertyPath: m_TileSpriteArray.Array.data[6].m_Data
       value: 
       objectReference: {fileID: 743411973}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_Tiles.Array.data[64].second.m_TileSpriteIndex
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_Tiles.Array.data[64].second.m_TileColorIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_Tiles.Array.data[65].second.m_TileSpriteIndex
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_Tiles.Array.data[65].second.m_TileColorIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[6].m_RefCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[7].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_TileColorArray.Array.data[0].m_RefCount
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_TileColorArray.Array.data[0].m_Data.r
+      value: 0.86852294
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_TileColorArray.Array.data[0].m_Data.g
+      value: 0.56867534
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_TileColorArray.Array.data[0].m_Data.b
+      value: 0.59884524
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_TileColorArray.Array.data[0].m_Data.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_TileColorArray.Array.data[2].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_TileColorArray.Array.data[2].m_Data.r
+      value: NaN
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_TileColorArray.Array.data[2].m_Data.g
+      value: NaN
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_TileColorArray.Array.data[2].m_Data.b
+      value: NaN
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_TileColorArray.Array.data[2].m_Data.a
+      value: NaN
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 43e218e2435d17a42a0effca8eba117e, type: 3}
 --- !u!114 &1394368140 stripped
@@ -2099,7 +2185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 1757243411}
   m_Damping: 0
   m_MaxWindowSize: -1
 --- !u!114 &1456442325
@@ -2140,6 +2226,12 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 592936201}
+--- !u!66 &1471955995 stripped
+CompositeCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6487204915467493425, guid: 15f1d8510c8a32141a479405b8596287,
+    type: 3}
+  m_PrefabInstance: {fileID: 677410285}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1518864552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2185,7 +2277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 1289260775}
   m_Damping: 0
   m_MaxWindowSize: -1
 --- !u!114 &1518864555
@@ -2374,7 +2466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 1683079515}
   m_Damping: 0
   m_MaxWindowSize: -1
 --- !u!114 &1669549785
@@ -2427,6 +2519,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!66 &1683079515 stripped
+CompositeCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7069242772404055702, guid: 557cc35fc12683d4a8c98be9e520edc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1844127036}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1707899896
 GameObject:
   m_ObjectHideFlags: 0
@@ -2568,6 +2666,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1707899899}
+--- !u!66 &1743173944 stripped
+CompositeCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1615399630161123027, guid: 43e218e2435d17a42a0effca8eba117e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1394368139}
+  m_PrefabAsset: {fileID: 0}
+--- !u!66 &1757243411 stripped
+CompositeCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3468639335503108511, guid: 6d247222014679d429c97a09d157f46b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2081397298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1767800818
 GameObject:
   m_ObjectHideFlags: 3
@@ -2950,7 +3060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 1743173944}
   m_Damping: 0
   m_MaxWindowSize: -1
 --- !u!114 &2109343123
