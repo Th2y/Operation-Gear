@@ -55,7 +55,6 @@ public class Map : MonoBehaviour {
 
     public void Bake() {
         this.startPosition = this.posOrigem.TransformPoint(Vector2.zero);
-        Debug.Log("Pos inicial " + this.startPosition);
         this.nodes = new List<Node>();
 
         RaycastHit2D hit = Physics2D.Linecast(startPosition, startPosition, this.layerMask);

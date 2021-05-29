@@ -85,8 +85,6 @@ public class Agent : MonoBehaviour {
 
     private void FindPath() {
         Node currentNode = this.map.GetNodeByPosition(this.transform.position);
-        Debug.Log("Minha pos " + this.transform.position);
-        Debug.Log("Meu alvo " + this.target.position);
         this.targetNode = this.map.GetNodeByPosition(this.target.position);
 
         this.searchAlgorithm = new AStar(currentNode);
@@ -95,16 +93,12 @@ public class Agent : MonoBehaviour {
     }
 
     private void Update() {
-        Debug.Log(this.searching);
         if (!this.searching) {
             return;
         }
         Node currentTargetNode = this.map.GetNodeByPosition(this.target.position);
         Node previousTargetNode = this.searchAlgorithm.TargetNode;
-        Debug.Log(currentTargetNode);
-        Debug.Log(previousTargetNode);
         if (currentTargetNode != previousTargetNode) {
-            Debug.Log("Estou");
             FindPath();
         }
 
