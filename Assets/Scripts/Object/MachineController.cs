@@ -6,6 +6,9 @@ public class MachineController : ObjectController
 {
     [SerializeField]
     private Sprite[] imagebox;
+    [SerializeField]
+    private ParticleSystem explosao;
+
     private int maquinasDestruidas = 0;
     private string nomeDaFase = "Piso1";
     private string maquinasSave;
@@ -26,8 +29,9 @@ public class MachineController : ObjectController
         anim.SetInteger("Vidas", life);
         if (life <= 3)
         {
-            //Adicionar uma parte para ativar a animação ou o efeito da fumaça
-            Debug.Log("Começar a soltar fumaça");
+            var main = explosao.main;
+            main.maxParticles++;
+            explosao.Play();
         }
 
         if (life <= 0)
