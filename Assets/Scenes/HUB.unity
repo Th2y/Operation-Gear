@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -538,6 +538,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audios: {fileID: 1833973326}
+  painelVenceu: {fileID: 0}
+  painelPerdeu: {fileID: 0}
 --- !u!1 &101801785
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +813,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a418e4b3725a148802618978f948f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audios: {fileID: 0}
+  audios: {fileID: 1833973326}
+  painelVenceu: {fileID: 0}
+  painelPerdeu: {fileID: 0}
 --- !u!1 &269926327
 GameObject:
   m_ObjectHideFlags: 0
@@ -6954,7 +6958,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2054864687
-  m_SortingLayer: 9
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 4838195076203060816, guid: 8728da09e5214544d875b6fde564be38,
     type: 3}
@@ -7033,6 +7037,7 @@ MonoBehaviour:
   cameraLimites:
     serializedVersion: 2
     m_Bits: 0
+  animController: {fileID: 0}
 --- !u!1 &1833973324
 GameObject:
   m_ObjectHideFlags: 0
