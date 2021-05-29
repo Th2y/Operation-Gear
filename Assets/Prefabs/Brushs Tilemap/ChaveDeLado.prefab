@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3157402223322360201}
   - component: {fileID: 6325511398051188818}
+  - component: {fileID: 8433137347984421119}
   - component: {fileID: 9147700479386992196}
   m_Layer: 8
   m_Name: chaves e terminais_1
@@ -83,6 +84,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8433137347984421119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7019728908683552550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f113faf2ef09c354e95950799ccbe929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  life: 1
+  anim: {fileID: 0}
+  nomeDaCena: Piso1
 --- !u!61 &9147700479386992196
 BoxCollider2D:
   m_ObjectHideFlags: 0

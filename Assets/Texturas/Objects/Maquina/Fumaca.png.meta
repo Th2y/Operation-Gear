@@ -1,127 +1,22 @@
 fileFormatVersion: 2
-guid: 6090783ba132ed648be02b1370f4f6c1
+guid: 3759a3936ebd3fc4285b461a9d794952
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1129646028150176215
-    second: "Maquin\xE1rio_0"
+      213: 2203924300774827116
+    second: Fumaca_0
   - first:
-      213: 7806000560938731370
-    second: "Maquin\xE1rio_1"
+      213: 8031506341612215776
+    second: Fumaca_1
   - first:
-      213: -4557894994658282112
-    second: "Maquin\xE1rio_2"
+      213: 7689472439126377258
+    second: Fumaca_2
   - first:
-      213: -6608872028290911126
-    second: "Maquin\xE1rio_3"
+      213: 6101366072143372372
+    second: Fumaca_3
   - first:
-      213: 2780356409905941676
-    second: "Maquin\xE1rio_4"
-  - first:
-      213: 1810366241352729470
-    second: "Maquin\xE1rio_5"
-  - first:
-      213: 2674593250377357395
-    second: "Maquin\xE1rio_6"
-  - first:
-      213: 5185122967773292212
-    second: "Maquin\xE1rio_7"
-  - first:
-      213: 3737716885811083323
-    second: "Maquin\xE1rio_8"
-  - first:
-      213: -1281116043925578823
-    second: "Maquin\xE1rio_9"
-  - first:
-      213: -8633918528029866356
-    second: "Maquin\xE1rio_10"
-  - first:
-      213: 3154353701453049932
-    second: "Maquin\xE1rio_11"
-  - first:
-      213: 3299834045543722999
-    second: "Maquin\xE1rio_12"
-  - first:
-      213: -5583712940756152107
-    second: "Maquin\xE1rio_13"
-  - first:
-      213: -6386661680904646618
-    second: "Maquin\xE1rio_14"
-  - first:
-      213: -3696306462366296496
-    second: "Maquin\xE1rio_15"
-  - first:
-      213: -2835544386148421143
-    second: "Maquin\xE1rio_16"
-  - first:
-      213: 5167509597163238042
-    second: "Maquin\xE1rio_17"
-  - first:
-      213: -8471049712829484396
-    second: "Maquin\xE1rio_18"
-  - first:
-      213: 6055264264925808364
-    second: "Maquin\xE1rio_19"
-  - first:
-      213: -4750673470056700087
-    second: "Maquin\xE1rio_20"
-  - first:
-      213: 6806520230978959771
-    second: "Maquin\xE1rio_21"
-  - first:
-      213: 1868636899070630895
-    second: "Maquin\xE1rio_22"
-  - first:
-      213: 4212377430232830013
-    second: "Maquin\xE1rio_23"
-  - first:
-      213: 5660928129938596781
-    second: "Maquin\xE1rio_24"
-  - first:
-      213: -6564658483555199548
-    second: "Maquin\xE1rio_25"
-  - first:
-      213: -3631519729666135170
-    second: "Maquin\xE1rio_26"
-  - first:
-      213: -4490852101292941553
-    second: "Maquin\xE1rio_27"
-  - first:
-      213: -409579607982020075
-    second: "Maquin\xE1rio_28"
-  - first:
-      213: 967284748675887811
-    second: "Maquin\xE1rio_29"
-  - first:
-      213: -3702892590713080856
-    second: "Maquin\xE1rio_30"
-  - first:
-      213: -4809686575271785906
-    second: "Maquin\xE1rio_31"
-  - first:
-      213: -6806713764408364391
-    second: "Maquin\xE1rio_32"
-  - first:
-      213: 1830890057104549669
-    second: "Maquin\xE1rio_33"
-  - first:
-      213: 6362306211574164327
-    second: "Maquin\xE1rio_34"
-  - first:
-      213: 4775484418690602293
-    second: "Maquin\xE1rio_35"
-  - first:
-      213: -3434488138131863086
-    second: "Maquin\xE1rio_36"
-  - first:
-      213: -30083540310133431
-    second: "Maquin\xE1rio_37"
-  - first:
-      213: 5071957792866689357
-    second: "Maquin\xE1rio_38"
-  - first:
-      213: -2183087473567525422
-    second: "Maquin\xE1rio_39"
+      213: -334550854724746741
+    second: Fumaca_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -151,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -165,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -231,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Maquin\xE1rio_0"
+      name: Fumaca_0
       rect:
         serializedVersion: 2
         x: 0
@@ -245,14 +140,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9268d2a2ce0b250f0800000000000000
-      internalID: -1129646028150176215
+      spriteID: c64e8838979e59e10800000000000000
+      internalID: 2203924300774827116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Maquin\xE1rio_1"
+      name: Fumaca_1
       rect:
         serializedVersion: 2
         x: 64
@@ -266,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a67c047f62c745c60800000000000000
-      internalID: 7806000560938731370
+      spriteID: 0edd7170774a57f60800000000000000
+      internalID: 8031506341612215776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Maquin\xE1rio_2"
+      name: Fumaca_2
       rect:
         serializedVersion: 2
         x: 128
@@ -287,14 +182,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 085bcdfa6aa1fb0c0800000000000000
-      internalID: -4557894994658282112
+      spriteID: a23c84c517e76ba60800000000000000
+      internalID: 7689472439126377258
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Maquin\xE1rio_3"
+      name: Fumaca_3
       rect:
         serializedVersion: 2
         x: 192
@@ -308,14 +203,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6474b3d7e19844a0800000000000000
-      internalID: -6608872028290911126
+      spriteID: 450e9bebd186ca450800000000000000
+      internalID: 6101366072143372372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "Maquin\xE1rio_4"
+      name: Fumaca_4
       rect:
         serializedVersion: 2
         x: 256
@@ -329,8 +224,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cac8c618c6fc59620800000000000000
-      internalID: 2780356409905941676
+      spriteID: b0204d825cf6b5bf0800000000000000
+      internalID: -334550854724746741
       vertices: []
       indices: 
       edges: []

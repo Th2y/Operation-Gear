@@ -524,17 +524,7 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 1615399630161123026}
-    m_ColliderPaths:
-    - - X: 589977115
-        Y: -410065120
-      - X: 589977115
-        Y: -80096552
-      - X: 370022592
-        Y: -80096845
-      - X: 370022885
-        Y: -410065120
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 58.997684, y: -41.00651}
@@ -585,7 +575,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1615399630343359352
 Transform:
   m_ObjectHideFlags: 0
@@ -622,6 +612,7 @@ MonoBehaviour:
   - {fileID: 3000087873642111027}
   - {fileID: 5008700590936045715}
   posInicial: {fileID: 8954158540542019850}
+  stage: {fileID: 0}
 --- !u!1 &4881517015481273032
 GameObject:
   m_ObjectHideFlags: 0
@@ -5085,18 +5076,18 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 2
+      m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741827
   - first: {x: 56, y: -30, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 6
-      m_TileSpriteIndex: 7
+      m_TileSpriteIndex: 6
       m_TileMatrixIndex: 0
-      m_TileColorIndex: 2
+      m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741827
   - first: {x: 57, y: -30, z: 0}
@@ -5959,9 +5950,9 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 27
     m_Data: {fileID: 21300000, guid: caf3a36bb821d3042b04ab0f82170500, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 2
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 0b0d42b04adfbb3498ecc20fd406fc53, type: 3}
@@ -6011,12 +6002,12 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 0
-    m_Data: {r: 3.7768e-41, g: 3.7768e-41, b: 3.7768e-41, a: 3.7768e-41}
+  - m_RefCount: 2
+    m_Data: {r: 0.86852294, g: 0.56867534, b: 0.59884524, a: 1}
   - m_RefCount: 153
     m_Data: {r: 1, g: 1, b: 1, a: 1}
-  - m_RefCount: 2
-    m_Data: {r: 0.8797709, g: 0.40231022, b: 0.54105973, a: 1}
+  - m_RefCount: 0
+    m_Data: {r: NaN, g: NaN, b: NaN, a: NaN}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}

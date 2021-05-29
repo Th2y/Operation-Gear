@@ -11,6 +11,7 @@ TagManager:
   - Inimigo
   - Portas
   - Chaves
+  - Maquina
   layers:
   - Default
   - TransparentFX
