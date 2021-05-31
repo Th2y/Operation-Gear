@@ -9,6 +9,7 @@ public class TakeDamage : MonoBehaviour
 
     private StatsController stats;
     private AnimController anim;
+
     private void Start()
     {
         stats = GetComponent<StatsController>();
@@ -17,19 +18,15 @@ public class TakeDamage : MonoBehaviour
         
     }
 
+
     // metodo para o jogador sofrer dano
     public void DamageInPlayer(float dmg)
     {
         stats.RemoveLife(dmg);
-        anim.TakeDamageAnim();
+        anim.TakeDamageAnim(true);
         
         DamageImageTrue();
         Invoke("DamageImageFalse", 1f);
-
-
-       
-
-        
 
     }
     public void DamageImageTrue()
@@ -39,6 +36,7 @@ public class TakeDamage : MonoBehaviour
     public void DamageImageFalse()
     {
         D_I.SetActive(false);
+        anim.TakeDamageAnim(false);
     }
 
 
