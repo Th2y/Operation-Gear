@@ -704,7 +704,7 @@ GameObject:
   - component: {fileID: 609597355}
   - component: {fileID: 609597356}
   m_Layer: 5
-  m_Name: InventoryParent
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1429,7 +1429,7 @@ GameObject:
   - component: {fileID: 1812323674}
   - component: {fileID: 1812323677}
   m_Layer: 5
-  m_Name: Slot (0)
+  m_Name: Slot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
