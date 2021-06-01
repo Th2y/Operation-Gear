@@ -5,6 +5,7 @@ using UnityEngine.Tilemaps;
 /// <summary>
 /// Pincel de Tilemap que permite usar Prefabs como Tiles
 /// </summary>
+#if UNITY_EDITOR
 [CreateAssetMenu(menuName = "Brush.../Prefab Brush", fileName = "Prefab Brush")]
 [CustomGridBrush (false, true, false, "Prefab Brush")]
 public class PincelTilemap : GridBrushBase
@@ -51,3 +52,4 @@ public class PincelTilemap : GridBrushBase
         }
     }
 }
+#endif

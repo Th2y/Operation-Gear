@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: a482c5902344ab84d85c6b63cbba3dc2,
     type: 2}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -122,6 +122,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &1135626 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3503195821050944738, guid: 6d247222014679d429c97a09d157f46b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2081397298}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8ff311cc69c4b419a48c92cd556e4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &40957907 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7495633318201965708, guid: 8c1379e5d5e030645a3df571ff234b36,
@@ -721,11 +733,6 @@ PrefabInstance:
       propertyPath: enemy
       value: 
       objectReference: {fileID: 2081397301}
-    - target: {fileID: 3768666785882165614, guid: f3867618f8da17d47b30f65271a48ffe,
-        type: 3}
-      propertyPath: doorController
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 3768666785882165615, guid: f3867618f8da17d47b30f65271a48ffe,
         type: 3}
       propertyPath: reloadScene
@@ -786,6 +793,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2066385130}
     m_Modifications:
+    - target: {fileID: 5535259587475270843, guid: 15f1d8510c8a32141a479405b8596287,
+        type: 3}
+      propertyPath: stage
+      value: 
+      objectReference: {fileID: 1135626}
     - target: {fileID: 6487204913618548096, guid: 15f1d8510c8a32141a479405b8596287,
         type: 3}
       propertyPath: m_Name
@@ -913,7 +925,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.777439, y: 1}
+    m_SensorSize: {x: 1.7774436, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -949,7 +961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 1471955995}
   m_Damping: 0
   m_MaxWindowSize: -1
 --- !u!1 &708477825
@@ -1234,6 +1246,12 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_SpriteID: 
+--- !u!4 &795568908 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 795568908, guid: f3867618f8da17d47b30f65271a48ffe,
+    type: 3}
+  m_PrefabInstance: {fileID: 639419464}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &849757932 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2015113853, guid: 084b8c42e85a183469dfbe6ecb23e893,
@@ -1686,6 +1704,12 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!66 &1289260775 stripped
+CompositeCollider2D:
+  m_CorrespondingSourceObject: {fileID: 8537857501580345892, guid: d60941fc60e712d44ac7642b8f9d2512,
+    type: 3}
+  m_PrefabInstance: {fileID: 1451152861}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1302140196 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 542095506937041899, guid: 084b8c42e85a183469dfbe6ecb23e893,
@@ -1705,15 +1729,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2066385130}
     m_Modifications:
+    - target: {fileID: 720681580577538708, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: stage
+      value: 
+      objectReference: {fileID: 1135626}
     - target: {fileID: 1615399630343359351, guid: 43e218e2435d17a42a0effca8eba117e,
         type: 3}
       propertyPath: m_Name
       value: Sala 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1615399630343359351, guid: 43e218e2435d17a42a0effca8eba117e,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1615399630343359352, guid: 43e218e2435d17a42a0effca8eba117e,
         type: 3}
@@ -1772,6 +1796,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
         type: 3}
+      propertyPath: m_TileAssetArray.Array.data[6].m_Data
+      value: 
+      objectReference: {fileID: 1525576875}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[6].m_Data
+      value: 
+      objectReference: {fileID: 743411973}
+    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
+        type: 3}
       propertyPath: m_Tiles.Array.data[64].second.m_TileSpriteIndex
       value: 6
       objectReference: {fileID: 0}
@@ -1792,19 +1826,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
         type: 3}
-      propertyPath: m_TileAssetArray.Array.data[6].m_Data
-      value: 
-      objectReference: {fileID: 1525576875}
-    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
-        type: 3}
       propertyPath: m_TileSpriteArray.Array.data[6].m_RefCount
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
-        type: 3}
-      propertyPath: m_TileSpriteArray.Array.data[6].m_Data
-      value: 
-      objectReference: {fileID: 743411973}
     - target: {fileID: 5579070175892356065, guid: 43e218e2435d17a42a0effca8eba117e,
         type: 3}
       propertyPath: m_TileSpriteArray.Array.data[7].m_RefCount
@@ -2091,6 +2115,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9141451246794704547, guid: d60941fc60e712d44ac7642b8f9d2512,
+        type: 3}
+      propertyPath: stage
+      value: 
+      objectReference: {fileID: 1135626}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d60941fc60e712d44ac7642b8f9d2512, type: 3}
 --- !u!114 &1451152862 stripped
@@ -2156,7 +2185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 1757243411}
   m_Damping: 0
   m_MaxWindowSize: -1
 --- !u!114 &1456442325
@@ -2188,7 +2217,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.777439, y: 1}
+    m_SensorSize: {x: 1.7774436, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2197,6 +2226,12 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 592936201}
+--- !u!66 &1471955995 stripped
+CompositeCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6487204915467493425, guid: 15f1d8510c8a32141a479405b8596287,
+    type: 3}
+  m_PrefabInstance: {fileID: 677410285}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1518864552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,7 +2277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 1289260775}
   m_Damping: 0
   m_MaxWindowSize: -1
 --- !u!114 &1518864555
@@ -2274,7 +2309,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.777439, y: 1}
+    m_SensorSize: {x: 1.7774436, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2431,7 +2466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 1683079515}
   m_Damping: 0
   m_MaxWindowSize: -1
 --- !u!114 &1669549785
@@ -2463,7 +2498,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.777439, y: 1}
+    m_SensorSize: {x: 1.7774436, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2484,6 +2519,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!66 &1683079515 stripped
+CompositeCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7069242772404055702, guid: 557cc35fc12683d4a8c98be9e520edc7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1844127036}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1707899896
 GameObject:
   m_ObjectHideFlags: 0
@@ -2625,6 +2666,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1707899899}
+--- !u!66 &1743173944 stripped
+CompositeCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1615399630161123027, guid: 43e218e2435d17a42a0effca8eba117e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1394368139}
+  m_PrefabAsset: {fileID: 0}
+--- !u!66 &1757243411 stripped
+CompositeCollider2D:
+  m_CorrespondingSourceObject: {fileID: 3468639335503108511, guid: 6d247222014679d429c97a09d157f46b,
+    type: 3}
+  m_PrefabInstance: {fileID: 2081397298}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1767800818
 GameObject:
   m_ObjectHideFlags: 3
@@ -2719,20 +2772,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2066385130}
     m_Modifications:
-    - target: {fileID: 5205920155415140666, guid: 557cc35fc12683d4a8c98be9e520edc7,
+    - target: {fileID: 1094286478406617059, guid: 557cc35fc12683d4a8c98be9e520edc7,
         type: 3}
-      propertyPath: maxNodes
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: stage
+      value: 
+      objectReference: {fileID: 1135626}
     - target: {fileID: 7069242772955824317, guid: 557cc35fc12683d4a8c98be9e520edc7,
         type: 3}
       propertyPath: m_Name
       value: Sala 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7069242772955824317, guid: 557cc35fc12683d4a8c98be9e520edc7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7069242772955824318, guid: 557cc35fc12683d4a8c98be9e520edc7,
         type: 3}
@@ -2789,8 +2837,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5205920155415140666, guid: 557cc35fc12683d4a8c98be9e520edc7, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 557cc35fc12683d4a8c98be9e520edc7, type: 3}
 --- !u!114 &1844127037 stripped
 MonoBehaviour:
@@ -2872,20 +2919,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2066385130}
     m_Modifications:
-    - target: {fileID: 3468639335875947901, guid: 6d247222014679d429c97a09d157f46b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3468639337109785190, guid: 6d247222014679d429c97a09d157f46b,
         type: 3}
       propertyPath: m_Name
       value: Sala 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3468639337109785190, guid: 6d247222014679d429c97a09d157f46b,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3468639337109785191, guid: 6d247222014679d429c97a09d157f46b,
         type: 3}
@@ -2946,7 +2983,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target
       value: 
-      objectReference: {fileID: 1091103630}
+      objectReference: {fileID: 795568908}
     - target: {fileID: 3566058381399844779, guid: 6d247222014679d429c97a09d157f46b,
         type: 3}
       propertyPath: player
@@ -3023,7 +3060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 0}
+  m_BoundingShape2D: {fileID: 1743173944}
   m_Damping: 0
   m_MaxWindowSize: -1
 --- !u!114 &2109343123
@@ -3055,7 +3092,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.777439, y: 1}
+    m_SensorSize: {x: 1.7774436, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
