@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class JogadorNaHUB : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class JogadorNaHUB : MonoBehaviour
     private Vector2 direcaoV;
     [SerializeField]
     private AnimController animController;
+    [SerializeField]
+    private MenuHUB menuHUB;
+    [SerializeField]
+    private Button btnConfirmar;
 
     public void Move(string direcao)
     {
@@ -63,6 +68,13 @@ public class JogadorNaHUB : MonoBehaviour
                 this.transform.position += Vector3.left;
             else if (direcaoV == Vector2.right)
                 this.transform.position += Vector3.right;
+            if (ray.collider.isTrigger)
+            {
+                menuHUB.MudarOQueCarregar(ray.collider.gameObject.name);
+                btnConfirmar.interactable = true;
+            }
+            else
+                btnConfirmar.interactable = false;
         }
         else
             Debug.Log(ray.collider.gameObject.name);

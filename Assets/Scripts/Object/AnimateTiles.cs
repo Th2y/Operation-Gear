@@ -6,7 +6,7 @@ using UnityEngine.Tilemaps;
 /// Depois, defina no inspector os tiles e a velocidade
 /// Por fim, coloca essa animação na TilePalet e usa normalmente
 /// </summary>
-
+#if UNITY_EDITOR
 [CreateAssetMenu(menuName = "Tile.../Animated Tile", fileName = "New Animated Tile")]
 public class AnimateTiles : TileBase
 {
@@ -36,3 +36,4 @@ public class AnimateTiles : TileBase
         return false;
     }
 }
+#endif
