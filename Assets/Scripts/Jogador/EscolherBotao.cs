@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EscolherBotao : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class EscolherBotao : MonoBehaviour
     private MovimentacaoJogador jogador;
     [SerializeField]
     private AnimController animController;
+    [SerializeField]
+    private ReloadScene reloadScene;
 
     public void Move(string direcao)
     {
@@ -20,5 +23,17 @@ public class EscolherBotao : MonoBehaviour
             this.jogador.Mover(direcao);
         else
             Poweraps.instancia.MoverSo(direcao);
+    }
+
+    public void ReiniciarJogo()
+    {
+        Time.timeScale = 1f;
+        reloadScene.Reloadscene();
+    }
+
+    public void IrParaOMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("HUB");
     }
 }
