@@ -108,6 +108,12 @@ public class StatsController : MonoBehaviour
                 Idle_T_E_R = Idle_TimeEnergyRes;
             }
         }
+        else
+        {
+
+            Idle_T_E_R = Idle_TimeEnergyRes;
+            Move_T_E_R = Move_TimeEnergyRes;
+        }
     }
 
 

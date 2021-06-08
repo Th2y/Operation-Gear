@@ -42,6 +42,8 @@ public class InventorySlots : MonoBehaviour
     {
         if (item != null)
         {
+            item.Use();
+
             Inventory.instance.RemoveItem(item);
 
             ClearSlot();
