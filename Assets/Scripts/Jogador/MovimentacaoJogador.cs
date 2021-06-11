@@ -130,7 +130,8 @@ public class MovimentacaoJogador : MonoBehaviour
             Porta porta = collision.GetComponent<Porta>();
             cinemachineChange.MudarCam(collision.gameObject.name);
             porta.StartAnim();
-            porta.portaConectada.salaOndeEstou.Ativar();
+            porta.portaConectada.StartAnim();
+            porta.portaConectada.salaOndeEstou.SetAtivo(true);
         }
         else if (collision.gameObject.CompareTag("Chaves"))
         {
