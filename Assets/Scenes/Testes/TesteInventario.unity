@@ -275,6 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: f48260dcd4af0e340b916d2404d8f343, type: 2}
+  SFX_Pickup: {fileID: 0}
 --- !u!212 &75895578
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -485,6 +486,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: f48260dcd4af0e340b916d2404d8f343, type: 2}
+  SFX_Pickup: {fileID: 0}
 --- !u!212 &541854304
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -785,6 +787,7 @@ MonoBehaviour:
   UI_energy: {fileID: 1772414646}
   UI_life: {fileID: 1772414646}
   ismove: 0
+  SFX_Death: {fileID: 0}
 --- !u!1 &1002444337
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,6 +1639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iDImage: 0
   icon: {fileID: 62832101}
+  SFX_Use: {fileID: 0}
 --- !u!1 &1947305897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1772,6 +1776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iDImage: 2
   icon: {fileID: 1762187963}
+  SFX_Use: {fileID: 0}
 --- !u!114 &2026032041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1922,6 +1927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: f48260dcd4af0e340b916d2404d8f343, type: 2}
+  SFX_Pickup: {fileID: 0}
 --- !u!212 &2036661312
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2061,6 +2067,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iDImage: 1
   icon: {fileID: 2143729124}
+  SFX_Use: {fileID: 0}
 --- !u!114 &2100304336
 MonoBehaviour:
   m_ObjectHideFlags: 0

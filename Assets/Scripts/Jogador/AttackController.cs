@@ -20,6 +20,9 @@ public class AttackController : MonoBehaviour
     private float TimeAttack;       // tempo total pro player atacar
     private float T_A;              // tempo pro player atacar
 
+    [Header("Sounds")]
+    public AudioSource SFX_Attack;
+
     private void Update()
     {
         if(T_A > 0) T_A -= Time.deltaTime;
@@ -36,6 +39,8 @@ public class AttackController : MonoBehaviour
 
     private void PlayerAttack()
     {
+        SFX_Attack.Play();
+
         animController.IsAttaking();
         //cria um circulo ao redor do attackpoint que detecta a layerdamage
         Collider2D[] hitinfo = Physics2D.OverlapCircleAll(Attackpoint.position,radius,layerDamage);
