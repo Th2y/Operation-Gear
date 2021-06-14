@@ -31,6 +31,9 @@ public class StatsController : MonoBehaviour
 
     public bool ismove; //test
 
+    [SerializeField]
+    private AudioClip damageSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -120,7 +123,7 @@ public class StatsController : MonoBehaviour
     public void RemoveLife(float dmg)
     {
         //remove a vida baseada na variavel dmg
-
+        AudioSource.PlayClipAtPoint(damageSound, this.transform.position);
         life -= dmg;
     }
     private void UI_Image(Image image,float min,float max)

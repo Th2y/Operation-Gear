@@ -29,9 +29,10 @@ public class MovimentacaoJogador : MonoBehaviour
         if (isPushing)
         {
             float distance = Vector3.Distance(this.transform.position, pushTargetPosition);
-            Debug.Log(distance);
-            if (distance < 1)
-            {
+            Debug.Log("Distância: " + distance);
+            Debug.Log("PushDirection: " + pushDirection);
+            if (distance <= Mathf.Epsilon)
+            {               
                 isPushing = false;
             }
             else
@@ -42,7 +43,7 @@ public class MovimentacaoJogador : MonoBehaviour
                 {
                     time = 0;
 
-                    this.transform.position += (Vector3)pushDirection;
+                    this.transform.position += (Vector3)pushDirection;                   
                 }
             }
         }
@@ -110,6 +111,7 @@ public class MovimentacaoJogador : MonoBehaviour
 
         if (hit.transform != null)
         {
+            Debug.Log(hit.transform.name);
             distance = Mathf.FloorToInt(hit.distance);
             distance = Mathf.Max(distance, 0);
         }
@@ -117,7 +119,7 @@ public class MovimentacaoJogador : MonoBehaviour
         {
             distance = distanceKnockback;
         }
-
+        Debug.Log("Distancia knockback: " + distance);
         pushTargetPosition = (Vector2)this.transform.position + (direction * distance);
 
         this.pushDirection = direction;

@@ -55,13 +55,14 @@ public class Map : MonoBehaviour {
 
     public void Bake() {
         this.startPosition = this.posOrigem.TransformPoint(Vector2.zero);
+        //Debug.Log("Pos inicial " + this.startPosition);
         this.nodes = new List<Node>();
 
         RaycastHit2D hit = Physics2D.Linecast(startPosition, startPosition, this.layerMask);
         Node origin = CreateNode(hit.transform, startPosition);
         FindNextNodes(origin);
         /*#if UNITY_EDITOR
-            Debug.Log("[Map]: {Bake} Quantidade de nÛs: " + this.nodes.Count);
+            Debug.Log("[Map]: {Bake} Quantidade de n√≥s: " + this.nodes.Count);
         #endif*/
         this.baked = true;
     }
@@ -88,7 +89,7 @@ public class Map : MonoBehaviour {
     private void FindNextNodes(Node node) {
         if (this.nodes.Count >= maxNodes) {
 #if UNITY_EDITOR
-            Debug.LogWarning("[Map]: {FindNextNodes} Mapeamento do cen·rio cancelado por excesso de tiles.");
+            Debug.LogWarning("[Map]: {FindNextNodes} Mapeamento do cen√°rio cancelado por excesso de tiles.");
 #endif
             return;
         }
@@ -101,9 +102,9 @@ public class Map : MonoBehaviour {
             foreach (Vector2 direction in Directions) {
                 nextNodePosition = (node.Position + direction);
                 hit = Physics2D.Linecast(nextNodePosition, nextNodePosition, this.layerMask);
-                // Verifica se j· existe um nÛ na posiÁ„o calculada
+                // Verifica se j√° existe um n√≥ na posi√ß√£o calculada
                 nextNode = GetNodeByPosition(nextNodePosition);
-                // Caso o nÛ ainda n„o exista
+                // Caso o n√≥ ainda n√£o exista
                 if (nextNode == null) {
                    nextNode = CreateNode(hit.transform, nextNodePosition);
                 }
@@ -135,11 +136,11 @@ public class Map : MonoBehaviour {
         bool removable;
         bool walkable;
         if (mapObject != null) {
-            // CÈlula ocupada (n„o pode andar)
+            // C√©lula ocupada (n√£o pode andar)
             removable = (mapObject.gameObject.layer == LayerMask.NameToLayer("Removable"));
             walkable = false;
         } else {
-            // CÈlula vazio (pode andar)
+            // C√©lula vazio (pode andar)
             walkable = true;
             removable = false;
         }
@@ -153,7 +154,7 @@ public class Map : MonoBehaviour {
             }
             else
             {
-                Debug.LogWarning("Objetos removÌveis devem ter o script RemovableObject.GameObject:"+mapObject.name);
+                Debug.LogWarning("Objetos remov√≠veis devem ter o script RemovableObject.GameObject:"+mapObject.name);
             }
         }
 
