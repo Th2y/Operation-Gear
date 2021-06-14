@@ -29,7 +29,10 @@ public class StatsController : MonoBehaviour
     public Image UI_energy;               // Sprite da energia  
     public Image UI_life;                 // Sprite da vida
 
-    public bool ismove; //test
+    public bool ismove;
+
+    [Header("Sounds")]
+    public AudioSource SFX_Death;
 
     [SerializeField]
     private AudioClip damageSound;
@@ -64,7 +67,11 @@ public class StatsController : MonoBehaviour
     // verifica se esta vivo ou não
     private void Isalive()
     {
-        if (life <= 0) reloadScene.Reloadscene();
+        if (life <= 0)
+        {
+            SFX_Death.Play();
+            reloadScene.Reloadscene();
+        }
     }
     // sistema de energia
     private void EnergyController()
@@ -110,6 +117,12 @@ public class StatsController : MonoBehaviour
                 Move_T_E_R -= Time.deltaTime;
                 Idle_T_E_R = Idle_TimeEnergyRes;
             }
+        }
+        else
+        {
+
+            Idle_T_E_R = Idle_TimeEnergyRes;
+            Move_T_E_R = Move_TimeEnergyRes;
         }
     }
 

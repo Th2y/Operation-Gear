@@ -1,0 +1,416 @@
+fileFormatVersion: 2
+guid: 0185e6e999062f24091fe4c867072a7c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1875555541540316221
+    second: besouro_rino_frente_attack-Sheet_0
+  - first:
+      213: 218089410121520024
+    second: besouro_rino_frente_attack-Sheet_1
+  - first:
+      213: -3183896698151327439
+    second: besouro_rino_frente_attack-Sheet_2
+  - first:
+      213: -2695038104802202723
+    second: besouro_rino_frente_attack-Sheet_3
+  - first:
+      213: 6460270144685480910
+    second: besouro_rino_frente_attack-Sheet_4
+  - first:
+      213: -7394772519966597213
+    second: besouro_rino_frente_attack-Sheet_5
+  - first:
+      213: 3187247362896561725
+    second: besouro_rino_frente_attack-Sheet_6
+  - first:
+      213: 7276396050511930299
+    second: besouro_rino_frente_attack-Sheet_7
+  - first:
+      213: -84000344034354349
+    second: besouro_rino_frente_attack-Sheet_8
+  - first:
+      213: -2073163496639781518
+    second: besouro_rino_frente_attack-Sheet_9
+  - first:
+      213: 812532943894996005
+    second: besouro_rino_frente_attack-Sheet_10
+  - first:
+      213: -3850148712369967210
+    second: besouro_rino_frente_attack-Sheet_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: besouro_rino_frente_attack-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 67
+        width: 26
+        height: 22
+      alignment: 9
+      pivot: {x: 0.4615385, y: 0.5909091}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cb59fd0c20b8f5e0800000000000000
+      internalID: -1875555541540316221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: besouro_rino_frente_attack-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 69
+        width: 26
+        height: 22
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0.59090906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 893519bb92fc60300800000000000000
+      internalID: 218089410121520024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: besouro_rino_frente_attack-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 69
+        width: 26
+        height: 22
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0.59090906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139a62172d680d3d0800000000000000
+      internalID: -3183896698151327439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: besouro_rino_frente_attack-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 66
+        width: 26
+        height: 23
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0.5652174}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9b6f136f1d499ad0800000000000000
+      internalID: -2695038104802202723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: besouro_rino_frente_attack-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 34
+        width: 26
+        height: 23
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0.5652174}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb1a07f77d77a950800000000000000
+      internalID: 6460270144685480910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: besouro_rino_frente_attack-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 37
+        width: 26
+        height: 18
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0.7222222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af1290829d706990800000000000000
+      internalID: -7394772519966597213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: besouro_rino_frente_attack-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 36
+        width: 27
+        height: 19
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0.68421054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3600ccf6906b3c20800000000000000
+      internalID: 3187247362896561725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: besouro_rino_frente_attack-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 36
+        width: 23
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5217391, y: 0.61904764}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb3a1dbe7a3faf460800000000000000
+      internalID: 7276396050511930299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: besouro_rino_frente_attack-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 4
+        width: 27
+        height: 19
+      alignment: 9
+      pivot: {x: 0.44444445, y: 0.68421054}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b52d4d12295def0800000000000000
+      internalID: -84000344034354349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: besouro_rino_frente_attack-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 5
+        width: 26
+        height: 18
+      alignment: 9
+      pivot: {x: 0.4615385, y: 0.7222222}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 275aa7da8c4aa33e0800000000000000
+      internalID: -2073163496639781518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: besouro_rino_frente_attack-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 5
+        width: 26
+        height: 22
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0.59090906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 524e9215862b64b00800000000000000
+      internalID: 812532943894996005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: besouro_rino_frente_attack-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 4
+        width: 26
+        height: 22
+      alignment: 9
+      pivot: {x: 0.46153846, y: 0.59090906}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69fa2c22526819ac0800000000000000
+      internalID: -3850148712369967210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
