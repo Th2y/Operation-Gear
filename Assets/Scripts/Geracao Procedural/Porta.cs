@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Porta : MonoBehaviour
@@ -30,7 +29,7 @@ public class Porta : MonoBehaviour
         portaConectada = porta;
     }
 
-    public virtual void StartAnim()
+    public void StartAnim()
     {
         if (anim != null)
             StartCoroutine(AnimStart());
@@ -40,8 +39,9 @@ public class Porta : MonoBehaviour
 
     private IEnumerator AnimStart()
     {
-        anim.SetBool("Open", true);
-        yield return new WaitForSeconds(2);
-        anim.SetBool("Open", false);
+        anim.SetInteger("OpenS", 0);
+        Debug.Log(anim.GetInteger("OpenS"));
+        yield return new WaitForSeconds(200);
+        anim.SetInteger("OpenS", 1);
     }
 }
