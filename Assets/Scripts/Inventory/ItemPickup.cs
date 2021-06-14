@@ -5,7 +5,7 @@ using UnityEngine;
 public class ItemPickup : MonoBehaviour
 {
     public Item item;
-
+    public AudioSource SFX_Pickup;
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -14,6 +14,7 @@ public class ItemPickup : MonoBehaviour
         {
             bool wasPickedUp = Inventory.instance.AddItem(item);
             if (wasPickedUp)
+                SFX_Pickup.Play();
                 Destroy(gameObject);
         }
     }

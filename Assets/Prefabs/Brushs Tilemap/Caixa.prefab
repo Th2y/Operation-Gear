@@ -179,6 +179,10 @@ MonoBehaviour:
   - {fileID: 6725727613379955586, guid: c5d3113756af9e44d8fa8374d5758f85, type: 3}
   - {fileID: -860264664590275695, guid: c5d3113756af9e44d8fa8374d5758f85, type: 3}
   image: {fileID: 4459352313549539436}
+  ItemDrop:
+  - {fileID: 8770377374603107815, guid: 09303e9ada4935b46b61ea8ffac7dd8d, type: 3}
+  - {fileID: 7614402720215260360, guid: 5767b8f1eccec6f4981062d24d973cff, type: 3}
+  amountItem: 1
 --- !u!61 &4459352313549539434
 BoxCollider2D:
   m_ObjectHideFlags: 0
