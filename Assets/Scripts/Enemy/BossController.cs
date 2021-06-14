@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour, IAgentObserver
+public class BossController : MonoBehaviour, IAgentObserver
 {
     public Animator animator;
     private Rigidbody2D rb;
@@ -14,7 +14,7 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     private float pushTime;
     public float pushCooldown;
     public float pushForce;
-    [Range(0,100)]
+    [Range(0, 100)]
     public float pushRate;
 
     [SerializeField]
@@ -50,7 +50,7 @@ public class EnemyController : MonoBehaviour, IAgentObserver
         GameObject enemyTargetGameObject = new GameObject();
         enemyTarget = enemyTargetGameObject.AddComponent<EnemyTarget>();
         this.agent.Target = enemyTargetGameObject.transform;
-        enemyTarget.target = player.transform;
+        enemyTarget.agent = agent;
         enemyTarget.Follow();
     }
 
@@ -81,7 +81,7 @@ public class EnemyController : MonoBehaviour, IAgentObserver
         {
             if (isDashing)
             {
-                Debug.Log("Estou seguindo");
+                //Debug.Log("Estou seguindo");
                 animator.SetBool("isWalking", true);
                 if (hasPushed)
                 {
@@ -95,16 +95,16 @@ public class EnemyController : MonoBehaviour, IAgentObserver
                     }
                 }
                 else
-                {                    
+                {
                     agent.MovementDelay = (distance - 1) * pushForce;
                     if (distance <= 1)
                     {
                         float playerDistance = Vector2.Distance(player.transform.position, enemyTarget.transform.position);
-                        if(playerDistance <= Mathf.Epsilon)
+                        if (playerDistance <= Mathf.Epsilon)
                         {
                             Vector2 pushDirection = (player.transform.position - this.transform.position).normalized;
                             player.GetComponent<MovimentacaoJogador>().Knockback(pushDirection);
-                        }                      
+                        }
                         hasPushed = true;
                         agent.Stop();
                         attackIndicator.Hide();
@@ -117,7 +117,7 @@ public class EnemyController : MonoBehaviour, IAgentObserver
                 if (dashActivated)
                 {
                     this.dashTime += Time.deltaTime;
-                    if(this.dashTime >= dashTimer)
+                    if (this.dashTime >= dashTimer)
                     {
                         this.dashTime = 0;
                         isDashing = true;
@@ -140,26 +140,26 @@ public class EnemyController : MonoBehaviour, IAgentObserver
                             NormalAttack();
 
                         }
-                    }                   
+                    }
                 }
-                else 
+                else
                 {
                     if (!dashActivated)
                     {
                         agent.Resume();
                     }
-                    
+
                 }
 
                 agent.MovementDelay = 1f;
-          
+
             }
         }
 
     }
 
     private void NormalAttack()
-    {       
+    {
         if (!isAttacking)
         {
             animator.SetTrigger("Attack");
@@ -170,7 +170,7 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     public void OnAttackComplete()
     {
         isAttacking = false;
-       
+
         GameObject _player = GameObject.FindGameObjectWithTag("Player");
         _player.GetComponent<TakeDamage>().DamageInPlayer(damage);
     }
@@ -230,14 +230,14 @@ public class EnemyController : MonoBehaviour, IAgentObserver
             if (randomChance <= pushRate)
             {
                 dashActivated = true;
-                if(attackIndicator == null)
+                if (attackIndicator == null)
                 {
                     attackIndicator = Instantiate(attackIndicatorPrefab);
                 }
                 attackIndicator.Show(this.transform.position, agent.GetNodesPositions());
                 agent.Stop();
                 enemyTarget.StopFollow();
-                
+
             }
             else
             {
@@ -252,6 +252,6 @@ public class EnemyController : MonoBehaviour, IAgentObserver
         {
             CheckPushDistance();
         }
-        
+
     }
 }
