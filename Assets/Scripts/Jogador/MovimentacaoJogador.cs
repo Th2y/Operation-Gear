@@ -97,8 +97,8 @@ public class MovimentacaoJogador : MonoBehaviour
             if (!Poweraps.instancia.usandoPower)
                 StatsController.instance.RemoveEnergy(1);
         }
-        else
-            Debug.Log(ray.collider.gameObject.name);
+        //else
+            //Debug.Log(ray.collider.gameObject.name);
     }
 
     public void Knockback(Vector2 direction)
@@ -133,6 +133,11 @@ public class MovimentacaoJogador : MonoBehaviour
             cinemachineChange.MudarCam(collision.gameObject.name);
             porta.StartAnim();
             porta.portaConectada.salaOndeEstou.Ativar();
+        }
+        else if (collision.gameObject.CompareTag("Chaves"))
+        {
+            Debug.Log("Encontrei uma chave");
+            collision.GetComponent<ColetarChaves>().Takedamage(1);
         }
     }
 }

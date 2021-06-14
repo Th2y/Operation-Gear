@@ -10,7 +10,7 @@ public class Agent : MonoBehaviour {
     [SerializeField]
     private Map map;
 
-    [Header("Movimentação")]
+    [Header("MovimentaÃ§Ã£o")]
     [SerializeField]
     private float movementDelay;
 
@@ -127,7 +127,7 @@ public class Agent : MonoBehaviour {
             if (this.movementElapsedTime >= this.movementDelay) {
                 this.movementElapsedTime = 0;
 
-                // Move para o próximo nó e remove o nó do caminho restante
+                // Move para o prÃ³ximo nÃ³ e remove o nÃ³ do caminho restante
                 Node nextNode = this.path.GetNext();
                 this.transform.position = nextNode.Position;
                 if(this.observer != null)

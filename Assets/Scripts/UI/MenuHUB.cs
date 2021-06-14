@@ -7,39 +7,40 @@ public class MenuHUB : MonoBehaviour
     [SerializeField]
     private AudioSource audios;
     [SerializeField]
-    private GameObject painelVenceu;
+    private JogadorNaHUB jogadorNaHUB;
     [SerializeField]
-    private GameObject painelPerdeu;
+    private GameObject[] painelLoja;
+    private string oQueCarregar;
 
-    public void Play()
+    public void MoveNaHUB(string direcao)
     {
-        // Toca um áudio e pula para a Scene especificada no editor ao fim da Coroutine
-        audios.Play();
-        StartCoroutine(CarregarFases());
+        DirecaoMovimento mover = (DirecaoMovimento)DirecaoMovimento.Parse(typeof(DirecaoMovimento), direcao);
+        this.jogadorNaHUB.Mover(mover);
     }
 
-    IEnumerator CarregarFases()
+    public void MudarOQueCarregar(string name)
     {
-        // Muda para a Scene determinada após o tempo determinado
-        yield return new WaitForSeconds(.5f);
-        SceneManager.LoadScene("Carregamento");
+        oQueCarregar = name;
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    public void ConfirmarNaHUb()
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (oQueCarregar == "Jogar")
         {
-            Venceu();
+            //Lógica para escolher qual cena carregar
+            // Toca um áudio e pula para a Scene especificada no editor ao fim da Coroutine
+            audios.Play();
+            SceneManager.LoadScene("Carregamento");
         }
-    }
-
-    private void Venceu()
-    {
-        painelVenceu.SetActive(true);
-    }
-
-    public void Perdeu()
-    {
-        painelPerdeu.SetActive(true);
+        else if (oQueCarregar == "Loja1")
+            painelLoja[0].SetActive(true);
+        else if (oQueCarregar == "Loja2")
+            painelLoja[1].SetActive(true);
+        else if (oQueCarregar == "Loja3")
+            painelLoja[2].SetActive(true);
+        else if (oQueCarregar == "Loja4")
+            painelLoja[3].SetActive(true);
+        else if (oQueCarregar == "Loja5")
+            painelLoja[4].SetActive(true);
     }
 }

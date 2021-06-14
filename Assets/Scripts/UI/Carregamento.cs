@@ -7,7 +7,7 @@ using TMPro;
 public class Carregamento : MonoBehaviour
 {
     public float TempoFixoSeg = 5;
-    public Image barraDeCarregamento;
+    public Slider barraDeCarregamento;
     public TextMeshProUGUI TextoProgresso;
     private int progresso = 0;
     public static bool novoJogo;
@@ -17,13 +17,14 @@ public class Carregamento : MonoBehaviour
         novoJogo = true;
 
         StartCoroutine(CenaDeCarregamento("Piso1"));
-
+        /*
         if (barraDeCarregamento != null)
         {
             barraDeCarregamento.type = Image.Type.Filled;
             barraDeCarregamento.fillMethod = Image.FillMethod.Horizontal;
             barraDeCarregamento.fillOrigin = (int)Image.OriginHorizontal.Left;
         }
+        */
     }
 
     IEnumerator CenaDeCarregamento(string cena)
@@ -46,6 +47,7 @@ public class Carregamento : MonoBehaviour
             TextoProgresso.text = "Carregando... " + progresso + "%";
 
         if (barraDeCarregamento != null)
-            barraDeCarregamento.fillAmount = (progresso / 100.0f);
+            barraDeCarregamento.value = progresso;
+      //    barraDeCarregamento.fillAmount = (progresso / 100.0f);
     }
 }
