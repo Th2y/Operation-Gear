@@ -10,8 +10,9 @@ public class MenuButtons : MonoBehaviour
     private float dramaTime = 1f;
     private float fallSpeed = 1f;
     private float fallAcceleration = 1f;
-    private string SceneName;
-    private bool isMainMenu = false;
+    public string SceneName;
+    public bool isMainMenu = false;
+    public bool isPaused = false;
 
     [SerializeField]
     private Color colorSelected = Color.white;
@@ -62,6 +63,19 @@ public class MenuButtons : MonoBehaviour
         // Fecha o jogo
         Application.Quit();
     }
+    public void timeStop()
+    {
+        if (isPaused == false)
+        {
+            isPaused = true;
+            Time.timeScale = 0;
+        }
+        else
+        {
+            isPaused = false;
+            Time.timeScale = 1;
+        }
+    }
     public void HighQuality()
     {
         // Ativa as configurações de alta qualidade
@@ -106,6 +120,6 @@ public class MenuButtons : MonoBehaviour
     {
         // Muda para a Scene determinada após o tempo determinado
         yield return new WaitForSeconds(startTime);
-        SceneManager.LoadScene("Piso1");
+        SceneManager.LoadScene(SceneName);
     }
 }

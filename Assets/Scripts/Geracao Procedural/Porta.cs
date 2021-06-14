@@ -11,14 +11,23 @@ public class Porta : MonoBehaviour
 
     [SerializeField]
     private Animator anim;
+    [SerializeField]
+    private SpriteRenderer portaImg;
+    [SerializeField]
+    private Sprite portaBloqueada;
 
     public string nomeDaSala;
 
-    public void Conectar(string nome)
+    public Sala salaOndeEstou;
+    public Porta portaConectada;
+
+    public void Conectar(string nome, Porta porta)
     {
         estaConectada = true;
         colisor.isTrigger = true;
         colisor.gameObject.name = nome;
+        portaImg.sprite = portaBloqueada;
+        portaConectada = porta;
     }
 
     public virtual void StartAnim()

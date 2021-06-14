@@ -9,7 +9,7 @@ namespace UnityEditor.Tilemaps
     /// Pincel de Tilemap que permite desenhar mais de um tile por vez, formando uma linha
     /// (Código da Unity disponível em: https://docs.unity3d.com/Manual/Tilemap-ScriptableBrushes-Example.html)
     /// </summary>
-
+#if UNITY_EDITOR
     [CustomGridBrush(true, false, false, "Line Brush")]
     public class LineBrush : GridBrush
     {
@@ -137,4 +137,5 @@ namespace UnityEditor.Tilemaps
             }
         }
     }
+#endif
 }

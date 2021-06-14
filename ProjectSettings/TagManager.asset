@@ -11,6 +11,7 @@ TagManager:
   - Inimigo
   - Portas
   - Chaves
+  - Maquina
   layers:
   - Default
   - TransparentFX
@@ -27,8 +28,10 @@ TagManager:
   - CameraLimites
   - Player
   - Coletavel
+  - ObstacleTemp
   - Inimigo
   - InimigoNaoPassa
+  - Removable
   - 
   - 
   - 
@@ -69,9 +72,17 @@ TagManager:
   - name: ObjetosIluminados
     uniqueID: 958504581
     locked: 0
-  - name: Canvas
-    uniqueID: 3872626649
-    locked: 0
   - name: Personagens
     uniqueID: 2240102609
+  - name: AttackIndicator
+    uniqueID: 4188601785
+    locked: 0
+  - name: Player
+    uniqueID: 952346169
+    locked: 0
+  - name: Enemy
+    uniqueID: 2303052053
+    locked: 0
+  - name: Canvas
+    uniqueID: 3872626649
     locked: 0

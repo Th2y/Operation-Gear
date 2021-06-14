@@ -47,6 +47,7 @@ public class AttackController : MonoBehaviour
 
         foreach (Collider2D hit in hitinfo)
         {
+            Debug.Log(hit.tag);
             //confere a tag do objeto
             if (hit.gameObject.CompareTag("Inimigo"))
             {
@@ -58,6 +59,11 @@ public class AttackController : MonoBehaviour
             else if (hit.gameObject.CompareTag("Object"))
             {
                 hit.GetComponent<BoxController>().Takedamage(1);
+            }
+            else if (hit.gameObject.CompareTag("Maquina"))
+            {
+                Debug.Log("Maquina encontrada");
+                hit.GetComponent<MachineController>().Takedamage(1);
             }
         }
     }

@@ -7,6 +7,8 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     public Animator animator;
     private Rigidbody2D rb;
 
+    private float dashTime;
+    public float dashTimer;
     private float attackTime;
     public float attackTimer;
     private float pushTime;
@@ -20,25 +22,47 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     [SerializeField]
     private bool isAttacking;
     [SerializeField]
-    private bool isFollowing;
+    private bool isDashing;
     [SerializeField]
     private bool hasPushed;
     [SerializeField]
     private bool isTackingDamage;
+    [SerializeField]
+    private bool dashActivated;
 
     public GameObject player;
-    public GameObject agent;
+
+    [SerializeField]
+    private AttackIndicator attackIndicatorPrefab;
+
+    private AttackIndicator attackIndicator;
 
     public int damage = 10;
     private int maxHealth = 100;
     private int currentHealth;
 
+    private Agent agent;
+    private EnemyTarget enemyTarget;
+
+    void Awake()
+    {
+        this.agent = GetComponent<Agent>();
+        GameObject enemyTargetGameObject = new GameObject();
+        enemyTarget = enemyTargetGameObject.AddComponent<EnemyTarget>();
+        this.agent.Target = enemyTargetGameObject.transform;
+        enemyTarget.target = player.transform;
+        enemyTarget.Follow();
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
+        dashTime = 0;
         currentHealth = maxHealth;
         rb = GetComponent<Rigidbody2D>();
-        isFollowing = false;
+        isDashing = false;
+        dashActivated = false;
         hasPushed = false;
         isTackingDamage = false;
         GetComponent<Agent>().Observer = this;
@@ -48,38 +72,60 @@ public class EnemyController : MonoBehaviour, IAgentObserver
     // Update is called once per frame
     void Update()
     {
-        float distance = Vector2.Distance(this.transform.position, player.transform.position);
+
+        float distanceX = Mathf.Abs(this.transform.position.x - enemyTarget.transform.position.x);
+        float distanceY = Mathf.Abs(this.transform.position.y - enemyTarget.transform.position.y);
+        float distance = distanceX + distanceY;
 
         if (!isDead)
         {
-            if (isFollowing)
+            if (isDashing)
             {
+                Debug.Log("Estou seguindo");
                 animator.SetBool("isWalking", true);
                 if (hasPushed)
                 {
+
                     pushTime += Time.deltaTime;
                     if (pushTime >= pushCooldown)
                     {
                         pushTime = 0;
                         hasPushed = false;
-                        isFollowing = false;
+                        isDashing = false;
                     }
                 }
                 else
-                {
-                    agent.GetComponent<Agent>().movementDelay = (distance - 1) * pushForce;
+                {                    
+                    agent.MovementDelay = (distance - 1) * pushForce;
                     if (distance <= 1)
                     {
-                        Vector2 pushDirection = (player.transform.position - this.transform.position).normalized;
-                        player.GetComponent<MovimentacaoJogador>().Knockback(pushDirection);
+                        float playerDistance = Vector2.Distance(player.transform.position, enemyTarget.transform.position);
+                        if(playerDistance <= Mathf.Epsilon)
+                        {
+                            Vector2 pushDirection = (player.transform.position - this.transform.position).normalized;
+                            player.GetComponent<MovimentacaoJogador>().Knockback(pushDirection);
+                        }                      
                         hasPushed = true;
-                        GetComponent<Agent>().Stop();
+                        agent.Stop();
+                        attackIndicator.Hide();
+                        enemyTarget.Follow();
                     }
                 }
             }
             else
             {
-                animator.SetBool("isWalking", false);
+                if (dashActivated)
+                {
+                    this.dashTime += Time.deltaTime;
+                    if(this.dashTime >= dashTimer)
+                    {
+                        this.dashTime = 0;
+                        isDashing = true;
+                        dashActivated = false;
+                        agent.Resume();
+                    }
+                }
+
                 if (distance <= 1)
                 {
                     if (!isAttacking && !isTackingDamage)
@@ -90,18 +136,22 @@ public class EnemyController : MonoBehaviour, IAgentObserver
                         {
                             attackTime = 0;
 
-                            GetComponent<Agent>().Stop();
+                            agent.Stop();
                             NormalAttack();
 
                         }
                     }                   
                 }
-                else
+                else 
                 {
-                    GetComponent<Agent>().Resume();
+                    if (!dashActivated)
+                    {
+                        agent.Resume();
+                    }
+                    
                 }
 
-                agent.GetComponent<Agent>().movementDelay = 1f;
+                agent.MovementDelay = 1f;
           
             }
         }
@@ -155,7 +205,7 @@ public class EnemyController : MonoBehaviour, IAgentObserver
         animator.SetBool("isDead", true);
 
         GetComponent<Collider2D>().enabled = false;
-        GetComponent<Agent>().Stop();
+        agent.Stop();
         this.enabled = false;
     }
 
@@ -169,7 +219,9 @@ public class EnemyController : MonoBehaviour, IAgentObserver
 
     private void CheckPushDistance()
     {
-        float distance = Vector2.Distance(this.transform.position, player.transform.position);
+        float distanceX = Mathf.Abs(this.transform.position.x - enemyTarget.transform.position.x);
+        float distanceY = Mathf.Abs(this.transform.position.y - enemyTarget.transform.position.y);
+        float distance = distanceX + distanceY;
         distance = Mathf.FloorToInt(distance);
 
         if (distance == 4)
@@ -177,17 +229,29 @@ public class EnemyController : MonoBehaviour, IAgentObserver
             float randomChance = Random.Range(0f, 100f);
             if (randomChance <= pushRate)
             {
-                isFollowing = true;
+                dashActivated = true;
+                if(attackIndicator == null)
+                {
+                    attackIndicator = Instantiate(attackIndicatorPrefab);
+                }
+                attackIndicator.Show(this.transform.position, agent.GetNodesPositions());
+                agent.Stop();
+                enemyTarget.StopFollow();
+                
             }
             else
             {
-                isFollowing = false;
+                dashActivated = false;
             }
         }
     }
 
     public void OnMoveComplete()
     {
-        CheckPushDistance();
+        if (!dashActivated)
+        {
+            CheckPushDistance();
+        }
+        
     }
 }

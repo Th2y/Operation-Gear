@@ -1694,6 +1694,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.25
+  timer: 0
+  distanceKnockback: 4
+  enemy: {fileID: 2078915070}
+  collisionLayers:
+    serializedVersion: 2
+    m_Bits: 32055
 --- !u!1 &1227053388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1866,11 +1872,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49fc53a5fdb748a49be60eebfff9830d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OriginPosition: {x: 0.5, y: 0.5}
   maxNodes: 1000
   baked: 0
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 33280
 --- !u!19719996 &1570806093
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -2694,8 +2701,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2078915075}
-  timer: 2
-  player: {fileID: 586898247}
+  attackTimer: 1
+  pushCooldown: 2
+  pushForce: 0.15
+  pushRate: 100
+  isDead: 0
+  isAttacking: 0
+  isFollowing: 0
+  hasPushed: 0
+  isTackingDamage: 0
+  player: {fileID: 586898245}
   agent: {fileID: 2078915070}
   maxHealth: 100
 --- !u!114 &2078915072
