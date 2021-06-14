@@ -61,21 +61,30 @@ public class Sala : MonoBehaviour
         portaConectada.Conectar(portaConectar.nomeDaSala, portaConectar);
     }
 
-    public void Ativar()
+    public void SetAtivo(bool eParaAtivar)
     {
-        Sala[] salas = GameObject.FindObjectsOfType<Sala>();
-        for(int i = 0; i < salas.Length; i++)
-        {
-            salas[i].gameObject.SetActive(false);
-        }
-
-        this.gameObject.SetActive(true);
+        this.gameObject.SetActive(eParaAtivar);
 
         for(int i=0; i < portas.Length; i++)
         {
             if (portas[i].estaConectada)
             {
-                portas[i].portaConectada.salaOndeEstou.gameObject.SetActive(true);
+                portas[i].portaConectada.salaOndeEstou.SetAtivoVizinhas(true, this);
+            }
+        }
+    }
+
+    public void SetAtivoVizinhas(bool eParaAtivar, Sala salaAtual)
+    {
+        Sala[] salas = GameObject.FindObjectsOfType<Sala>();
+
+        this.gameObject.SetActive(eParaAtivar);
+        for (int i = 0; i < portas.Length; i++)
+        {
+            if (portas[i].estaConectada)
+            {
+                if(portas[i].portaConectada.salaOndeEstou != salaAtual)
+                    portas[i].portaConectada.salaOndeEstou.gameObject.SetActive(false);
             }
         }
     }

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class EnemyTarget : MonoBehaviour
 {
-    public Transform target;
+    public Transform player;
     private bool isFollowing;
+    public Agent agent;
 
     public void Follow()
     {
@@ -22,7 +23,14 @@ public class EnemyTarget : MonoBehaviour
     {
         if (isFollowing)
         {
-            this.transform.position = target.position;
+            if (agent.HasTarget())
+            {
+                this.transform.position = agent.TargetPosition;
+            }
+            else
+            {
+                this.transform.position = player.position;
+            }        
         }
     }
 }

@@ -23,7 +23,7 @@ public class Mapa : MonoBehaviour
             salaInicial.Conectar(porta);
             if (i == 0)
             {
-                porta.salaOndeEstou.Ativar();
+                porta.salaOndeEstou.SetAtivo(true);
             }
         }
 

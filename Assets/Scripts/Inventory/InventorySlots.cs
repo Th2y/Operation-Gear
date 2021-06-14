@@ -9,21 +9,18 @@ public class InventorySlots : MonoBehaviour
     Item item;
     public Image icon;
 
+    [Header("Sounds")]
+    public AudioSource SFX_Use;
 
-   
+
+
 
     public void AddItem(Item newItem)
     {
-
         item = newItem;
 
         icon.sprite = newItem.icon;
         icon.enabled = true;
-
-
-
-
-
     }
 
 
@@ -38,7 +35,7 @@ public class InventorySlots : MonoBehaviour
     }
     public void OnRemoveButton()
     {
-        Inventory.instance.RemoveItem(item, iDImage);
+        
         ClearSlot();
     }
 
@@ -48,9 +45,16 @@ public class InventorySlots : MonoBehaviour
     {
         if (item != null)
         {
+            item.Use();
+
+            SFX_Use.Play();
+
+            Inventory.instance.RemoveItem(item);
+
             ClearSlot();
 
 
+            
 
         }
 

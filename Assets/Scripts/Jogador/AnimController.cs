@@ -40,8 +40,10 @@ public class AnimController : MonoBehaviour
             Invoke("IsNotMoving",1f);
         }
     }
-    public void TakeDamageAnim()
+    public void TakeDamageAnim(bool state)
     {
-        anim.SetBool("TakeDamage",true);
+        anim.SetBool("TakeDamage",state);
     }
+  
+
 }

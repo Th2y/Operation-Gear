@@ -43,4 +43,9 @@ public class MenuHUB : MonoBehaviour
         else if (oQueCarregar == "Loja5")
             painelLoja[4].SetActive(true);
     }
+
+    public void Play()
+    {
+        SceneManager.LoadScene("Carregamento");
+    }
 }

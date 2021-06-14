@@ -49,17 +49,10 @@ public class Inventory : MonoBehaviour
         return true;
     }
 
-    public void RemoveItem(Item _item, int idSlot)
+    public void RemoveItem(Item _item)
     {
 
-        if (items.Contains(_item))
-        {
-            items.Remove(_item);
-        }
-        else
-        {
-            Debug.Log(" não tem este item");
-        }
+        items.Remove(_item);
 
         if (onItemChangedCallBack != null)
         {
