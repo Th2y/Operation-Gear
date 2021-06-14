@@ -59,6 +59,19 @@ public class Agent : MonoBehaviour {
         }
     }
 
+    public Vector3 TargetPosition
+    {
+        get
+        {
+            return this.targetNode.Position;
+        }
+    }
+
+    public bool HasTarget()
+    {
+        return this.targetNode != null;
+    }
+
     public Map Map {
         get {
             return this.map;
@@ -83,28 +96,29 @@ public class Agent : MonoBehaviour {
         }
     }
 
-    private void FindPath() {
+    private void FindPath() {      
         Node currentNode = this.map.GetNodeByPosition(this.transform.position);
-        Debug.Log("Minha pos " + this.transform.position);
-        Debug.Log("Meu alvo " + this.target.position);
-        this.targetNode = this.map.GetNodeByPosition(this.target.position);
-
         this.searchAlgorithm = new AStar(currentNode);
-        this.searchAlgorithm.Find(this.targetNode);
-        this.path = this.searchAlgorithm.Path;
+        if(this.target != null)
+        {
+            this.targetNode = this.map.GetNodeByPosition(this.target.position);
+            this.searchAlgorithm.Find(this.targetNode);
+            this.path = this.searchAlgorithm.Path;
+        }
+        
     }
 
     private void Update() {
-        Debug.Log(this.searching);
-        if (!this.searching) {
+        //Debug.Log(this.searching);
+        if (!this.searching || this.target == null) {
             return;
         }
         Node currentTargetNode = this.map.GetNodeByPosition(this.target.position);
         Node previousTargetNode = this.searchAlgorithm.TargetNode;
-        Debug.Log(currentTargetNode);
-        Debug.Log(previousTargetNode);
+        //Debug.Log(currentTargetNode);
+        //Debug.Log(previousTargetNode);
         if (currentTargetNode != previousTargetNode) {
-            Debug.Log("Estou");
+            //Debug.Log("Estou");
             FindPath();
         }
 
