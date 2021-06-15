@@ -18,6 +18,8 @@ public class MenuButtons : MonoBehaviour
     private Color colorSelected = Color.white;
     [SerializeField]
     private Color colorUnselected = Color.white;
+    [SerializeField]
+    private Color colorCurrent = Color.white;
 
     [SerializeField]
     private AudioSource audios;
@@ -85,7 +87,7 @@ public class MenuButtons : MonoBehaviour
         fillHigh.SetActive(true);
         textLow.color = colorSelected;
         textMedium.color = colorSelected;
-        textHigh.color = colorSelected;
+        textHigh.color = colorCurrent;
     }
     public void MediumQuality()
     {
@@ -95,7 +97,7 @@ public class MenuButtons : MonoBehaviour
         fillMedium.SetActive(true);
         fillHigh.SetActive(false);
         textLow.color = colorSelected;
-        textMedium.color = colorSelected;
+        textMedium.color = colorCurrent;
         textHigh.color = colorUnselected;
     }
     public void LowQuality()
@@ -105,7 +107,7 @@ public class MenuButtons : MonoBehaviour
         fillLow.SetActive(true);
         fillMedium.SetActive(false);
         fillHigh.SetActive(false);
-        textLow.color = colorSelected;
+        textLow.color = colorCurrent;
         textMedium.color = colorUnselected;
         textHigh.color = colorUnselected;
     }
