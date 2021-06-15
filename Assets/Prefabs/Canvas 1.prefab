@@ -1059,7 +1059,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jogador: {fileID: 0}
   animController: {fileID: 0}
-  reloadScene: {fileID: 0}
 --- !u!1 &494909478265956311
 GameObject:
   m_ObjectHideFlags: 0
@@ -3801,10 +3800,10 @@ RectTransform:
   m_Father: {fileID: 9157645172442863718}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 800.0939, y: -449.94708}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9157645170989250079
 CanvasRenderer:
@@ -3911,6 +3910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iDImage: 1
   icon: {fileID: 9157645170942155305}
+  SFX_Use: {fileID: 0}
 --- !u!1 &9157645171025798251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3946,10 +3946,10 @@ RectTransform:
   m_Father: {fileID: 9157645172442863718}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 910.0939, y: -449.94708}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9157645171025798246
 CanvasRenderer:
@@ -4056,6 +4056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iDImage: 2
   icon: {fileID: 9157645171324253558}
+  SFX_Use: {fileID: 0}
 --- !u!1 &9157645171240170133
 GameObject:
   m_ObjectHideFlags: 0
@@ -4091,10 +4092,10 @@ RectTransform:
   m_Father: {fileID: 9157645172442863718}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 690.0939, y: -449.94708}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9157645171240170129
 CanvasRenderer:
@@ -4201,6 +4202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   iDImage: 0
   icon: {fileID: 9157645173028295208}
+  SFX_Use: {fileID: 0}
 --- !u!1 &9157645171324253556
 GameObject:
   m_ObjectHideFlags: 0
@@ -4356,7 +4358,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9157645172442863718
 RectTransform:
   m_ObjectHideFlags: 0
