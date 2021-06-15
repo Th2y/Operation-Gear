@@ -1389,7 +1389,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7763975, y: 1}
+    m_SensorSize: {x: 1.7775216, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1933,7 +1933,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227053388}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.678854, y: -13.5, z: -10}
+  m_LocalPosition: {x: 18.675482, y: -13.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 502779972}
@@ -2251,7 +2251,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7763975, y: 1}
+    m_SensorSize: {x: 1.7775216, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2343,7 +2343,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7763975, y: 1}
+    m_SensorSize: {x: 1.7775216, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2498,7 +2498,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7763975, y: 1}
+    m_SensorSize: {x: 1.7775216, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2976,6 +2976,53 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2066385130}
     m_Modifications:
+    - target: {fileID: 1056698958, guid: 15f1d8510c8a32141a479405b8596287, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 946213fa0402ad34e8f1a5824124bc93,
+        type: 3}
+    - target: {fileID: 1964451802, guid: 15f1d8510c8a32141a479405b8596287, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0ac29f61c4f47c745b5b3a08397bbbef, type: 2}
+    - target: {fileID: 1964451804, guid: 15f1d8510c8a32141a479405b8596287, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 0ac29f61c4f47c745b5b3a08397bbbef, type: 2}
+    - target: {fileID: 1972021366, guid: 15f1d8510c8a32141a479405b8596287, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1972021366, guid: 15f1d8510c8a32141a479405b8596287, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 946213fa0402ad34e8f1a5824124bc93,
+        type: 3}
+    - target: {fileID: 277000258058031404, guid: 15f1d8510c8a32141a479405b8596287,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 277000258058031404, guid: 15f1d8510c8a32141a479405b8596287,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190358928264609572, guid: 15f1d8510c8a32141a479405b8596287,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190358928264609572, guid: 15f1d8510c8a32141a479405b8596287,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5190358928264609572, guid: 15f1d8510c8a32141a479405b8596287,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 6487204913618548096, guid: 15f1d8510c8a32141a479405b8596287,
         type: 3}
       propertyPath: m_Name
@@ -3036,6 +3083,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6775569689988353029, guid: 15f1d8510c8a32141a479405b8596287,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1da1415af9e3b72418ae53d38c20ae47,
+        type: 3}
+    - target: {fileID: 7670386106905533388, guid: 15f1d8510c8a32141a479405b8596287,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1da1415af9e3b72418ae53d38c20ae47,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15f1d8510c8a32141a479405b8596287, type: 3}
 --- !u!114 &2055592546 stripped
@@ -3194,7 +3253,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7763975, y: 1}
+    m_SensorSize: {x: 1.7775216, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
