@@ -2211,7 +2211,7 @@ Animator:
   m_GameObject: {fileID: 4088457740893512500}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9893b2e23462cbb4e82f2d0d9ae93bc0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0ac29f61c4f47c745b5b3a08397bbbef, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2259,7 +2259,7 @@ SpriteRenderer:
   m_SortingLayerID: 579107527
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: db8a709c45b57504494a811a6615f3bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 946213fa0402ad34e8f1a5824124bc93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2297,13 +2297,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6003745458603154244}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 33, y: 8.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 676481265027486585}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &3875857344234713129
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2338,7 +2338,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1, y: 0}
+  m_Offset: {x: 1, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2361,7 +2361,7 @@ Animator:
   m_GameObject: {fileID: 6003745458603154244}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9893b2e23462cbb4e82f2d0d9ae93bc0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0ac29f61c4f47c745b5b3a08397bbbef, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -2409,7 +2409,7 @@ SpriteRenderer:
   m_SortingLayerID: 579107527
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: db8a709c45b57504494a811a6615f3bf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 946213fa0402ad34e8f1a5824124bc93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2521,17 +2521,7 @@ CompositeCollider2D:
   m_GeometryType: 1
   m_GenerationType: 0
   m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 8537857501580345893}
-    m_ColliderPaths:
-    - - X: 429999707
-        Y: 0
-      - X: 429999707
-        Y: 150000000
-      - X: 320000000
-        Y: 149999707
-      - X: 320000293
-        Y: 0
+  m_ColliderPaths: []
   m_CompositePaths:
     m_Paths:
     - - {x: 42.999943, y: 0}
