@@ -15,6 +15,8 @@ public class Inventory : MonoBehaviour
             return;
         }
         instance = this;
+
+       
     }
     #endregion
 
@@ -24,6 +26,8 @@ public class Inventory : MonoBehaviour
     public int space = 20;
 
     public List<Item> items = new List<Item>();
+
+   
 
 
     public bool AddItem(Item _item)
@@ -37,8 +41,6 @@ public class Inventory : MonoBehaviour
             }
 
             items.Add(_item);
-         
-
 
 
             if (onItemChangedCallBack != null)
